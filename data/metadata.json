@@ -1,0 +1,53 @@
+{
+  "chain_id": 1,
+  "dataset_name": "Solidity Upgrade Transactions 100",
+  "dataset_version": "1.0.0",
+  "network": "ethereum-mainnet",
+  "row_count": 100,
+  "scope_limitations": [
+    "Only direct upgradeTo and upgradeToAndCall transactions are included.",
+    "This is an upgrade-transaction-to-new-implementation mapping dataset; it does not claim a fully pinned old/new snapshot pair.",
+    "Beacon, Diamond, metamorphic, and nonstandard upgrade functions are excluded.",
+    "The bytecode-presence check is at latest state because the public validation endpoint does not provide archive state.",
+    "The dataset does not contain verified Solidity source code or formal properties."
+  ],
+  "selection": {
+    "candidate_count": 4361,
+    "candidates_checked": 120,
+    "eligible_functions": [
+      "upgradeTo",
+      "upgradeToAndCall"
+    ],
+    "method": "SHA-256 rank, first validated transition per proxy",
+    "seed": "fse2027-upgrade-dataset-v1"
+  },
+  "source": {
+    "artifact_sha256": "b6e05d3ecf12bc757f8f48b55f858afdd55d2639b1af6050b2342bb2baebbf22",
+    "commit": "9b2bf71d1929a8bc27c88b52fe9224c24325cd68",
+    "path": "upgrade_chains_data/proxy_upgrade_transactions_group_all_remove_repeat.json",
+    "repository": "xiaofan88/USCDetector",
+    "url": "https://raw.githubusercontent.com/xiaofan88/USCDetector/9b2bf71d1929a8bc27c88b52fe9224c24325cd68/upgrade_chains_data/proxy_upgrade_transactions_group_all_remove_repeat.json"
+  },
+  "unique_proxy_count": 100,
+  "unique_transaction_count": 100,
+  "validation": {
+    "checks": [
+      "transaction hash, sender, target, selector, and implementation argument",
+      "successful transaction receipt",
+      "matching Upgraded(address) event emitted by the proxy",
+      "source timestamp equals the on-chain block timestamp",
+      "new implementation bytecode currently exists"
+    ],
+    "failure_counts": {
+      "duplicate_proxy_after_validation": 2,
+      "invalid_hash_sender_or_implementation": 10,
+      "matching_upgraded_event_not_found": 9,
+      "unexpected_argument_types": 657,
+      "unsuccessful_receipt": 4,
+      "unsupported_upgrade_function": 5555
+    },
+    "required_chain_id": 1,
+    "rpc_host": "ethereum.publicnode.com",
+    "validated_at_utc": "2026-08-18T18:37:12+00:00"
+  }
+}
