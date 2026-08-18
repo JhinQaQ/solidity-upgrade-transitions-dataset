@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.4.24+commit.e67f0147",
+  "fullyQualifiedName": "Winner.sol:Winner",
+  "language": "Solidity",
+  "name": "Winner"
+}

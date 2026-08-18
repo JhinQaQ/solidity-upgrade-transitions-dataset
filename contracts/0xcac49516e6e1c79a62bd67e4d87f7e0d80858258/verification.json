@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "12087180",
+    "deployer": "0x4374D3d032B3c96785094ec9f384f07077792768",
+    "transactionHash": "0xadbe13cc4430673b92c543acd3967a1644fc05b5b4a73b2838caff561d6b3362",
+    "transactionIndex": "59"
+  },
+  "implementation_address": "0xcac49516e6e1c79a62bd67e4d87f7e0d80858258",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xcac49516e6e1c79a62bd67e4d87f7e0d80858258?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xcac49516e6e1c79a62bd67e4d87f7e0d80858258/runtime-bytecode.hex",
+    "sha256": "2172ffe2fdcceb9450519d06338aa4fc905fb50d4f5aacb3d4865a7696d61df8",
+    "size_bytes": 20375,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "LoopringAmmPool.sol",
+      "sha256": "067de9636dc4516d426451a2942b846588f59013c7fe13dd91bf34ca3d67eb84",
+      "stored_path": "contracts/0xcac49516e6e1c79a62bd67e4d87f7e0d80858258/sources/LoopringAmmPool.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-02-21T10:02:44Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6139833",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xcac49516e6e1c79a62bd67e4d87f7e0d80858258?fields=all"
+}

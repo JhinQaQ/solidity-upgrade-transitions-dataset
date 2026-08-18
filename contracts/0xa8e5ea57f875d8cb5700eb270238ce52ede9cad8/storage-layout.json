@@ -1,0 +1,316 @@
+{
+  "storage": [
+    {
+      "astId": 3,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "owner",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_address"
+    },
+    {
+      "astId": 81,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "_status",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 417,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "VaultMapping",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_mapping(t_uint256,t_struct(VaultInfo)412_storage)"
+    },
+    {
+      "astId": 419,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "vaultId",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 422,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "XIVTokenContractAddress",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_address"
+    },
+    {
+      "astId": 450,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "userMapping",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(userVaultInfo)443_storage))"
+    },
+    {
+      "astId": 452,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "oneYear",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 456,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "addedToColdmapping",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_mapping(t_uint256,t_bool)"
+    },
+    {
+      "astId": 458,
+      "contract": "StakingVault.sol:StakingVault",
+      "label": "isInitialized",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_bool"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_mapping(t_uint256,t_struct(userVaultInfo)443_storage))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(uint256 => struct StakingVault.userVaultInfo))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_struct(userVaultInfo)443_storage)"
+    },
+    "t_mapping(t_uint256,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_uint256,t_struct(VaultInfo)412_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct StakingVault.VaultInfo)",
+      "numberOfBytes": "32",
+      "value": "t_struct(VaultInfo)412_storage"
+    },
+    "t_mapping(t_uint256,t_struct(userVaultInfo)443_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct StakingVault.userVaultInfo)",
+      "numberOfBytes": "32",
+      "value": "t_struct(userVaultInfo)443_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(VaultInfo)412_storage": {
+      "encoding": "inplace",
+      "label": "struct StakingVault.VaultInfo",
+      "members": [
+        {
+          "astId": 389,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "id",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 391,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "poolSize",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 393,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "minimumAmount",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 395,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "maturityPeriod",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 397,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "APY",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 399,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "earlyWithDrawTime",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 401,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "withDrawPenality",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 403,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "investmentPeriod",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 405,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "startTimeStamp",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 407,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "userAmountAdded",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 409,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "name",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_string_storage"
+        },
+        {
+          "astId": 411,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "maximumAmount",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "384"
+    },
+    "t_struct(userVaultInfo)443_storage": {
+      "encoding": "inplace",
+      "label": "struct StakingVault.userVaultInfo",
+      "members": [
+        {
+          "astId": 424,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "investMentVaultId",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 426,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "investmentAmount",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 428,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "maturityPeriod",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 430,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "APY",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 432,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "earlyWithDrawTime",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 434,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "withDrawPenality",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 436,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "startTimeStamp",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 438,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "stakingTimeStamp",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 440,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "name",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_string_storage"
+        },
+        {
+          "astId": 442,
+          "contract": "StakingVault.sol:StakingVault",
+          "label": "isActive",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_bool"
+        }
+      ],
+      "numberOfBytes": "320"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

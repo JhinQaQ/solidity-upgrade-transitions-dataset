@@ -1,0 +1,14 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.4+commit.c7e474f2",
+  "fullyQualifiedName": "StakingVault.sol:StakingVault",
+  "language": "Solidity",
+  "name": "StakingVault"
+}

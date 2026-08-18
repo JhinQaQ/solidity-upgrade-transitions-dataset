@@ -1,0 +1,28 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "details": {
+        "constantOptimizer": true,
+        "cse": true,
+        "deduplicate": true,
+        "inliner": true,
+        "jumpdestRemover": true,
+        "orderLiterals": true,
+        "peephole": true,
+        "yul": false
+      },
+      "runs": 1536
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.11+commit.d7f03943",
+  "fullyQualifiedName": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+  "language": "Solidity",
+  "name": "FreaksNGuildsMigrated"
+}

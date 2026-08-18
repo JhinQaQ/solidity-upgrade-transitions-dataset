@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.6.2+commit.bacdbe57",
+  "fullyQualifiedName": "/contracts/operating/ComplianceRegistry.sol:ComplianceRegistry",
+  "language": "Solidity",
+  "name": "ComplianceRegistry"
+}

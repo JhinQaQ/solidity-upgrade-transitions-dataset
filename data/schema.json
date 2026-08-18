@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/JhinQaQ/solidity-upgrade-transitions-dataset/blob/main/data/schema.json",
   "title": "Solidity Upgrade Transactions 100",
-  "description": "Validated Ethereum mainnet upgrade-transaction to new-implementation mappings.",
+  "description": "Validated Ethereum mainnet upgrade-transaction to new-implementation mappings with linked code artifacts.",
   "type": "array",
   "minItems": 100,
   "maxItems": 100,
@@ -34,7 +34,17 @@
       "source_record_index",
       "selection_rank_sha256",
       "validation_rpc_host",
-      "validated_at_utc"
+      "validated_at_utc",
+      "new_implementation_artifact_dir",
+      "new_implementation_runtime_bytecode_path",
+      "new_implementation_runtime_bytecode_sha256",
+      "new_implementation_runtime_bytecode_size_bytes",
+      "new_implementation_source_available",
+      "new_implementation_source_provider",
+      "new_implementation_source_match",
+      "new_implementation_source_file_count",
+      "new_implementation_contract_name",
+      "new_implementation_compiler_version"
     ],
     "properties": {
       "dataset_id": { "type": "string", "pattern": "^SUT-[0-9]{4}$" },
@@ -73,7 +83,36 @@
         "pattern": "^[0-9a-f]{64}$"
       },
       "validation_rpc_host": { "type": "string", "minLength": 1 },
-      "validated_at_utc": { "type": "string", "format": "date-time" }
+      "validated_at_utc": { "type": "string", "format": "date-time" },
+      "new_implementation_artifact_dir": {
+        "type": "string",
+        "pattern": "^contracts/0x[0-9a-f]{40}$"
+      },
+      "new_implementation_runtime_bytecode_path": {
+        "type": "string",
+        "pattern": "^contracts/0x[0-9a-f]{40}/runtime-bytecode\\.hex$"
+      },
+      "new_implementation_runtime_bytecode_sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "new_implementation_runtime_bytecode_size_bytes": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "new_implementation_source_available": { "type": "boolean" },
+      "new_implementation_source_provider": {
+        "enum": ["sourcify", "blockscout", "none"]
+      },
+      "new_implementation_source_match": {
+        "enum": ["exact_match", "match", "full_match", "partial_match", "unavailable"]
+      },
+      "new_implementation_source_file_count": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "new_implementation_contract_name": { "type": "string" },
+      "new_implementation_compiler_version": { "type": "string" }
     }
   },
   "$defs": {

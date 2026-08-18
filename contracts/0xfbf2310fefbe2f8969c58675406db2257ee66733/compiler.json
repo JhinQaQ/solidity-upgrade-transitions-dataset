@@ -1,0 +1,14 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000
+    }
+  },
+  "compilerVersion": "0.7.6+commit.7338295f",
+  "fullyQualifiedName": "contracts/test/PriceOracleDelegate.sol:PriceOracleDelegate",
+  "language": "Solidity",
+  "name": "PriceOracleDelegate"
+}

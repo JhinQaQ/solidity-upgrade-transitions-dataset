@@ -1,0 +1,182 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "15237739",
+    "deployer": "0xC5C721caA3cAd959818e891b533a34c37946e9Bf",
+    "transactionHash": "0xee2243c97b49ca380bb0ce8ea81e26b027ae2ed20c8484fb9a893f2d482a7595",
+    "transactionIndex": "58"
+  },
+  "implementation_address": "0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/runtime-bytecode.hex",
+    "sha256": "309beb9b64d576c3009e99b134a09fae71ea420575879b22663cc1259ec90772",
+    "size_bytes": 20832,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol",
+      "sha256": "a55a53b215e2bb9c350bf7b86ee09b0e488522f7d8747877fd9a3a7e474c2c26",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/access/AccessControlEnumerableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol",
+      "sha256": "7f221363f6bd6fcf5af3f5e6ae628756c195021c3b366718665427c4f14099cb",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/IAccessControlEnumerableUpgradeable.sol",
+      "sha256": "00e174801c04f08f2840ee1eed6394d06ba2b029c0b6078166255148794c1187",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/access/IAccessControlEnumerableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/IAccessControlUpgradeable.sol",
+      "sha256": "6d3fbd4566bc123db1ee6ba2a1b79544b572df9b9cc9be360ddb3244dd07c86b",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/access/IAccessControlUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "sha256": "f0cbb88e6cbc994b565645eabd4320d27d529c7f1f4b3abb5fc263f3961c0a24",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol",
+      "sha256": "a94576fd98585c07b2a9725f7c89c910a3a1909a03f49ec2df465327c6a0ffc3",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+      "sha256": "f6c1a8b4512e9cc0168278c2a634b184fd86b1e39c7c283bcf34fb154236fc5d",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol",
+      "sha256": "e0ac7115916f0dce0a8e80769694736f3e674bdc5b2e5853964c82004b1e1cc5",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "sha256": "6e058aaee8c641107b209b62c34d484f2f125a44ecb66f7204a701614dfc1d68",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+      "sha256": "f2121091bdea42f19d25a6f043821eba21ccbecc64fa5d44b1574b0541e9a574",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+      "sha256": "8aecaaba0f09bc906c27867246210adfd19230a3e4a209a1909045c633030476",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol",
+      "sha256": "7ba7f2a159c698617f90c59705f1928ba7adb95c52eef0cb4c1ce3f81787bf0c",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/token/ERC721/IERC721ReceiverUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol",
+      "sha256": "b7c30218228cde89462d762ff873d1297038bb0f9406da6763bd08e3fccb4f93",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/token/ERC721/IERC721Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol",
+      "sha256": "78d97961d78c8245d51fef2306c33bbc97edb18cb61159979a75187379e93c86",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/token/ERC721/extensions/IERC721MetadataUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "sha256": "44edc4d7099c781d11421cea2d82a52948e738f5f6191c8ad01dfc0f9858549c",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "sha256": "5fb301961e45cb482fe4e05646d2f529aa449fe0e90c6671475d6a32356fa2d4",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol",
+      "sha256": "8253b7fb367ad6bdb028d020b73a063caf353d2f9f7f4d63d6ff0ceb65e73344",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol",
+      "sha256": "16a0e36f8dc6a83df3fec4344a11ad166ba99649d1cc52613c7ebe8015bd81a3",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+      "sha256": "fd84e5284eccc479268f0ef36b830019d4f7999ceb7959430d8d8d9e602dd4ef",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+      "sha256": "a39bc026ad6214e9ecd526bd4a1ddf9862d80bd4a9d0d031d9bafa4c3c147c0b",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/structs/BitMapsUpgradeable.sol",
+      "sha256": "ec59ba0e93655abe264f0d5b90b92c088e95daf9e9cdf25a7c641624f465433f",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/structs/BitMapsUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol",
+      "sha256": "80cae696855012fa154908e5641f81c5d94ac3bf5ecd463c62fdafc120b9bc9e",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/@openzeppelin/contracts-upgradeable/utils/structs/EnumerableSetUpgradeable.sol"
+    },
+    {
+      "original_path": "src/ERC2981V3.sol",
+      "sha256": "4422ecb0152f4ec4c5e6f013545d69aab67431da6581584a246cd8ed45dbb074",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/ERC2981V3.sol"
+    },
+    {
+      "original_path": "src/ERC721QStorage.sol",
+      "sha256": "e66d7ea025bff002931eb27c7d1d63d71b0ecb6d3a43e48c734f7551a8b7fd31",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/ERC721QStorage.sol"
+    },
+    {
+      "original_path": "src/ERC721QUpgradeable.sol",
+      "sha256": "ae845f9eafbdf7422573d63dc41229065db4d9f28ad276e2896784171f7704f6",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/ERC721QUpgradeable.sol"
+    },
+    {
+      "original_path": "src/ManageableUpgradeable.sol",
+      "sha256": "0ac4d7d5587ca639b7d1b4b7d5bf9f0e5e71a8106537557c0fd69f1939cdbe9f",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/ManageableUpgradeable.sol"
+    },
+    {
+      "original_path": "src/QuantumSpaces.sol",
+      "sha256": "fd3473c8abe35aacf6d2ccd3ccc1b94f0360bfb550584a63e76a6c4b859ce757",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/QuantumSpaces.sol"
+    },
+    {
+      "original_path": "src/QuantumSpacesStorage.sol",
+      "sha256": "5d0e8528099a726171e32fccf9694f3088fd49fedece4054e39fc1deef83faf7",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/QuantumSpacesStorage.sol"
+    },
+    {
+      "original_path": "src/TokenId.sol",
+      "sha256": "4fa0677449735569f0d6476f03b00310e32fa882378501b62c9777b63cec74e8",
+      "stored_path": "contracts/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57/sources/src/TokenId.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-23T09:30:06Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "6642911",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x97d3e5fbcf6dd93a2abfb95a00d2da7199ee3f57?fields=all"
+}

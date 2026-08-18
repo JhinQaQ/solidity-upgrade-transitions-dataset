@@ -1,0 +1,167 @@
+{
+  "storage": [
+    {
+      "astId": 5,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 8,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 73,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "______gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1202,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "governor",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_address"
+    },
+    {
+      "astId": 1307,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "config",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_mapping(t_bytes32,t_uint256)"
+    },
+    {
+      "astId": 2551,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "productImplementations",
+      "offset": 0,
+      "slot": "53",
+      "type": "t_mapping(t_bytes32,t_address)"
+    },
+    {
+      "astId": 2563,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "longs",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address)))))"
+    },
+    {
+      "astId": 2575,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "shorts",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address)))))"
+    },
+    {
+      "astId": 2578,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "allLongs",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_array(t_address)dyn_storage"
+    },
+    {
+      "astId": 2581,
+      "contract": "OptionFactory.sol:OptionFactory",
+      "label": "allShorts",
+      "offset": 0,
+      "slot": "57",
+      "type": "t_array(t_address)dyn_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_address)dyn_storage": {
+      "base": "t_address",
+      "encoding": "dynamic_array",
+      "label": "address[]",
+      "numberOfBytes": "32"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address)))))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => mapping(address => mapping(uint256 => mapping(uint256 => address)))))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address))))"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address))))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => mapping(uint256 => mapping(uint256 => address))))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address)))"
+    },
+    "t_mapping(t_address,t_mapping(t_uint256,t_mapping(t_uint256,t_address)))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(uint256 => mapping(uint256 => address)))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_mapping(t_uint256,t_address))"
+    },
+    "t_mapping(t_bytes32,t_address)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_bytes32,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_address)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_uint256,t_mapping(t_uint256,t_address))": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => mapping(uint256 => address))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_address)"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

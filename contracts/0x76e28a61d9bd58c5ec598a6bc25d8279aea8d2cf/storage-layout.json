@@ -1,0 +1,233 @@
+{
+  "storage": [
+    {
+      "astId": 532,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 535,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 600,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "______gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 619,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 625,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 627,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "53",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 629,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_name",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 631,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 633,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_decimals",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 87,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_status",
+      "offset": 0,
+      "slot": "57",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1115,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "58",
+      "type": "t_address"
+    },
+    {
+      "astId": 1413,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_curvePool",
+      "offset": 0,
+      "slot": "59",
+      "type": "t_contract(ICurvePool)1326"
+    },
+    {
+      "astId": 1415,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_curveGauge",
+      "offset": 0,
+      "slot": "60",
+      "type": "t_contract(ICurveGauge)1268"
+    },
+    {
+      "astId": 1417,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_currencyToken",
+      "offset": 0,
+      "slot": "61",
+      "type": "t_contract(IERC20)77"
+    },
+    {
+      "astId": 1419,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_lender",
+      "offset": 0,
+      "slot": "62",
+      "type": "t_contract(ITrueLender)1379"
+    },
+    {
+      "astId": 1421,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_minter",
+      "offset": 0,
+      "slot": "63",
+      "type": "t_contract(ICurveMinter)1279"
+    },
+    {
+      "astId": 1423,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "_uniRouter",
+      "offset": 0,
+      "slot": "64",
+      "type": "t_contract(IUniswapRouter)1398"
+    },
+    {
+      "astId": 1426,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "joiningFee",
+      "offset": 0,
+      "slot": "65",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1428,
+      "contract": "TrueFiPool.sol:TrueFiPool",
+      "label": "claimableFees",
+      "offset": 0,
+      "slot": "66",
+      "type": "t_uint256"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(ICurveGauge)1268": {
+      "encoding": "inplace",
+      "label": "contract ICurveGauge",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ICurveMinter)1279": {
+      "encoding": "inplace",
+      "label": "contract ICurveMinter",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ICurvePool)1326": {
+      "encoding": "inplace",
+      "label": "contract ICurvePool",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IERC20)77": {
+      "encoding": "inplace",
+      "label": "contract IERC20",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ITrueLender)1379": {
+      "encoding": "inplace",
+      "label": "contract ITrueLender",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IUniswapRouter)1398": {
+      "encoding": "inplace",
+      "label": "contract IUniswapRouter",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

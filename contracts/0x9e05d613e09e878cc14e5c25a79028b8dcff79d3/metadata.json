@@ -1,0 +1,1359 @@
+{
+  "compiler": {
+    "version": "0.8.10+commit.fc410830"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "contract MinimalForwarder",
+            "name": "_trustedForwarder",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_usdc",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "acct",
+            "type": "address"
+          }
+        ],
+        "name": "CollateralDeposited",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "acct",
+            "type": "address"
+          }
+        ],
+        "name": "CollateralWithdrawn",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "version",
+            "type": "uint8"
+          }
+        ],
+        "name": "Initialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          }
+        ],
+        "name": "OrderCancelled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "collateralAsset",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "premium",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "vaultID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "oToken",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "initialMargin",
+            "type": "uint256"
+          }
+        ],
+        "name": "OrderExecuted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "underlyingAsset",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "isPut",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "strikePrice",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "expiry",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "premium",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "notional",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          }
+        ],
+        "name": "OrderPlaced",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "orderID",
+            "type": "uint256"
+          }
+        ],
+        "name": "VaultSettled",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "OTokenFactory",
+        "outputs": [
+          {
+            "internalType": "contract IOtokenFactoryWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "USDC",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "addressbook",
+        "outputs": [
+          {
+            "internalType": "contract AddressBookWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "beneficiary",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "controller",
+        "outputs": [
+          {
+            "internalType": "contract ControllerWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_orderID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "acct",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct OTCWrapper.Permit",
+            "name": "_mmSignature",
+            "type": "tuple"
+          }
+        ],
+        "name": "depositCollateral",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_orderID",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "acct",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct OTCWrapper.Permit",
+            "name": "_userSignature",
+            "type": "tuple"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "acct",
+                "type": "address"
+              },
+              {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+              }
+            ],
+            "internalType": "struct OTCWrapper.Permit",
+            "name": "_mmSignature",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_premium",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_collateralAsset",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_collateralAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "executeOrder",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "fee",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "fillDeadline",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_addressBook",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_beneficiary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_fillDeadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "forwarder",
+            "type": "address"
+          }
+        ],
+        "name": "isTrustedForwarder",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "isWhitelistedMarketMaker",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "latestOrder",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "marginRequirements",
+        "outputs": [
+          {
+            "internalType": "contract MarginRequirementsWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "minMaxNotional",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "min",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "max",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "oracle",
+        "outputs": [
+          {
+            "internalType": "contract OracleWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "orderStatus",
+        "outputs": [
+          {
+            "internalType": "enum OTCWrapper.OrderStatus",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "orders",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "underlying",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "collateral",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "isPut",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "strikePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "expiry",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "premium",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "notional",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "seller",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "vaultID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "oToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "openedAt",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "ordersByAcct",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_underlying",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "_isPut",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_strikePrice",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_expiry",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_premium",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_notional",
+            "type": "uint256"
+          }
+        ],
+        "name": "placeOrder",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_beneficiary",
+            "type": "address"
+          }
+        ],
+        "name": "setBeneficiary",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_underlying",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_fee",
+            "type": "uint256"
+          }
+        ],
+        "name": "setFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_fillDeadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "setFillDeadline",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_underlying",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_min",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_max",
+            "type": "uint256"
+          }
+        ],
+        "name": "setMinMaxNotional",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_marketMakerAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "_isWhitelisted",
+            "type": "bool"
+          }
+        ],
+        "name": "setWhitelistMarketMaker",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_orderID",
+            "type": "uint256"
+          }
+        ],
+        "name": "settleVault",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_orderID",
+            "type": "uint256"
+          }
+        ],
+        "name": "undoOrder",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "whitelist",
+        "outputs": [
+          {
+            "internalType": "contract WhitelistWrapperInterface",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_orderID",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "withdrawCollateral",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "author": "Ribbon Team",
+      "kind": "dev",
+      "methods": {
+        "constructor": {
+          "custom:oz-upgrades-unsafe-allow": "constructor"
+        },
+        "depositCollateral(uint256,uint256,(uint256,uint256,address,uint8,bytes32,bytes32))": {
+          "details": "can only be called by the market maker who is the order seller",
+          "params": {
+            "_amount": "amount to deposit (with its respective token decimals)",
+            "_mmSignature": "market maker permit signature",
+            "_orderID": "id of the order"
+          }
+        },
+        "executeOrder(uint256,(uint256,uint256,address,uint8,bytes32,bytes32),(uint256,uint256,address,uint8,bytes32,bytes32),uint256,address,uint256)": {
+          "details": "can only be called by whitelisted market makers      requires that product and collateral have already been whitelisted beforehand      ensure that initial margin has been set up beforehand      ensure collateral naked cap from Controller.sol is high enough for the additional collateral      ensure setUpperBoundValues and setSpotShock from MarginCalculator.sol have been set up",
+          "params": {
+            "_collateralAmount": "collateral amount (with its respective token decimals)",
+            "_collateralAsset": "collateral asset address",
+            "_mmSignature": "market maker permit signature",
+            "_orderID": "id of the order",
+            "_premium": "order premium amount (USDC value with USDC decimals)",
+            "_userSignature": "user permit signature"
+          }
+        },
+        "initialize(address,address,uint256)": {
+          "params": {
+            "_addressBook": "AddressBook address",
+            "_beneficiary": "beneficiary address",
+            "_fillDeadline": "fill deadline duration in seconds"
+          }
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "placeOrder(address,bool,uint256,uint256,uint256,uint256)": {
+          "params": {
+            "_expiry": "option expiry timestamp",
+            "_isPut": "option type the vault is selling",
+            "_notional": "order notional (USD value with 6 decimals)",
+            "_premium": "order premium amount (USDC value with USDC decimals)",
+            "_strikePrice": "option strike price (with its respective token decimals)",
+            "_underlying": "underlying asset address"
+          }
+        },
+        "renounceOwnership()": {
+          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+        },
+        "setBeneficiary(address)": {
+          "details": "can only be called by owner",
+          "params": {
+            "_beneficiary": "beneficiary address"
+          }
+        },
+        "setFee(address,uint256)": {
+          "details": "can only be called by owner",
+          "params": {
+            "_fee": "fee amount in bps with 2 decimals (400 = 4bps = 0.04%)",
+            "_underlying": "underlying asset address"
+          }
+        },
+        "setFillDeadline(uint256)": {
+          "details": "can only be called by owner",
+          "params": {
+            "_fillDeadline": "fill deadline duration in seconds"
+          }
+        },
+        "setMinMaxNotional(address,uint256,uint256)": {
+          "details": "can only be called by owner",
+          "params": {
+            "_max": "maximum USD notional value allowed (with 6 decimals)",
+            "_min": "minimum USD notional value allowed (with 6 decimals)",
+            "_underlying": "underlying asset address"
+          }
+        },
+        "setWhitelistMarketMaker(address,bool)": {
+          "details": "can only be called by owner",
+          "params": {
+            "_isWhitelisted": "bool with whitelist status",
+            "_marketMakerAddress": "address of the market maker"
+          }
+        },
+        "settleVault(uint256)": {
+          "details": "can only be called by the market maker who is the order seller",
+          "params": {
+            "_orderID": "order id"
+          }
+        },
+        "transferOwnership(address)": {
+          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+        },
+        "undoOrder(uint256)": {
+          "params": {
+            "_orderID": "order id"
+          }
+        },
+        "withdrawCollateral(uint256,uint256)": {
+          "details": "can only be called by the market maker who is the order seller",
+          "params": {
+            "_amount": "amount to withdraw (with its respective token decimals)",
+            "_orderID": "id of the order"
+          }
+        }
+      },
+      "stateVariables": {
+        "minMaxNotional": {
+          "details": "mapping between an asset address to a struct consisting of uint256 min and a uint256 max which will be its notional floor and cap allowed"
+        }
+      },
+      "title": "OTC Wrapper",
+      "version": 1
+    },
+    "userdoc": {
+      "events": {
+        "CollateralDeposited(uint256,uint256,address)": {
+          "notice": "emits an event when collateral is deposited"
+        },
+        "CollateralWithdrawn(uint256,uint256,address)": {
+          "notice": "emits an event when collateral is withdrawn"
+        },
+        "OrderCancelled(uint256)": {
+          "notice": "emits an event when an order is canceled"
+        },
+        "OrderExecuted(uint256,address,uint256,address,uint256,address,uint256)": {
+          "notice": "emits an event when an order is executed"
+        },
+        "OrderPlaced(uint256,address,bool,uint256,uint256,uint256,uint256,address)": {
+          "notice": "emits an event when an order is placed"
+        },
+        "VaultSettled(uint256)": {
+          "notice": "emits an event when a vault is settled"
+        }
+      },
+      "kind": "user",
+      "methods": {
+        "USDC()": {
+          "notice": "USDC 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+        },
+        "beneficiary()": {
+          "notice": "address that will receive the product fees"
+        },
+        "depositCollateral(uint256,uint256,(uint256,uint256,address,uint8,bytes32,bytes32))": {
+          "notice": "allows market maker to deposit collateral"
+        },
+        "executeOrder(uint256,(uint256,uint256,address,uint8,bytes32,bytes32),(uint256,uint256,address,uint8,bytes32,bytes32),uint256,address,uint256)": {
+          "notice": "executes an order"
+        },
+        "fee(address)": {
+          "notice": "mapping between an asset address and its corresponding fee"
+        },
+        "fillDeadline()": {
+          "notice": "fill deadline duration in seconds"
+        },
+        "initialize(address,address,uint256)": {
+          "notice": "initialize the deployed contract"
+        },
+        "isWhitelistedMarketMaker(address)": {
+          "notice": "mapping between a Market Maker address and its whitelist status"
+        },
+        "latestOrder()": {
+          "notice": "order counter"
+        },
+        "orderStatus(uint256)": {
+          "notice": "mapping between order id and order status"
+        },
+        "orders(uint256)": {
+          "notice": "mapping between order id and order details"
+        },
+        "ordersByAcct(address,uint256)": {
+          "notice": "mapping between acct and list of all successful orders"
+        },
+        "placeOrder(address,bool,uint256,uint256,uint256,uint256)": {
+          "notice": "places an order"
+        },
+        "setBeneficiary(address)": {
+          "notice": "sets the beneficiary address"
+        },
+        "setFee(address,uint256)": {
+          "notice": "sets the fee for a given underlying asset"
+        },
+        "setFillDeadline(uint256)": {
+          "notice": "sets the fill deadline duration"
+        },
+        "setMinMaxNotional(address,uint256,uint256)": {
+          "notice": "sets the floor and cap of a particular asset notional"
+        },
+        "setWhitelistMarketMaker(address,bool)": {
+          "notice": "sets the whitelist status of market maker addresses"
+        },
+        "settleVault(uint256)": {
+          "notice": "settles the vault after expiry"
+        },
+        "undoOrder(uint256)": {
+          "notice": "cancels an order"
+        },
+        "withdrawCollateral(uint256,uint256)": {
+          "notice": "allows market maker to withdraw collateral"
+        }
+      },
+      "notice": "Contract that overlays Gamma Protocol for the OTC related interactions",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "/contracts/core/OTCWrapper.sol": "OTCWrapper"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "/contracts/core/OTCWrapper.sol": {
+      "keccak256": "0x5580c813add67ee8b4a3fce550e46567baa94f3e7ec9065344dd9e5fdbcdd5a7",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4f3b06fe6548af3797861b57becf5fb67f9c675cc43bcab6de0684b76aeb8a3c",
+        "dweb:/ipfs/QmUzzBKoTWGR2bRBCAuUj2sRMkMYutWRbcp3RyBGFH52h8"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/AddressBookWrapperInterface.sol": {
+      "keccak256": "0xae2319568d2027f41995d61347ea497744de7ce66d9dc256abc0950d1c3d5cc4",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://6c2420510c972d634ca29062be0bad407db366d704ed05d1f812ca7572a24c4b",
+        "dweb:/ipfs/QmUyextNXANY2iigzcFJNfPcrDYnM7dTesrUkhBBm6tWQa"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/ControllerWrapperInterface.sol": {
+      "keccak256": "0x8f4824c7c748a7abe98e4bfe69ab9ccc553409a92af10af664641aa5a0d5d0c3",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://c3caf7c9ebf93eca1014692e4bdebecdd0e399a59d0a6527efbd13b2ad8a5f9a",
+        "dweb:/ipfs/QmTjfBFAY74XMb2w1Go8whVKN2F9UKwAWQ6pLbdEge4SdK"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/IOtokenFactoryWrapperInterface.sol": {
+      "keccak256": "0x088b74647c0d8ebc5cf89d5eecf2c9d4bd827b007fbe4e577a699865d857b94d",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://a8ade657da3cf9aad0d27a573f14445837a51f077139f62058c5b0feda9d3ec2",
+        "dweb:/ipfs/QmSJwJiSgKu5etWp4qZBqPU7ZNdw8h3BaA1WYHL7zdDgXS"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/MarginRequirementsWrapperInterface.sol": {
+      "keccak256": "0x50c78e1f52474e3937cb1dd5941197697c2a7548c3065642216eaea4be7a209f",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://361e37db13ca9b728dbd664bdbc013148b25e87a2e367e6c3426d9d96889fc82",
+        "dweb:/ipfs/QmNP7nL9SRqGd1UhrPxKnK57JJbzR6o7tJ7mx23ADj2aiR"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/OracleWrapperInterface.sol": {
+      "keccak256": "0x17b5517bdb53ac9b385aff27c3846f87444f427ce866fd0a6a962b29fe0abc8b",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://505fb270985b367cac086e3f71ce502b69ee767c03a66b3639dc8ad57e324829",
+        "dweb:/ipfs/QmcZHUuc4j3GEbmsWgaxHg4ahuAi8CrZACteDraBhH9PhE"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/UtilsWrapperInterface.sol": {
+      "keccak256": "0xf08c720696eebc184a661c93b4fac3257b90ebbd8b335b0dc99a0356fc883f02",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://6409053644aaf0a4c15e4ed4de49f9164f1eda861e182e625e17a1dc69b3b95a",
+        "dweb:/ipfs/Qmcwhkr2nwR7pPJhqjVf2cHdzdmVn8nkPMH4g8zdbyPNt5"
+      ]
+    },
+    "/contracts/interfaces/otcWrapperInterfaces/WhitelistWrapperInterface.sol": {
+      "keccak256": "0x2e224f5a9c2ad5a42e5eef776754df5222cd3bc42154e5363d612211bafa5564",
+      "license": "UNLICENSED",
+      "urls": [
+        "bzz-raw://4e19bfc0083f59706e3c0ed83c45946bfab6c5e90e79912bc97cf31610f08451",
+        "dweb:/ipfs/QmZ5QvtjhLnikhVKUJnScfFePKbKcYCCbSBQieDFoCMpkp"
+      ]
+    },
+    "/contracts/libs/SupportsNonCompliantERC20.sol": {
+      "keccak256": "0x16488f294f37837430a9d10f5291ca87be047a11aa425d2aba8730f437170c05",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://85a6ce296ce2d4fd4135241094a3f8e9169aaa60803183909ec5d93d24bc0435",
+        "dweb:/ipfs/QmUYxiNW4HrVdhnXeycs4Pmwge9vkNmBwWS36DdxR91HYa"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+        "dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/metatx/ERC2771ContextUpgradeable.sol": {
+      "keccak256": "0x10d677119c17bf67ce9ba5edcfbf45ae9f086296fd37f1ccbf533344b71e6951",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://209a350bfe2df45139a9192d6aa9340229dcc0f7a6733cb15af4c6dcf1d41d82",
+        "dweb:/ipfs/QmVH6iWVuER6uFRUV9gJh6zcUJh4hTvbpidnxLptsuVdrS"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "keccak256": "0x037c334add4b033ad3493038c25be1682d78c00992e1acb0e2795caff3925271",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8a313cf42389440e2706837c91370323b85971c06afd6d056d21e2bc86459618",
+        "dweb:/ipfs/QmT8XUrUvQ9aZaPKrqgRU2JVGWnaxBcUYJA7Q7K5KcLBSZ"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol": {
+      "keccak256": "0x2b3005a0064cfc558bdf64b2bae94b565f4574a536aadd61c13838d4f2157790",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://622c3eb87563e71585c9f538d1a196fe2d154dcc5b8f335e8770a8acc95e1f3a",
+        "dweb:/ipfs/QmSnDqJJLzv3mirjGB1vrk5X7hegFdS7BKpscpxyqj7sWu"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+      "keccak256": "0x2edcb41c121abc510932e8d83ff8b82cf9cdde35e7c297622f5c29ef0af25183",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://72460c66cd1c3b1c11b863e0d8df0a1c56f37743019e468dc312c754f43e3b06",
+        "dweb:/ipfs/QmPExYKiNb9PUsgktQBupPaM33kzDHxaYoVeJdLhv8s879"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+        "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+      ]
+    },
+    "@openzeppelin/contracts/metatx/MinimalForwarder.sol": {
+      "keccak256": "0xc38f078acfe8e3e6b62db677673cb0c9414d3666aea286ac9fe46fba60a36c88",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://2aaf94ab2d10518f65769b00e8c151bb36479d18f30f0813870223bce2e0f264",
+        "dweb:/ipfs/QmdhA5QuULqq9WZKaeuLGqZbHzpQPc2vDhfj37AZHYA12m"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+        "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "keccak256": "0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
+        "dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "keccak256": "0x9b72f93be69ca894d8492c244259615c4a742afc8d63720dbc8bb81087d9b238",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f5a7b96e511be78d5cdf635c784e6ab8cdd38625bb8cafb8a80914a1c89cf0f6",
+        "dweb:/ipfs/QmVzTCwJxQAkjRQHboT5QrvsVJGWQHgfEjeTbvyxoKBrds"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Address.sol": {
+      "keccak256": "0xf96f969e24029d43d0df89e59d365f277021dac62b48e1c1e3ebe0acdd7f1ca1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ec772b45a624be516f1c81970caa8a2e144301e9d0921cbc1a2789fef39a1269",
+        "dweb:/ipfs/QmNyjwxCrGhQMyzLD93oUobJXVe9ceJvRvfXwbEtuxPiEj"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Strings.sol": {
+      "keccak256": "0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634",
+        "dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb"
+      ]
+    },
+    "@openzeppelin/contracts/utils/cryptography/ECDSA.sol": {
+      "keccak256": "0xda898fa084aa1ddfdb346e6a40459e00a59d87071cce7c315a46d648dd71d0ba",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ce501a941f4aa1555c04dabb5e07992503bb6a9b32ff8f7cdcefdb4a742210cb",
+        "dweb:/ipfs/QmeScPrUpdrGYs9BytV3Z5ZWJcBXtuAgCW4BLHua4xFUxx"
+      ]
+    },
+    "@openzeppelin/contracts/utils/cryptography/EIP712.sol": {
+      "keccak256": "0x948d8b2d18f38141ec78c5229d770d950ebc781ed3f44cc9e3ccbb9fded5846a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://7311ac950ed2d81f3ccf1784a926efbfc82a86dcb5c98d41eb3792c0cac63a2f",
+        "dweb:/ipfs/QmRRwCUHewkPmehx8QRYENFoWyLNx8UEZGULxWYUeSZdTS"
+      ]
+    },
+    "@openzeppelin/contracts/utils/math/Math.sol": {
+      "keccak256": "0xa1e8e83cd0087785df04ac79fb395d9f3684caeaf973d9e2c71caef723a3a5d6",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://33bbf48cc069be677705037ba7520c22b1b622c23b33e1a71495f2d36549d40b",
+        "dweb:/ipfs/Qmct36zWXv3j7LZB83uwbg7TXwnZSN1fqHNDZ93GG98bGz"
+      ]
+    }
+  },
+  "version": 1
+}

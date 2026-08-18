@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.4+commit.c7e474f2",
+  "fullyQualifiedName": "contracts/tokens/AutoCoinageSnapshot2.sol:AutoCoinageSnapshot2",
+  "language": "Solidity",
+  "name": "AutoCoinageSnapshot2"
+}

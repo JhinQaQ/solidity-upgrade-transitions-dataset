@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "13544524",
+    "deployer": "0xFa760444A229e78A50Ca9b3779f4ce4CcE10E170",
+    "transactionHash": "0xbbad05b374037521c6173d6febfdae590b7d3a5eb9117139f09897fb8099d4e4",
+    "transactionIndex": "113"
+  },
+  "implementation_address": "0xe35518c73996fdc7e4db7733d4e98209dd5a1768",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xe35518c73996fdc7e4db7733d4e98209dd5a1768?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xe35518c73996fdc7e4db7733d4e98209dd5a1768/runtime-bytecode.hex",
+    "sha256": "c2cfd2aa3d04ffe1f59543ddff8209e36425e0ec8b59574ca8572f72f3f7ddf3",
+    "size_bytes": 2837,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Vesting.sol",
+      "sha256": "fda22004ee3f6a6b3fb189418ed048510d17954a36430a1b73ffb20e89a6bd0d",
+      "stored_path": "contracts/0xe35518c73996fdc7e4db7733d4e98209dd5a1768/sources/Vesting.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T15:55:42Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "2598021",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xe35518c73996fdc7e4db7733d4e98209dd5a1768?fields=all"
+}

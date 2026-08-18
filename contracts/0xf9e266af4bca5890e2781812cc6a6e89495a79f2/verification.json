@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "5774626",
+    "deployer": "0x0084a81668B9A978416aBEB88bC1572816cc7cAC",
+    "transactionHash": "0x776944fc9cb70ac130026ff31bfea75d4156c6fd456a82016802964655baf18d",
+    "transactionIndex": null
+  },
+  "implementation_address": "0xf9e266af4bca5890e2781812cc6a6e89495a79f2",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xf9e266af4bca5890e2781812cc6a6e89495a79f2?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xf9e266af4bca5890e2781812cc6a6e89495a79f2/runtime-bytecode.hex",
+    "sha256": "74e5883541ea918b0c2dae357920b953302a7685da3d73c2623cfc7fef88174f",
+    "size_bytes": 2082,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "AuthenticatedProxy.sol",
+      "sha256": "8e849540160fc8b80f3dd69db3a650c351f2d65f6b90f36606097c6bc1ca16d1",
+      "stored_path": "contracts/0xf9e266af4bca5890e2781812cc6a6e89495a79f2/sources/AuthenticatedProxy.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T14:08:05Z",
+  "sourcify_creation_match": null,
+  "sourcify_match_id": "1903287",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xf9e266af4bca5890e2781812cc6a6e89495a79f2?fields=all"
+}

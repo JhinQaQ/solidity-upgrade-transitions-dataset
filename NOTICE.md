@@ -5,3 +5,5 @@ The selected records were derived from the public [USCDetector](https://github.c
 As of the pinned commit, the upstream repository did not declare a license through GitHub's repository-license metadata. This repository therefore does not claim to grant rights in the upstream code or full source artifact. It redistributes only a small, attributed selection of factual mappings plus original validation and packaging code.
 
 No license has been selected for this repository yet. Keep the repository private until the maintainer reviews the intended public-release license and attribution requirements.
+
+Verified contract sources were retrieved from Sourcify and Blockscout. Individual source files retain their embedded SPDX identifiers and notices when present; their licenses may differ. Inclusion in this private research dataset does not relicense those sources. Review source-level licensing and provider terms before making the repository public or redistributing the contract-code archive.

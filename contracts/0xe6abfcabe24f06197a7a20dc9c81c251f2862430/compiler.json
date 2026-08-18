@@ -1,0 +1,26 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {
+      "": {
+        "AmmExitRequest": "0x02d1b34cea8a23d2ca0b6c35e66e515729e9e7b1",
+        "AmmJoinRequest": "0x2fad77345e55d3c5dd95ef7594c8c1b214273d3e",
+        "AmmStatus": "0xba64e6de39f6303f8e62b4d52386b76cab626ee6",
+        "AmmWithdrawal": "0x40d9fab377d368753b9814e788393092ae374639"
+      }
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 999999
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.7.0+commit.9e61f92b",
+  "fullyQualifiedName": "LoopringAmmPool.sol:LoopringAmmPool",
+  "language": "Solidity",
+  "name": "LoopringAmmPool"
+}

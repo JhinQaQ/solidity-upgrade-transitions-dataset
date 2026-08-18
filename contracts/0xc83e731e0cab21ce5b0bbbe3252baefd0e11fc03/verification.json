@@ -1,0 +1,142 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "13086558",
+    "deployer": "0x7Dee3c1fE15B6C16622ba2d7f939a2242155654d",
+    "transactionHash": "0x069ca631faace9d865bf47ad09df5326633eb4d1d34aafafd0df3bcd7c37cd14",
+    "transactionIndex": "137"
+  },
+  "implementation_address": "0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/runtime-bytecode.hex",
+    "sha256": "c1a7cbccc73a0224e57e0592ccbc0faccf27890bf167ced5d07fbf6218affe0d",
+    "size_bytes": 17683,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Address.sol",
+      "sha256": "2e892d3fdc578964f22d07ccb1b31080206fad04fd088ba5750a248b547a43b1",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/Address.sol"
+    },
+    {
+      "original_path": "Context.sol",
+      "sha256": "b830150076b8b0f78bb3e4ac11f3c05a9215be7be576d704b9db0157147867a6",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/Context.sol"
+    },
+    {
+      "original_path": "DeficiencyToken.sol",
+      "sha256": "1a050d05e8939c578db4758473ef62d5555b86962c7ffbaa321a90651421f5e1",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/DeficiencyToken.sol"
+    },
+    {
+      "original_path": "I1Inch3.sol",
+      "sha256": "f12b08c1652e9bc8d63c9117082603055c83698cae6db25907f3af8838358434",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/I1Inch3.sol"
+    },
+    {
+      "original_path": "IDeficiencyToken.sol",
+      "sha256": "b7050b09c1954e00771a3bccd0517422d6ac7c5ab9403ce36481ae948cc6ad06",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/IDeficiencyToken.sol"
+    },
+    {
+      "original_path": "IERC20.sol",
+      "sha256": "aee34f81be60e4bc1803a46fd2587e316acc283de6c894a792100d6fc9d49908",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/IERC20.sol"
+    },
+    {
+      "original_path": "IERC20WithDecimals.sol",
+      "sha256": "48b2b1a0c990e123410370a0fcb39a3f143e7ccc9f859c84a8ebd19dff7d1ee0",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/IERC20WithDecimals.sol"
+    },
+    {
+      "original_path": "ILiquidator2.sol",
+      "sha256": "66253d43f403d18b7ffa872c85c982505dd1b4f28e4303b75314c9bf4acf1947",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ILiquidator2.sol"
+    },
+    {
+      "original_path": "ILoanFactory2.sol",
+      "sha256": "44c9ca54ed169823156bf7ab36b2b038624a4d7d4a0fb54d36841ad093ccfad3",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ILoanFactory2.sol"
+    },
+    {
+      "original_path": "ILoanToken2.sol",
+      "sha256": "9a16a2f02687459c1476369a655f8bb645e5da8b0561d84cf417024501c7bf6a",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ILoanToken2.sol"
+    },
+    {
+      "original_path": "ISAFU.sol",
+      "sha256": "b2cfaee8146348a9c2d54f5213e81e0d93fdc40f37590881ecccaafa5640da7c",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ISAFU.sol"
+    },
+    {
+      "original_path": "ITrueFiPool2.sol",
+      "sha256": "c3e43563376919761b933aa44af97bb043efaf6c77a834dbd5a90affcef52cd4",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ITrueFiPool2.sol"
+    },
+    {
+      "original_path": "ITrueFiPoolOracle.sol",
+      "sha256": "13959900c49a1bcffe72dc282b9ca54a0651d9f59e61bdae0a6eb4d4516fd902",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ITrueFiPoolOracle.sol"
+    },
+    {
+      "original_path": "ITrueLender2.sol",
+      "sha256": "4c5db1d8549857fe7a789f43dfe51b384040a01753fb45709f15c41f7c11da60",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/ITrueLender2.sol"
+    },
+    {
+      "original_path": "Initializable.sol",
+      "sha256": "1e8ab9027934eca2e99500b9abbe43b17a29f6f9257c9b28c2f205dcad93956d",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/Initializable.sol"
+    },
+    {
+      "original_path": "OneInchExchange.sol",
+      "sha256": "4214e300601ef5f11551f944cb991736dbf6618f1601778f26e592c1625360a9",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/OneInchExchange.sol"
+    },
+    {
+      "original_path": "SAFU.sol",
+      "sha256": "b18f48758c8d31cb4f5be578239b19329b0e2441f097c72e485ebd9e3e9e7046",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/SAFU.sol"
+    },
+    {
+      "original_path": "SafeERC20.sol",
+      "sha256": "112dad835b73a5457461e90286e6daed09e2d3fdd68d26ff35387e8135c8f073",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/SafeERC20.sol"
+    },
+    {
+      "original_path": "SafeMath.sol",
+      "sha256": "0a249139188b101375379d8f0dfbdf20f1be71126bfe29310d4c537b22292ff0",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/SafeMath.sol"
+    },
+    {
+      "original_path": "UpgradeableClaimable.sol",
+      "sha256": "31c539f059cceef01ea9a1cf01930f4ad7179c699157fcca601eb8f5781865cf",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/UpgradeableClaimable.sol"
+    },
+    {
+      "original_path": "UpgradeableERC20.sol",
+      "sha256": "77dc8a775b070e72656b52a21b3b1b22a7024c14157e20dd1250429b52d94925",
+      "stored_path": "contracts/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03/sources/UpgradeableERC20.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-04T17:17:46Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6732335",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xc83e731e0cab21ce5b0bbbe3252baefd0e11fc03?fields=all"
+}

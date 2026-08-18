@@ -1,0 +1,16 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.4.26+commit.4563c3fc",
+  "fullyQualifiedName": "CrossDelegate.sol:CrossDelegate",
+  "language": "Solidity",
+  "name": "CrossDelegate"
+}

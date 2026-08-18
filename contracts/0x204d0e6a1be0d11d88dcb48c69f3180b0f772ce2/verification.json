@@ -1,0 +1,102 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "15408065",
+    "deployer": "0xB504715f7240297F9771a8C1E75DFdB9cB481230",
+    "transactionHash": "0xc67766c3f41b40bdb98a232a171f71770abfcd2163dabe4f075e1b668ea1b865",
+    "transactionIndex": "42"
+  },
+  "implementation_address": "0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/runtime-bytecode.hex",
+    "sha256": "0844aee005703f50a8d789c4b6227e877a22d20a29fb58b04a6af7a3626cbb20",
+    "size_bytes": 23931,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "sha256": "aa73590d5265031c5bb64b5c0e7f84c44cf5f8539e6d8606b763adac784e8b2e",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@openzeppelin/contracts/security/ReentrancyGuard.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "sha256": "94f23e4af51a18c2269b355b8c7cf4db8003d075c9c541019eb8dcf4122864d5",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@openzeppelin/contracts/token/ERC20/IERC20.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+      "sha256": "3e7aa0e0f69eec8f097ad664d525e7b3f0a3fda8dcdd97de5433ddb131db86ef",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol",
+      "sha256": "fa36a21bd954262006d806b988e4495562e7b50420775e2aa0deecb596fd1902",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Address.sol",
+      "sha256": "1e0922f6c0bf6b1b8b4d480dcabb691b1359195a297bde6dc5172e79f3a1f826",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@openzeppelin/contracts/utils/Address.sol"
+    },
+    {
+      "original_path": "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol",
+      "sha256": "29c75e69ce173ff8b498584700fef76bc81498c1d98120e2877a1439f0c31b5a",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol"
+    },
+    {
+      "original_path": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol",
+      "sha256": "0439ffe0fd4a5e1f4e22d71ddbda76d63d61679947d158cba4ee0a1da60cf663",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol"
+    },
+    {
+      "original_path": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+      "sha256": "a2900701961cb0b6152fc073856b972564f7c798797a4a044e83d2ab8f0e8d38",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol"
+    },
+    {
+      "original_path": "contracts/Minter.sol",
+      "sha256": "5d6e24de4dc4c80fccf742b603137f353384d157f3f806400fd7c9b984c47a07",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/contracts/Minter.sol"
+    },
+    {
+      "original_path": "contracts/Ownable.sol",
+      "sha256": "e0d632b340a91ced1268027df3f8e4810bc242bfd8278b7c54b67eabbc1d7d48",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/contracts/Ownable.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IController.sol",
+      "sha256": "01307c4a9f997a46742950dde50ad02c63d64278bf4b21276c3a37e1b600b59b",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/contracts/interfaces/IController.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IEURB.sol",
+      "sha256": "11cdec89ee4327ab7de6e55dd3b23dc587ac01e1d8e245b9b935818ed3758d66",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/contracts/interfaces/IEURB.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IOracle.sol",
+      "sha256": "d4d509a0389aa7db0e5d6d79946a3739a708b2e5ee3ea9a98eec35ca5b0a1ab2",
+      "stored_path": "contracts/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2/sources/contracts/interfaces/IOracle.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-21T12:02:16Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "6492852",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x204d0e6a1be0d11d88dcb48c69f3180b0f772ce2?fields=all"
+}

@@ -1,0 +1,92 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "15972057",
+    "deployer": "0x796C1f28c777b8a5851D356EBbc9DeC2ee51137F",
+    "transactionHash": "0x5734156057b9a2db2846013256d6b6b96636b79f2fd7c500e40a9a4b4e963eec",
+    "transactionIndex": "37"
+  },
+  "implementation_address": "0x3883f75b2be639f9236ed230dd7202f31eaf38d5",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x3883f75b2be639f9236ed230dd7202f31eaf38d5?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/runtime-bytecode.hex",
+    "sha256": "95ffc79cd5015cc5c586f14057b7c2cb170fd7a4182cb69837a0934e5a1733c0",
+    "size_bytes": 6682,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts/GSN/Context.sol",
+      "sha256": "9a3d1e5be0f0ace13e2d9aa1d0a1c3a6574983983ad5de94fc412f878bf7fe89",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/@openzeppelin/contracts/GSN/Context.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/access/AccessControl.sol",
+      "sha256": "58b76eafe07688de306e807e4bdb2dcc857d43828ed271a2da9421e63f9fbc84",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/@openzeppelin/contracts/access/AccessControl.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Address.sol",
+      "sha256": "7a6f9acee77ad6aa4db616c473d507a5726698c3bd9005d6c54d8258c3cb6480",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/@openzeppelin/contracts/utils/Address.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/EnumerableSet.sol",
+      "sha256": "1c80db0a768faf951fc3d048078f808575cc400f5b0eea5defa657257dffe66d",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/@openzeppelin/contracts/utils/EnumerableSet.sol"
+    },
+    {
+      "original_path": "contracts/common/AccessRoleCommon.sol",
+      "sha256": "2a4463c54b774768443c2ea695048fb5633592a6a937d5ce2ab9be30efb5945f",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/common/AccessRoleCommon.sol"
+    },
+    {
+      "original_path": "contracts/common/AccessibleCommon.sol",
+      "sha256": "3af8636fc764e112e06e749c3eb008276afb458fd5bb9904e3223eb2e13eb5c6",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/common/AccessibleCommon.sol"
+    },
+    {
+      "original_path": "contracts/libraries/LibLockTOS.sol",
+      "sha256": "a7d6656af045acd3ff34fcaeba84af9e53223ea44fb9602a3ac65d560c910a9b",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/libraries/LibLockTOS.sol"
+    },
+    {
+      "original_path": "contracts/stake/LockTOSStorage.sol",
+      "sha256": "e15993849da0014e9ee5310f6fc716d9f08f61524461df9d8f8fb7cf5ee6ac50",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/stake/LockTOSStorage.sol"
+    },
+    {
+      "original_path": "contracts/stake/LockTOSv2Proxy.sol",
+      "sha256": "45810bd6468aeffe291d56568f304c57577d34c89eda0175872372881ea71e0c",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/stake/LockTOSv2Proxy.sol"
+    },
+    {
+      "original_path": "contracts/stake/LockTOSv2Storage.sol",
+      "sha256": "3cea2a3ad7698d86a112bc895acfcbac7865ba1a163ee7fa46ba48f6b11bd2b8",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/stake/LockTOSv2Storage.sol"
+    },
+    {
+      "original_path": "contracts/stake/ProxyBase.sol",
+      "sha256": "cd6114d1410cd18748197b7c43f2ffa2c74484a9d31b4f39cc669fb6c2f53821",
+      "stored_path": "contracts/0x3883f75b2be639f9236ed230dd7202f31eaf38d5/sources/contracts/stake/ProxyBase.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-21T19:59:08Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "6522043",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x3883f75b2be639f9236ed230dd7202f31eaf38d5?fields=all"
+}

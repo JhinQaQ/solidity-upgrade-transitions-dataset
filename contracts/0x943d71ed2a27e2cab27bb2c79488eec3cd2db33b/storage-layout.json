@@ -1,0 +1,295 @@
+{
+  "storage": [
+    {
+      "astId": 519,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 522,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 501,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 789,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 804,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "_status",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 848,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1435,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 10,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_address"
+    },
+    {
+      "astId": 122,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 3567,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "_delay",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 3570,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "routerInfo",
+      "offset": 0,
+      "slot": "252",
+      "type": "t_struct(RouterPermissionsInfo)4698_storage"
+    },
+    {
+      "astId": 2208,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "chainId",
+      "offset": 0,
+      "slot": "255",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2210,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "nonce",
+      "offset": 0,
+      "slot": "256",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2212,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "feePercent",
+      "offset": 0,
+      "slot": "257",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2215,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "wrapper",
+      "offset": 0,
+      "slot": "258",
+      "type": "t_contract(IWrapped)4109"
+    },
+    {
+      "astId": 2218,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "executor",
+      "offset": 0,
+      "slot": "259",
+      "type": "t_contract(IExecutor)3863"
+    },
+    {
+      "astId": 2222,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "swapRouters",
+      "offset": 0,
+      "slot": "260",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 2226,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "approvedAssets",
+      "offset": 0,
+      "slot": "261",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 2232,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "routerBalances",
+      "offset": 0,
+      "slot": "262",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 2236,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "processed",
+      "offset": 0,
+      "slot": "263",
+      "type": "t_mapping(t_bytes32,t_bool)"
+    },
+    {
+      "astId": 3552,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "264",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 3554,
+      "contract": "contracts/Fibswap.sol:Fibswap",
+      "label": "maxAllowSlippage",
+      "offset": 0,
+      "slot": "313",
+      "type": "t_uint256"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IExecutor)3863": {
+      "encoding": "inplace",
+      "label": "contract IExecutor",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IWrapped)4109": {
+      "encoding": "inplace",
+      "label": "contract IWrapped",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_address)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes32,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_struct(RouterPermissionsInfo)4698_storage": {
+      "encoding": "inplace",
+      "label": "struct RouterPermissionsInfo",
+      "members": [
+        {
+          "astId": 4689,
+          "contract": "contracts/Fibswap.sol:Fibswap",
+          "label": "approvedRouters",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 4693,
+          "contract": "contracts/Fibswap.sol:Fibswap",
+          "label": "routerRecipients",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_mapping(t_address,t_address)"
+        },
+        {
+          "astId": 4697,
+          "contract": "contracts/Fibswap.sol:Fibswap",
+          "label": "routerOwners",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_mapping(t_address,t_address)"
+        }
+      ],
+      "numberOfBytes": "96"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

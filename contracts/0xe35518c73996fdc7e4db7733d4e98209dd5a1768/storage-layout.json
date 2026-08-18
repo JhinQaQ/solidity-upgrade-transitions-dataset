@@ -1,0 +1,84 @@
+{
+  "storage": [
+    {
+      "astId": 216,
+      "contract": "Vesting.sol:Vesting",
+      "label": "token",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_contract(IERC20)77"
+    },
+    {
+      "astId": 218,
+      "contract": "Vesting.sol:Vesting",
+      "label": "totalTokens",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 220,
+      "contract": "Vesting.sol:Vesting",
+      "label": "releaseStart",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 222,
+      "contract": "Vesting.sol:Vesting",
+      "label": "releaseEnd",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 226,
+      "contract": "Vesting.sol:Vesting",
+      "label": "starts",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 230,
+      "contract": "Vesting.sol:Vesting",
+      "label": "grantedToken",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 234,
+      "contract": "Vesting.sol:Vesting",
+      "label": "released",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_mapping(t_address,t_uint256)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IERC20)77": {
+      "encoding": "inplace",
+      "label": "contract IERC20",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

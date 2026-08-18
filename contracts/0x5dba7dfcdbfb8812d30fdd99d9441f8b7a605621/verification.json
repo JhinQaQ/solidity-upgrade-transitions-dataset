@@ -1,0 +1,47 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "7641734",
+    "deployer": "0x4A164CA582D169f7caad471250991Dd861ddA981",
+    "transactionHash": "0x3b6a6821c83f9b4315301b71c6ee83b8118916ec4aa0071b1eabd3c76f1dd19b",
+    "transactionIndex": "0"
+  },
+  "implementation_address": "0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621/runtime-bytecode.hex",
+    "sha256": "c3c3e0bdb6f52cae35d2e69d4e0d042ab5d1fc55c045ad8c5f3b4732ea9a6fba",
+    "size_bytes": 14228,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "OKb.sol",
+      "sha256": "8b515f7f7a6cc3bb4c499f104b894bcd27335b07885be73d040749c67de92d4e",
+      "stored_path": "contracts/0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621/sources/OKb.sol"
+    },
+    {
+      "original_path": "SafeMath.sol",
+      "sha256": "49cba5e8c9434328265b435d41c995f3b82337178c66b831c4322690a8f22ddf",
+      "stored_path": "contracts/0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621/sources/SafeMath.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T15:17:57Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "2391400",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x5dba7dfcdbfb8812d30fdd99d9441f8b7a605621?fields=all"
+}

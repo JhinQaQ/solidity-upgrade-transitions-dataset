@@ -1,0 +1,97 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "16882481",
+    "deployer": "0x0BE1241468df7E9D3b74a84869DDf05c36fD7E50",
+    "transactionHash": "0x58006cee58c849071811990b447fcb114c02d09437eb75a07ee82036e4b59c81",
+    "transactionIndex": "58"
+  },
+  "implementation_address": "0xb2999240765ce4334400ab1d5ef24163c30fb35f",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xb2999240765ce4334400ab1d5ef24163c30fb35f?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/runtime-bytecode.hex",
+    "sha256": "2946bbe9e5c2d16ee6a272decedadac06bad07ca78f21457f94071fa3627ea57",
+    "size_bytes": 17551,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "/contracts/access/Operator.sol",
+      "sha256": "1bb52a9764e3814dae9e9d8fedf36fb5002a9c4e9f79e5da81484df37b45ce34",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/access/Operator.sol"
+    },
+    {
+      "original_path": "/contracts/access/Roles.sol",
+      "sha256": "5e3709579148adc782715c86e08e3056da4b623d30943bfe9e78ea2aa7de76e3",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/access/Roles.sol"
+    },
+    {
+      "original_path": "/contracts/interfaces/IComplianceRegistry.sol",
+      "sha256": "83be73b06513b0e8a1a9ae6516c70b26368884f2b7e15c3db6dc864034ad8498",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/interfaces/IComplianceRegistry.sol"
+    },
+    {
+      "original_path": "/contracts/interfaces/IERC20Detailed.sol",
+      "sha256": "2553a370e681da0d58b220fd32a73e2cbd689f1f9483be0cb3e27d827d318bc5",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/interfaces/IERC20Detailed.sol"
+    },
+    {
+      "original_path": "/contracts/interfaces/IGovernable.sol",
+      "sha256": "f636c525ec503ed12d7a88230f2f73a7527eced39872c085251f6bd5aa172405",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/interfaces/IGovernable.sol"
+    },
+    {
+      "original_path": "/contracts/interfaces/IPriceOracle.sol",
+      "sha256": "ead56759f3576d72302e0303f56e0774b52970655f1894ca050f57a25ecdf7f2",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/interfaces/IPriceOracle.sol"
+    },
+    {
+      "original_path": "/contracts/interfaces/IPriceable.sol",
+      "sha256": "485f9f25c34fe2cd3d0af032fd76d70af86e8c95edc70ed5ddb861c5d6922a70",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/interfaces/IPriceable.sol"
+    },
+    {
+      "original_path": "/contracts/operating/ComplianceRegistry.sol",
+      "sha256": "a9b22c258038f1b33d85a13a4311d524684857f2f68ee3cc8073dc932f5cede8",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/contracts/operating/ComplianceRegistry.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol",
+      "sha256": "76ebc21fed2a058ecf8aeb25d49571634f7fae3c58f6ba0ec78ec7653db0de69",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol",
+      "sha256": "b3f8bff91edd40a4c165517ff5792750c74c0947744a8d39056211e9576c203a",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol",
+      "sha256": "c68f02ede856eeb8259fad40dcb5c8d48774f5927e5d78ff06a38a8dd4ae5850",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol",
+      "sha256": "f070ae1b340396cf66f9283c49e0ef49eeec41319c809d2f1dfc113535e7e20c",
+      "stored_path": "contracts/0xb2999240765ce4334400ab1d5ef24163c30fb35f/sources/@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-04T12:57:09Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6703542",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xb2999240765ce4334400ab1d5ef24163c30fb35f?fields=all"
+}

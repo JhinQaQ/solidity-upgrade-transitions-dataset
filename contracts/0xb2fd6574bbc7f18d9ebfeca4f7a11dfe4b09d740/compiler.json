@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.5.17+commit.d19bba13",
+  "fullyQualifiedName": "DfTokenizedDeposit.sol:DfTokenizedDeposit",
+  "language": "Solidity",
+  "name": "DfTokenizedDeposit"
+}

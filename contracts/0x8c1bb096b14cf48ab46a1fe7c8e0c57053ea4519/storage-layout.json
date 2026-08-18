@@ -1,0 +1,333 @@
+{
+  "storage": [
+    {
+      "astId": 28,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_address"
+    },
+    {
+      "astId": 1218,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "_status",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1260,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "saleIDCounter",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1262,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "onlyInitOnce",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_bool"
+    },
+    {
+      "astId": 1300,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "whitelist",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 1304,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "flashSales",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_mapping(t_uint256,t_struct(FlashSale)1287_storage)"
+    },
+    {
+      "astId": 1310,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "flashSaleIDToPurchaseRecord",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_mapping(t_uint256,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 1314,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "auctions",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_mapping(t_uint256,t_struct(Auction)1296_storage)"
+    },
+    {
+      "astId": 1320,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "repetitionFilter",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))"
+    },
+    {
+      "astId": 1322,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "testServerAddress",
+      "offset": 0,
+      "slot": "9",
+      "type": "t_address"
+    },
+    {
+      "astId": 1324,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "serverAddress",
+      "offset": 0,
+      "slot": "10",
+      "type": "t_address"
+    },
+    {
+      "astId": 1328,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "serverHashMap",
+      "offset": 0,
+      "slot": "11",
+      "type": "t_mapping(t_bytes32,t_uint256)"
+    },
+    {
+      "astId": 1332,
+      "contract": "Sales721ForEth.sol:Sales721ForEth",
+      "label": "flashSaleOnProd",
+      "offset": 0,
+      "slot": "12",
+      "type": "t_mapping(t_uint256,t_bool)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)dyn_storage": {
+      "base": "t_uint256",
+      "encoding": "dynamic_array",
+      "label": "uint256[]",
+      "numberOfBytes": "32"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(uint256 => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_bool)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes32,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_uint256,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_uint256,t_struct(Auction)1296_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct Sales721ForEth.Auction)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Auction)1296_storage"
+    },
+    "t_mapping(t_uint256,t_struct(FlashSale)1287_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct Sales721ForEth.FlashSale)",
+      "numberOfBytes": "32",
+      "value": "t_struct(FlashSale)1287_storage"
+    },
+    "t_struct(Auction)1296_storage": {
+      "encoding": "inplace",
+      "label": "struct Sales721ForEth.Auction",
+      "members": [
+        {
+          "astId": 1289,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "base",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_struct(BaseSale)1282_storage"
+        },
+        {
+          "astId": 1291,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "minBidIncrement",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 1293,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "highestBidPrice",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 1295,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "highestBidder",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_address"
+        }
+      ],
+      "numberOfBytes": "384"
+    },
+    "t_struct(BaseSale)1282_storage": {
+      "encoding": "inplace",
+      "label": "struct Sales721ForEth.BaseSale",
+      "members": [
+        {
+          "astId": 1264,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "seller",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 1266,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "tokenAddresses",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 1269,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "tokenIDs",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_array(t_uint256)dyn_storage"
+        },
+        {
+          "astId": 1271,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "payTokenAddress",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_address"
+        },
+        {
+          "astId": 1273,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "price",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 1275,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "receiver",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_address"
+        },
+        {
+          "astId": 1277,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "startTime",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 1279,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "endTime",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 1281,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "isAvailable",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_bool"
+        }
+      ],
+      "numberOfBytes": "288"
+    },
+    "t_struct(FlashSale)1287_storage": {
+      "encoding": "inplace",
+      "label": "struct Sales721ForEth.FlashSale",
+      "members": [
+        {
+          "astId": 1284,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "base",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_struct(BaseSale)1282_storage"
+        },
+        {
+          "astId": 1286,
+          "contract": "Sales721ForEth.sol:Sales721ForEth",
+          "label": "purchaseLimitation",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "320"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

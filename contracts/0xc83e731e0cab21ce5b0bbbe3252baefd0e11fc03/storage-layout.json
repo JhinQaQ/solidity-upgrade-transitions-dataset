@@ -1,0 +1,146 @@
+{
+  "storage": [
+    {
+      "astId": 849,
+      "contract": "SAFU.sol:SAFU",
+      "label": "initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 852,
+      "contract": "SAFU.sol:SAFU",
+      "label": "initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 926,
+      "contract": "SAFU.sol:SAFU",
+      "label": "______gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2115,
+      "contract": "SAFU.sol:SAFU",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_address"
+    },
+    {
+      "astId": 2117,
+      "contract": "SAFU.sol:SAFU",
+      "label": "_pendingOwner",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_address"
+    },
+    {
+      "astId": 1223,
+      "contract": "SAFU.sol:SAFU",
+      "label": "loanFactory",
+      "offset": 0,
+      "slot": "53",
+      "type": "t_contract(ILoanFactory2)510"
+    },
+    {
+      "astId": 1225,
+      "contract": "SAFU.sol:SAFU",
+      "label": "liquidator",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_contract(ILiquidator2)489"
+    },
+    {
+      "astId": 1227,
+      "contract": "SAFU.sol:SAFU",
+      "label": "_1Inch",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_contract(I1Inch3)363"
+    },
+    {
+      "astId": 1232,
+      "contract": "SAFU.sol:SAFU",
+      "label": "deficiencyToken",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_mapping(t_contract(ILoanToken2)663,t_contract(IDeficiencyToken)389)"
+    },
+    {
+      "astId": 1237,
+      "contract": "SAFU.sol:SAFU",
+      "label": "poolDeficit",
+      "offset": 0,
+      "slot": "57",
+      "type": "t_mapping(t_address,t_uint256)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(I1Inch3)363": {
+      "encoding": "inplace",
+      "label": "contract I1Inch3",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IDeficiencyToken)389": {
+      "encoding": "inplace",
+      "label": "contract IDeficiencyToken",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ILiquidator2)489": {
+      "encoding": "inplace",
+      "label": "contract ILiquidator2",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ILoanFactory2)510": {
+      "encoding": "inplace",
+      "label": "contract ILoanFactory2",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ILoanToken2)663": {
+      "encoding": "inplace",
+      "label": "contract ILoanToken2",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_contract(ILoanToken2)663,t_contract(IDeficiencyToken)389)": {
+      "encoding": "mapping",
+      "key": "t_contract(ILoanToken2)663",
+      "label": "mapping(contract ILoanToken2 => contract IDeficiencyToken)",
+      "numberOfBytes": "32",
+      "value": "t_contract(IDeficiencyToken)389"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

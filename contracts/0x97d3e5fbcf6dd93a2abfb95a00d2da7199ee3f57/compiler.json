@@ -1,0 +1,14 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.11+commit.d7f03943",
+  "fullyQualifiedName": "src/QuantumSpaces.sol:QuantumSpaces",
+  "language": "Solidity",
+  "name": "QuantumSpaces"
+}

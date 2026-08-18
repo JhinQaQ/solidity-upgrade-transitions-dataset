@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "11113431",
+    "deployer": "0xBeEF483F3dbBa7FC428ebe37060e5b9561219E3d",
+    "transactionHash": "0xec8352441045d0740949554282a9a5eddbcab2c93f2f4b3b7534ce43af680e3a",
+    "transactionIndex": "105"
+  },
+  "implementation_address": "0x5a48866c0faa3947838bd945e85d550d94530ee7",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x5a48866c0faa3947838bd945e85d550d94530ee7?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x5a48866c0faa3947838bd945e85d550d94530ee7/runtime-bytecode.hex",
+    "sha256": "6417b8cfb297bd350f33cbffbaee9cc6bb3db506818d255ee5139a6c4064cc86",
+    "size_bytes": 3929,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "ShareholderVomer.sol",
+      "sha256": "39b61c48a688783914ad352d5d6b50f9771642004b5d5de98b029ff3308d1913",
+      "stored_path": "contracts/0x5a48866c0faa3947838bd945e85d550d94530ee7/sources/ShareholderVomer.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-22T07:24:54Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6563713",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x5a48866c0faa3947838bd945e85d550d94530ee7?fields=all"
+}

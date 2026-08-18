@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 20000
+    }
+  },
+  "compilerVersion": "0.6.10+commit.00c0fcaf",
+  "fullyQualifiedName": "SAFU.sol:SAFU",
+  "language": "Solidity",
+  "name": "SAFU"
+}

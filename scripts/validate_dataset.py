@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import zipfile
@@ -16,7 +17,11 @@ DATA = ROOT / "data"
 CSV_PATH = DATA / "upgrade_transactions_100.csv"
 JSON_PATH = DATA / "upgrade_transactions_100.json"
 METADATA_PATH = DATA / "metadata.json"
+SCHEMA_PATH = DATA / "schema.json"
 XLSX_PATH = DATA / "upgrade_transactions_100.xlsx"
+CONTRACTS = ROOT / "contracts"
+CONTRACT_INDEX_JSON = CONTRACTS / "index.json"
+CONTRACT_INDEX_CSV = CONTRACTS / "index.csv"
 
 ADDRESS = re.compile(r"^0x[0-9a-f]{40}$")
 HASH = re.compile(r"^0x[0-9a-f]{64}$")
@@ -37,6 +42,20 @@ def csv_string(value: object) -> str:
     if isinstance(value, bool):
         return "True" if value else "False"
     return str(value)
+
+
+def file_sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def validate_checksum_manifest(path: Path, base: Path) -> None:
+    for line_number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        digest, separator, relative = line.partition("  ")
+        require(bool(separator), f"{path}: malformed line {line_number}")
+        require(bool(HEX_64.fullmatch(digest)), f"{path}: bad digest on line {line_number}")
+        target = base / relative
+        require(target.is_file(), f"{path}: missing {relative}")
+        require(file_sha256(target) == digest, f"{path}: checksum mismatch for {relative}")
 
 
 def validate_xlsx_text_cells(first_row: dict[str, object]) -> None:
@@ -68,13 +87,70 @@ def main() -> int:
         json_rows = json.load(handle)
     with METADATA_PATH.open(encoding="utf-8") as handle:
         metadata = json.load(handle)
+    with SCHEMA_PATH.open(encoding="utf-8") as handle:
+        schema = json.load(handle)
+    with CONTRACT_INDEX_JSON.open(encoding="utf-8") as handle:
+        contract_rows = json.load(handle)
+    with CONTRACT_INDEX_CSV.open(newline="", encoding="utf-8") as handle:
+        contract_csv_rows = list(csv.DictReader(handle))
 
     require(len(csv_rows) == 100, "CSV must contain exactly 100 rows")
     require(len(json_rows) == 100, "JSON must contain exactly 100 rows")
+    expected_fields = set(schema["items"]["required"])
+    require(all(set(row) == expected_fields for row in json_rows), "JSON rows differ from schema fields")
     require(metadata["row_count"] == 100, "Metadata row_count must be 100")
     require(metadata["chain_id"] == 1, "Metadata chain_id must be 1")
     require(metadata["unique_proxy_count"] == 100, "Expected 100 unique proxies")
     require(metadata["unique_transaction_count"] == 100, "Expected 100 unique transactions")
+    require(metadata["unique_new_implementation_count"] == 85, "Expected 85 implementations")
+    artifacts_metadata = metadata["contract_artifacts"]
+    require(artifacts_metadata["runtime_bytecode_available_count"] == 85, "Expected 85 bytecodes")
+    require(artifacts_metadata["source_available_count"] == 48, "Expected 48 source sets")
+    require(artifacts_metadata["source_unavailable_count"] == 37, "Expected 37 unavailable sources")
+
+    require(len(contract_rows) == 85, "Contract index must contain 85 implementations")
+    require(len(contract_csv_rows) == 85, "Contract CSV index must contain 85 implementations")
+    contract_by_address: dict[str, dict[str, object]] = {}
+    for index, (csv_row, artifact) in enumerate(zip(contract_csv_rows, contract_rows), start=1):
+        require(set(csv_row) == set(artifact), f"Contract row {index}: CSV/JSON fields differ")
+        for field, value in artifact.items():
+            require(csv_row[field] == csv_string(value), f"Contract row {index}: {field} differs")
+        address = artifact["implementation_address"]
+        require(bool(ADDRESS.fullmatch(address)), f"Contract row {index}: invalid address")
+        require(address not in contract_by_address, f"Contract row {index}: duplicate address")
+        contract_by_address[address] = artifact
+
+        bytecode_path = ROOT / artifact["runtime_bytecode_path"]
+        require(bytecode_path.is_file(), f"Contract row {index}: missing runtime bytecode")
+        require(
+            file_sha256(bytecode_path) == artifact["runtime_bytecode_sha256"],
+            f"Contract row {index}: bytecode checksum mismatch",
+        )
+        bytecode = bytecode_path.read_text(encoding="ascii").strip()
+        require(bytecode.startswith("0x") and len(bytecode) > 2, f"Contract row {index}: empty bytecode")
+        require(
+            (len(bytecode) - 2) // 2 == artifact["runtime_bytecode_size_bytes"],
+            f"Contract row {index}: bytecode size mismatch",
+        )
+
+        verification_path = ROOT / artifact["verification_manifest_path"]
+        verification = json.loads(verification_path.read_text(encoding="utf-8"))
+        require(verification["implementation_address"] == address, f"Contract row {index}: bad manifest")
+        require(
+            len(verification["source_files"]) == artifact["source_file_count"],
+            f"Contract row {index}: source count mismatch",
+        )
+        if artifact["source_available"]:
+            require(artifact["source_provider"] in {"sourcify", "blockscout"}, f"Contract row {index}: bad provider")
+            require(artifact["source_file_count"] > 0, f"Contract row {index}: source missing")
+        else:
+            require(artifact["source_provider"] == "none", f"Contract row {index}: unavailable provider mismatch")
+            require(artifact["source_match"] == "unavailable", f"Contract row {index}: unavailable match mismatch")
+            require(artifact["source_file_count"] == 0, f"Contract row {index}: unexpected source")
+        for source in verification["source_files"]:
+            source_path = ROOT / source["stored_path"]
+            require(source_path.is_file(), f"Contract row {index}: source file missing")
+            require(file_sha256(source_path) == source["sha256"], f"Contract row {index}: source checksum mismatch")
 
     proxies: set[str] = set()
     transactions: set[str] = set()
@@ -124,9 +200,35 @@ def main() -> int:
         proxies.add(row["proxy_address"])
         transactions.add(row["upgrade_transaction_hash"])
         implementations.add(row["new_implementation_address"])
+        artifact = contract_by_address[row["new_implementation_address"]]
+        require(
+            row["new_implementation_artifact_dir"] == artifact["artifact_dir"],
+            f"Row {index}: artifact directory mismatch",
+        )
+        require(
+            row["new_implementation_runtime_bytecode_path"] == artifact["runtime_bytecode_path"],
+            f"Row {index}: bytecode path mismatch",
+        )
+        require(
+            row["new_implementation_runtime_bytecode_sha256"] == artifact["runtime_bytecode_sha256"],
+            f"Row {index}: bytecode checksum link mismatch",
+        )
+        require(
+            row["new_implementation_runtime_bytecode_size_bytes"] == artifact["runtime_bytecode_size_bytes"],
+            f"Row {index}: bytecode size link mismatch",
+        )
+        require(
+            row["new_implementation_source_available"] is artifact["source_available"],
+            f"Row {index}: source availability mismatch",
+        )
+        require(
+            row["new_implementation_source_provider"] == artifact["source_provider"],
+            f"Row {index}: source provider mismatch",
+        )
 
     require(len(proxies) == 100, "Proxy addresses are not unique")
     require(len(transactions) == 100, "Transaction hashes are not unique")
+    require(len(implementations) == 85, "Expected 85 unique implementations")
     require(
         json_rows == sorted(
             json_rows,
@@ -135,10 +237,13 @@ def main() -> int:
         "Rows are not in canonical block/transaction order",
     )
     validate_xlsx_text_cells(json_rows[0])
+    validate_checksum_manifest(CONTRACTS / "CHECKSUMS.sha256", CONTRACTS)
+    validate_checksum_manifest(ROOT / "CHECKSUMS.sha256", ROOT)
 
     print(
         "PASS: 100 rows; 100 unique proxies; "
-        f"{len(implementations)} unique new implementations; CSV/JSON/XLSX consistent"
+        f"{len(implementations)} unique new implementations; 85 bytecodes; "
+        "48 verified source sets; CSV/JSON/XLSX consistent"
     )
     return 0
 

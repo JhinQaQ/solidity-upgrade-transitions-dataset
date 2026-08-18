@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 999999
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.7.6+commit.7338295f",
+  "fullyQualifiedName": "LoopringAmmPool.sol:LoopringAmmPool",
+  "language": "Solidity",
+  "name": "LoopringAmmPool"
+}

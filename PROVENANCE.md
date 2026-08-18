@@ -37,6 +37,21 @@ Validation requires chain ID 1 and checks the transaction, receipt, block, and c
 
 The matching event emitter is recorded as `proxy_address`. The RPC hostname and validation timestamp are recorded in every row and in `data/metadata.json`.
 
+## New-implementation code artifacts
+
+For each of the 85 distinct new implementation addresses, `scripts/collect_contract_artifacts.py` calls `eth_getCode(address, "latest")` and stores the result in `contracts/<address>/runtime-bytecode.hex`. The artifact index records its byte length and SHA-256 digest.
+
+The collector then queries Sourcify's v2 contract endpoint. A successful match preserves the returned Solidity sources, ABI, compiler description, metadata, standard JSON input, and storage layout when those fields exist. If Sourcify has no source, the collector queries Blockscout's smart-contract endpoint as a fallback. Each implementation has a `verification.json` manifest recording the provider lookups, match classification, source paths and hashes, and collection time.
+
+Release coverage is:
+
+- runtime bytecode: 85/85 distinct new implementations;
+- Sourcify verified source: 47/85 (20 exact matches, 27 matches);
+- Blockscout partially verified source: 1/85; and
+- no verified human-readable source found through either service: 37/85.
+
+These services are evidence sources, not trusted correctness oracles. The stored match status and hashes let experiments choose their own admissibility policy.
+
 ## Trust boundary and limitations
 
 Receipt and block checks independently confirm the published mapping, but the public endpoint used for this release did not provide archive-state access. Therefore:
@@ -44,6 +59,8 @@ Receipt and block checks independently confirm the published mapping, but the pu
 - `new_implementation_code_size_bytes_latest` is a latest-state check, not historical code at the upgrade block;
 - no old implementation address is asserted;
 - no EIP-1967 storage transition is asserted;
-- source code, compiler settings, proxy family, and formal properties are not verified here.
+- verified source/build metadata is available for only 48 of 85 new implementations;
+- source/build artifacts are for new implementations, not complete old/new pairs;
+- proxy family and formal properties are not classified here.
 
-Treat these records as transaction → new-implementation mappings. A paper claiming historical old/new snapshot soundness should add archive-node validation and preserve the resulting state proofs or equivalent independently checkable evidence.
+Treat these records as transaction → new-implementation mappings with latest-state code artifacts. A paper claiming historical old/new snapshot soundness should add archive-node validation and preserve the resulting state proofs or equivalent independently checkable evidence.

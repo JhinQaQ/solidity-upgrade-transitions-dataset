@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.17+commit.8df45f5f",
+  "fullyQualifiedName": "contracts/2_Owner.sol:WAGMIClaimable",
+  "language": "Solidity",
+  "name": "WAGMIClaimable"
+}

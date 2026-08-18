@@ -1,0 +1,1754 @@
+{
+  "compiler": {
+    "version": "0.8.0+commit.c7dfd78e"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "share",
+            "type": "uint256"
+          }
+        ],
+        "name": "Donated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "oldGovernance",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newGovernance",
+            "type": "address"
+          }
+        ],
+        "name": "GovernanceUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "feeAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "Harvested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "paused",
+            "type": "bool"
+          }
+        ],
+        "name": "MintPausedUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "mintShare",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "mintAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "Minted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "oldPerformanceFee",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "newPerformanceFee",
+            "type": "uint256"
+          }
+        ],
+        "name": "PerformanceFeeUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "oldIndex",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "newIndex",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "totalUnderlying",
+            "type": "uint256"
+          }
+        ],
+        "name": "Rebased",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "oldFee",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "newFee",
+            "type": "uint256"
+          }
+        ],
+        "name": "RedeemFeeUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "redeemShare",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "redeemAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fee",
+            "type": "uint256"
+          }
+        ],
+        "name": "Redeemed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "strategist",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "allowed",
+            "type": "bool"
+          }
+        ],
+        "name": "StrategistUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "oldTreasury",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newTreasury",
+            "type": "address"
+          }
+        ],
+        "name": "TreasuryUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "oldShare",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "newShare",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "totalShares",
+            "type": "uint256"
+          }
+        ],
+        "name": "UserShareUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "BADGER",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "BADGER_RENCRV",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "BADGER_RENCRV_STAKING",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "BADGER_TREE",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "DIGG",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "DOMAIN_SEPARATOR",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MAX_PERCENT",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "PERCENT_MAX",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "PERMIT_TYPEHASH",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "RENCRV",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "REN_SWAP",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "UNISWAP",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "WAD",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "WBTC",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "WETH",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_destination",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_data",
+            "type": "bytes"
+          }
+        ],
+        "name": "addTransaction",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "converter",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "internalType": "uint8",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "subtractedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "decreaseAllowance",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "divest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "donate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "getMintAmount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRedeemAmount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "governance",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_tokens",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_cumulativeAmounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_cycle",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32[]",
+            "name": "_merkleProof",
+            "type": "bytes32[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_amountsToClaim",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "harvest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "harvest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "harvestable",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "addedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "increaseAllowance",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "index",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_token",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "_nameOverride",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_symbolOverride",
+            "type": "string"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_converter",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "invest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "investable",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "liquidityRatio",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "mintPaused",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "nonces",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "performanceFee",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "_v",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "_r",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "_s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "permit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "rebase",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "redeem",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "redeemFee",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeTransaction",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "salvage",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_token",
+            "type": "address"
+          }
+        ],
+        "name": "salvageToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_governance",
+            "type": "address"
+          }
+        ],
+        "name": "setGovernance",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "_paused",
+            "type": "bool"
+          }
+        ],
+        "name": "setMintPaused",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_performanceFee",
+            "type": "uint256"
+          }
+        ],
+        "name": "setPerformanceFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_redeemFee",
+            "type": "uint256"
+          }
+        ],
+        "name": "setRedeemFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_strategist",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "_allowed",
+            "type": "bool"
+          }
+        ],
+        "name": "setStrategist",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_treasury",
+            "type": "address"
+          }
+        ],
+        "name": "setTreasury",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "strategists",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "token",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalShares",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalUnderlying",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "transactionSize",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "transactions",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "enabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "address",
+            "name": "destination",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "treasury",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_index",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "_enabled",
+            "type": "bool"
+          }
+        ],
+        "name": "updateTransaction",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "userShare",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "details": "Single plus for Badger renCrv.",
+      "kind": "dev",
+      "methods": {
+        "addTransaction(address,bytes)": {
+          "details": "Add a new rebase hook.",
+          "params": {
+            "_data": "Transaction payload for the rebase hook.",
+            "_destination": "Destination contract for the reabase hook."
+          }
+        },
+        "allowance(address,address)": {
+          "details": "See {IERC20-allowance}."
+        },
+        "approve(address,uint256)": {
+          "details": "See {IERC20-approve}. Requirements: - `spender` cannot be the zero address."
+        },
+        "balanceOf(address)": {
+          "details": "Returns the balance of plus token for the account. See {IERC20Updateable-balanceOf}."
+        },
+        "decimals()": {
+          "details": "Returns the number of decimals used to get its user representation. For example, if `decimals` equals `2`, a balance of `505` tokens should be displayed to a user as `5,05` (`505 / 10 ** 2`). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless this function is overloaded; NOTE: This information is only used for _display_ purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}."
+        },
+        "decreaseAllowance(address,uint256)": {
+          "details": "Atomically decreases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address. - `spender` must have allowance for the caller of at least `subtractedValue`."
+        },
+        "divest()": {
+          "details": "Retrive the underlying assets from the investment. Only governance or strategist can call this function."
+        },
+        "donate(uint256)": {
+          "details": "Allows anyone to donate their plus asset to all other holders.",
+          "params": {
+            "_amount": "Amount of plus token to donate."
+          }
+        },
+        "getMintAmount(uint256)": {
+          "details": "Returns the amount of single plus tokens minted with the underlying token provided._amounts Amount of underlying token used to mint the single plus token."
+        },
+        "getRedeemAmount(uint256)": {
+          "details": "Returns the amount of tokens received in redeeming the single plus token.",
+          "params": {
+            "_amount": "Amounf of single plus to redeem."
+          },
+          "returns": {
+            "_0": "Amount of underlying token received as well as fee collected."
+          }
+        },
+        "harvest()": {
+          "details": "Harvest additional yield from the investment."
+        },
+        "harvest(address[],uint256[],uint256,uint256,bytes32[],uint256[])": {
+          "details": "Harvest additional yield from the investment. Only governance or strategist can call this function."
+        },
+        "harvestable()": {
+          "details": "Returns the amount of reward that could be harvested now. harvestable > 0 means it's time to call harvest."
+        },
+        "increaseAllowance(address,uint256)": {
+          "details": "Atomically increases the allowance granted to `spender` by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - `spender` cannot be the zero address."
+        },
+        "initialize(address)": {
+          "details": "Initializes brenCrv+."
+        },
+        "initialize(address,string,string)": {
+          "details": "Initializes the single plus contract.",
+          "params": {
+            "_nameOverride": "If empty, the single plus name will be `token_name Plus`",
+            "_symbolOverride": "If empty. the single plus name will be `token_symbol+`",
+            "_token": "Underlying token of the single plus."
+          }
+        },
+        "invest()": {
+          "details": "Invest the underlying assets for additional yield. Only governance or strategist can call this function."
+        },
+        "investable()": {
+          "details": "Returns the amount that can be invested now. The invested token does not have to be the underlying token. investable > 0 means it's time to call invest."
+        },
+        "liquidityRatio()": {
+          "details": "Returns the current liquidity ratio of the plus token in WAD."
+        },
+        "mint(uint256)": {
+          "details": "Mints the single plus token with the underlying token._amount Amount of the underlying token used to mint single plus token."
+        },
+        "name()": {
+          "details": "Returns the name of the token."
+        },
+        "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": {
+          "details": "Gassless approve."
+        },
+        "rebase()": {
+          "details": "Accrues interest to increase index."
+        },
+        "redeem(uint256)": {
+          "details": "Redeems the single plus token.",
+          "params": {
+            "_amount": "Amount of single plus token to redeem. -1 means redeeming all shares."
+          }
+        },
+        "removeTransaction(uint256)": {
+          "details": "Remove a rebase hook.",
+          "params": {
+            "_index": "Index of the transaction to remove."
+          }
+        },
+        "salvage()": {
+          "details": "Used to salvage any ETH deposited to BTC+ contract by mistake. Only strategist can salvage ETH. The salvaged ETH is transferred to treasury for futher operation."
+        },
+        "salvageToken(address)": {
+          "details": "Used to salvage any token deposited to plus contract by mistake. Only strategist can salvage token. The salvaged token is transferred to treasury for futhuer operation.",
+          "params": {
+            "_token": "Address of the token to salvage."
+          }
+        },
+        "setGovernance(address)": {
+          "details": "Updates governance. Only governance can update governance."
+        },
+        "setMintPaused(bool)": {
+          "details": "Updates the mint paused state of the underlying token.",
+          "params": {
+            "_paused": "Whether minting with that token is paused."
+          }
+        },
+        "setPerformanceFee(uint256)": {
+          "details": "Updates the performance fee. Only governance can update the performance fee."
+        },
+        "setRedeemFee(uint256)": {
+          "details": "Updates the redeem fee. Only governance can update redeem fee."
+        },
+        "setStrategist(address,bool)": {
+          "details": "Updates strategist. Both governance and strategists can update strategist."
+        },
+        "setTreasury(address)": {
+          "details": "Updates the treasury. Only governance can update treasury."
+        },
+        "symbol()": {
+          "details": "Returns the symbol of the token, usually a shorter version of the name."
+        },
+        "totalSupply()": {
+          "details": "Returns the total supply of plus token. See {IERC20Updateable-totalSupply}."
+        },
+        "totalUnderlying()": {
+          "details": "Returns the total value of the plus token in terms of the peg value. For single plus, it's equal to its total supply. For composite plus, it's equal to the total amount of single plus tokens in its basket."
+        },
+        "transactionSize()": {
+          "details": "Returns the number of rebase hook transactions."
+        },
+        "transfer(address,uint256)": {
+          "details": "See {IERC20-transfer}. Requirements: - `recipient` cannot be the zero address. - the caller must have a balance of at least `amount`."
+        },
+        "transferFrom(address,address,uint256)": {
+          "details": "See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. Requirements: - `sender` and `recipient` cannot be the zero address. - `sender` must have a balance of at least `amount`. - the caller must have allowance for ``sender``'s tokens of at least `amount`."
+        },
+        "updateTransaction(uint256,bool)": {
+          "details": "Updates an existing rebase hook transaction.",
+          "params": {
+            "_enabled": "True for enabled, false for disabled.",
+            "_index": "Index of transaction. Transaction ordering may have changed since adding."
+          }
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "/Users/shengdading/git/BTC-Plus/contracts/single/eth/BadgerRenCrv+.sol": "BadgerRenCrvPlus"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000
+    },
+    "remappings": []
+  },
+  "sources": {
+    "/Users/shengdading/git/BTC-Plus/contracts/Plus.sol": {
+      "keccak256": "0x9660442c0679b58d3f099b7a85d85c5a0e46ec52341313945292762c0e1aeee1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a262e238265c2f4e291f14212e841da288c8bb4f3a394c91ee4c0dcf4ea10229",
+        "dweb:/ipfs/QmXWtBpzRC1HDrpDfja2tTRDUL4aCBGA3Ha9UwfMHeREGU"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/SinglePlus.sol": {
+      "keccak256": "0x0283aa0eb89cff9767cff6b84b2dc9d0713cf8089832771327546e9c603fe7b2",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://54c617be06f3859a2673506e57b52d1c4e1dc64ce2045dd6ab490993b673c5ac",
+        "dweb:/ipfs/QmaBps5THoPdpmhpvdGFNBAhhV9jPmhURbKWUJQyVSfdi5"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/IConverter.sol": {
+      "keccak256": "0xb33a6f54031d8a26e0a3cfc36405b4fddf8ee8a76364bdc923bef92ecbb50772",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b199e560c60ab3039481ddbba43415e5e78143ec7f61a19a19d4276a7b18d0cd",
+        "dweb:/ipfs/Qmcsp2f49G8gH9oNVwhRNhG6k5d1s1NMf8XKWWA4pZ1mgP"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/IPlus.sol": {
+      "keccak256": "0x4a2f3a89234ca2635f2205a4865ab0047b3a8ef8b3602ecaca826de5de31c673",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ae163fc3ce346ab3d55d43584ebdbe3d28632ed4c8f390c3058535fa5462e4ed",
+        "dweb:/ipfs/QmYAMP2uc2vLbBSnq3SYmPXBUby96czbnUyRU7rKqKkoXu"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/ISinglePlus.sol": {
+      "keccak256": "0x5b315f276368337562b43e99e9dc2c0ae94bfb6e89afe46246480f33a0e2fab1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://7ff07a914189eebf8184ac46f9ce7d91d03045e8c32a43761f9557c11ab2df90",
+        "dweb:/ipfs/QmTR4qnT1bTU7JBQsQrJsjKYxw6ukCHtjCsYX4q8faNNbo"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerGeyser.sol": {
+      "keccak256": "0x609088f19407de26740ca8fdea4d519efbc521d2bf94a4523583c88a777f1bfe",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8f5db1204bc349b1c431e2aa725c585938ca189740af799bd54a4ceba382b518",
+        "dweb:/ipfs/QmYpyh1SGmeusd9RpaQqRKFtatKPArcT7ivZ6GkWpCJHbD"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerSett.sol": {
+      "keccak256": "0x269e8d07dd8fab9c8111460e9cac36490b3e545ee7fb50eb36d49f7a26f9f464",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://30624762072e0e9d70a3de63982ef0712fa903fcad3762ae01923c02b32ec5f9",
+        "dweb:/ipfs/Qme9i92JfkmPh8wNhVAqnvCiRNqiKexwmaVH7aY3py2uf9"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerTree.sol": {
+      "keccak256": "0x298441a420465b100f07ea211a054deecf0d9516843ef92abc8c80f9d68e75af",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0f4d87e0a401bc59d50a0e995dae47a4aca2f513ca623524ffc5d05153a6fc28",
+        "dweb:/ipfs/QmYrDeR4jzuarZ5kA8GhDnq7ScarEJP4rUX8YxUAqUzqtL"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/curve/ICurveFi.sol": {
+      "keccak256": "0xbbdb60c569a8a02961dffad6b22e8756f25a8cbafd5ff58e639ce2bb352c5702",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://30ab378127c9ffdafe9b6eb5856a72b3bcd74e9006355b0051a5b8e12151cb4a",
+        "dweb:/ipfs/QmcbrfSDUU2iqS9jf6yis4wskQ2Vf5z9X2Uwd9cfouu19F"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/interfaces/uniswap/IUniswapRouter.sol": {
+      "keccak256": "0xea63da57068652659b5e662285a79637aa40eb1a37e5eeda3451cba2629a0174",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://e7215805e5784dd49ae70e075823414908185b25ea7819125cee4c05348be333",
+        "dweb:/ipfs/QmWVrmzt474Ehn6UEFVeN8Svv4pSxETvMJVTUgCFkPUfCD"
+      ]
+    },
+    "/Users/shengdading/git/BTC-Plus/contracts/single/eth/BadgerRenCrv+.sol": {
+      "keccak256": "0x016e553c8952dadb4ef29514df9e17f48defe23d3b134915d29b37c597659b1b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://71e44edd4e16223d94470c4881d22fdf153284814024d50d4ac42fe8529bb3db",
+        "dweb:/ipfs/QmXtCkDh3zDPuxkXTHUTnK9ZFd8E1R53j5ojobLp2j1quZ"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "keccak256": "0x60aac6a853246704b017e55f9d3b456debfd0a7f49dd9a99e7113bed03ef0696",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://67add465d6dec3198061b5fb7ed4d8b0e1a26f0c0200115d338241ca74a693de",
+        "dweb:/ipfs/Qmerko5uM4L1jwJKK7yPiqTq1QTgd6cbNEy6ffmTLBj6MW"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol": {
+      "keccak256": "0x89fa60d14355f7ae06af11e28fce2bb90c5c6186645d681a30e1b36234a4c210",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6f05bc422cea1903d9ba10eece86d8bce72c2f1a225f174101b992b978534c2d",
+        "dweb:/ipfs/QmQzi5ZMexyRRfkyur7G2uHUmaQg4VfvCkUuxbSdqsXTSv"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol": {
+      "keccak256": "0x2f5ea7cdb9dfa192ca6aee45fda92edabc89ee373c33d783d18413ebecd8d79c",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f5decb68ac6264f3a0ee1c4e1f59fdfe11f4d49f05c5c271dfd52664b4e397f9",
+        "dweb:/ipfs/QmUKzH96sRkwHnT11zqUNgov1w4NnMCaumiTc4ixKgYA3R"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol": {
+      "keccak256": "0x8d4a0f2b5b760b5e2c19ed3c108d83897a4dfd5bfed97a93867918df19191e5e",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://7787f0e6d168740118ca2fc09a35e33644656f6998b124ab09a5fe790d5388f7",
+        "dweb:/ipfs/QmeRPExxvGzci1QVdGpvoRWynS6xyczVXYNVqHLoMQaaMU"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol": {
+      "keccak256": "0xc28d9f2ac7088d478d86ec6c0e1dadd48af1b2d0c1f6d497f9b652339e3002ec",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6d6d207eb0751beba40697f8145294a949cc6632426312600dee2cb1c9aaa0ad",
+        "dweb:/ipfs/QmPLgWdQtDKZgcNDhnzYDbuZQgYNQW5YyqHunDaA8ekQ5m"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+      "keccak256": "0x5642ae1d6b33c5c0b71a8412c6c64cbcf2468b84a002bee3e33cdb5644d25cdb",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://07ba474854eacf022fca2ab63af2b09653f476a9ef2d144ea3d022a0c0b92726",
+        "dweb:/ipfs/QmVNfrArMejFSrPMktAtDte64FJ2fGPQHqgSXDz2SH6dse"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x8e9eb503de1189f50c5f16fef327da310b11898d6b9ab3ca937df07c35233b9e",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9631a7abcad07067f268b6295668a287e205ea9a8dc0fca02c2bf4db6c39431d",
+        "dweb:/ipfs/QmUYFfB2AngTZLEsah4u8Z44riaB6yWkUXeasi1oG7ipfS"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol": {
+      "keccak256": "0x97ae7d1909acff532e532ac63455c5222dae87c2737aefdce3db9684fd8ab93f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ec9f97d23a6dc0ab9759dfdfe19e2a5fc99b314fbd04a79bf60146c533a1144e",
+        "dweb:/ipfs/QmPQwFgukwfaqmgK39o1a5MLPhZBvj4CtrnqM3Ef4LwdYX"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol": {
+      "keccak256": "0x1d84970ad956bd24b298d0876ff96e1e2125daead8a6791c5c7753e83123b724",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://70ce1561c46b66e51521813d10ba0c928ea185cc7ebd63a80a73e0f704f3fd77",
+        "dweb:/ipfs/QmXgsPb22AV46v1k6w8AR3mYavteY7zWGUB26LKLvY4jqM"
+      ]
+    }
+  },
+  "version": 1
+}

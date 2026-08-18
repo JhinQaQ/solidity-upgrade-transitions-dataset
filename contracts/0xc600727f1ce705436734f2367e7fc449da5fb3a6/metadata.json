@@ -1,0 +1,2107 @@
+{
+  "compiler": {
+    "version": "0.8.4+commit.c7e474f2"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "AddSync",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "previousAdminRole",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "newAdminRole",
+            "type": "bytes32"
+          }
+        ],
+        "name": "RoleAdminChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
+        ],
+        "name": "RoleGranted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
+        ],
+        "name": "RoleRevoked",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "snashotAggregatorId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Snapshot",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "SnapshotLayer2",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "SyncLayer2",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "SyncLayer2Address",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "SyncLayer2Batch",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "ADMIN_ROLE",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "DEFAULT_ADMIN_ROLE",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "REFACTOR_BOUNDARY",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "REFACTOR_DIVIDER",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_layers",
+            "type": "address[]"
+          }
+        ],
+        "name": "addLayer2s",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "addSync",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "v",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "refactoredCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_factor",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "refactorCount",
+            "type": "uint256"
+          }
+        ],
+        "name": "applyFactor",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snashotAggregatorId",
+            "type": "uint256"
+          }
+        ],
+        "name": "balanceOfAt",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "accountStaked",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snapshotId",
+            "type": "uint256"
+          }
+        ],
+        "name": "balanceOfAt",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "currentAccountBalanceSnapshots",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "refactoredCount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "remain",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct AutoRefactorCoinageI.Balance",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "currentFactorSnapshots",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "snapshotted",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snapShotFactor",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snapShotRefactorCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "curFactorValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "curFactor",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "curRefactorCount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "currentLayer2SnapshotId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "currentTotalSupplySnapshots",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "balance",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "refactoredCount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "remain",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct AutoRefactorCoinageI.Balance",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_layer",
+            "type": "address"
+          }
+        ],
+        "name": "delLayer2",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "existLayer2s",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "getAccountBalanceSnapsByIds",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "snapshotId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "getAccountBalanceSnapsBySnapshotId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "getBalanceOfInTokamak",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "accountAmount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "getCurrentLayer2SnapshotId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          }
+        ],
+        "name": "getLayer2BalanceOfInTokamak",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "balanceOfLayer2Amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "refactoredCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "remain",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "getLayer2TotalSupplyInTokamak",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "totalSupplyLayer2",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "refactoredCount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "remain",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getRoleAdmin",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getTotalStakedInTokamak",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "accountAmount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "grantRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "hasRole",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "lastSnapShotIndex",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "layer2Registry",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "layer2s",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "snashotAggregatorId",
+            "type": "uint256"
+          }
+        ],
+        "name": "layerSnapshotIds",
+        "outputs": [
+          {
+            "internalType": "address[]",
+            "name": "",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "migratedL2",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "needSyncs",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "pauseProxy",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "renounceRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "revokeRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "seigManager",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_seigManager",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_layer2Registry",
+            "type": "address"
+          }
+        ],
+        "name": "setAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "name_",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol_",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "decimals_",
+            "type": "uint256"
+          }
+        ],
+        "name": "setNameSymbolDecimals",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "snapshot",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "snapshot",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "snashotAggregatorTotal",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snashotAggregatorId",
+            "type": "uint256"
+          }
+        ],
+        "name": "stakedAmountWithSnashotAggregator",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "accountStaked",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStaked",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes4",
+            "name": "interfaceId",
+            "type": "bytes4"
+          }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "sync",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "sync",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "accounts",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "balances",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "refactoredCounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "remains",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[3]",
+            "name": "layerTotal",
+            "type": "uint256[3]"
+          },
+          {
+            "internalType": "uint256[2]",
+            "name": "layerFactor",
+            "type": "uint256[2]"
+          }
+        ],
+        "name": "syncBactchOffline",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "accounts",
+            "type": "address[]"
+          }
+        ],
+        "name": "syncBatch",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          }
+        ],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "layer2",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "snapshotId",
+            "type": "uint256"
+          }
+        ],
+        "name": "totalSupplyAt",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "snashotAggregatorId",
+            "type": "uint256"
+          }
+        ],
+        "name": "totalSupplyAt",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "totalStaked",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "addLayer2s(address[])": {
+          "params": {
+            "_layers": "layer2's addresses"
+          }
+        },
+        "addSync(address,address)": {
+          "params": {
+            "account": "an account",
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "uint256  account's length in needSyncs's layer2"
+          }
+        },
+        "applyFactor(uint256,uint256,uint256,uint256)": {
+          "params": {
+            "_factor": "_factor of AutoRefactorCoinage(coinage)",
+            "refactorCount": "refactorCount of AutoRefactorCoinage(coinage)",
+            "refactoredCount": "refactoredCounts of AutoRefactorCoinageI(coinage).balances(account);",
+            "v": "balances of AutoRefactorCoinageI(coinage).balances(account);"
+          },
+          "returns": {
+            "_0": "balance  balance"
+          }
+        },
+        "balanceOf(address)": {
+          "params": {
+            "account": "a account address"
+          },
+          "returns": {
+            "_0": "amount account's balance staked amount"
+          }
+        },
+        "balanceOf(address,address)": {
+          "params": {
+            "account": "a account address",
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "amount account's balance staked amount"
+          }
+        },
+        "balanceOfAt(address,address,uint256)": {
+          "params": {
+            "account": "a account address",
+            "layer2": "a layer2 address",
+            "snapshotId": "a snapshotId"
+          },
+          "returns": {
+            "_0": "amount account's balance staked amount"
+          }
+        },
+        "balanceOfAt(address,uint256)": {
+          "params": {
+            "account": "a account address",
+            "snashotAggregatorId": "a snashotAggregatorId"
+          },
+          "returns": {
+            "accountStaked": "amount account's balance staked amount"
+          }
+        },
+        "currentFactorSnapshots(address)": {
+          "params": {
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "curFactor": "a current Factor in tokamak",
+            "curFactorValue": "a current FactorValue in tokamak",
+            "curRefactorCount": "a current RefactorCount in tokamak",
+            "snapShotFactor": "factor in Snapshot",
+            "snapShotRefactorCount": "RefactorCount in Snapshot",
+            "snapshotted": "Whether a snapshot was taken"
+          }
+        },
+        "delLayer2(address)": {
+          "params": {
+            "_layer": "layer2's address"
+          }
+        },
+        "getAccountBalanceSnapsByIds(uint256,address,address)": {
+          "params": {
+            "account": "a account address",
+            "id": "id",
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "ids  snapshot's id",
+            "_1": "balances  snapshot's balance",
+            "_2": "refactoredCounts  snapshot's refactoredCount",
+            "_3": "remains  snapshot's remain"
+          }
+        },
+        "getAccountBalanceSnapsBySnapshotId(uint256,address,address)": {
+          "params": {
+            "account": "a account address",
+            "layer2": "a layer2 address",
+            "snapshotId": "snapshotId"
+          },
+          "returns": {
+            "_0": "ids  snapshot's id",
+            "_1": "balances  snapshot's balance",
+            "_2": "refactoredCounts  snapshot's refactoredCount",
+            "_3": "remains  snapshot's remain"
+          }
+        },
+        "getBalanceOfInTokamak(address)": {
+          "params": {
+            "account": "account"
+          },
+          "returns": {
+            "accountAmount": " user's staked balance"
+          }
+        },
+        "getCurrentLayer2SnapshotId(address)": {
+          "params": {
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "Layer2SnapshotId Layer2's SnapshotId"
+          }
+        },
+        "getLayer2BalanceOfInTokamak(address,address)": {
+          "params": {
+            "layer2": "a layer2 address",
+            "user": "account"
+          },
+          "returns": {
+            "balance": "a balance of layer2's account.balances",
+            "balanceOfLayer2Amount": "balanceOf of layer2's account",
+            "refactoredCount": "a refactoredCount of layer2's account.balances",
+            "remain": "a remain of layer2's account.balances"
+          }
+        },
+        "getLayer2TotalSupplyInTokamak(address)": {
+          "params": {
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "balance": "a balance of layer2.balances",
+            "refactoredCount": "a refactoredCount of layer2.balances",
+            "remain": "a remain of layer2.balances",
+            "totalSupplyLayer2": "totalSupply of layer2"
+          }
+        },
+        "getRoleAdmin(bytes32)": {
+          "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+        },
+        "getTotalStakedInTokamak()": {
+          "returns": {
+            "accountAmount": " total amount staked"
+          }
+        },
+        "grantRole(bytes32,address)": {
+          "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+        },
+        "hasRole(bytes32,address)": {
+          "details": "Returns `true` if `account` has been granted `role`."
+        },
+        "lastSnapShotIndex(address)": {
+          "params": {
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "SnapShotIndex  SnapShotIndex"
+          }
+        },
+        "layerSnapshotIds(uint256)": {
+          "params": {
+            "snashotAggregatorId": "a snashotAggregatorId"
+          },
+          "returns": {
+            "_0": "layer2's addresses",
+            "_1": "layer2's snashotIds"
+          }
+        },
+        "renounceRole(bytes32,address)": {
+          "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+        },
+        "revokeRole(bytes32,address)": {
+          "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+        },
+        "setAddress(address,address)": {
+          "params": {
+            "_layer2Registry": "a layer2Registry address",
+            "_seigManager": "a segManager address"
+          }
+        },
+        "setNameSymbolDecimals(string,string,uint256)": {
+          "params": {
+            "decimals_": "decimals",
+            "name_": "name",
+            "symbol_": "symbol"
+          }
+        },
+        "snapshot()": {
+          "returns": {
+            "_0": "snashotAggregatorId"
+          }
+        },
+        "snapshot(address)": {
+          "params": {
+            "layer2": "layer2's address"
+          },
+          "returns": {
+            "_0": "snashotId of layer2"
+          }
+        },
+        "stakedAmountWithSnashotAggregator(address,uint256)": {
+          "params": {
+            "account": "a account address"
+          },
+          "returns": {
+            "accountStaked": " account's staked amount",
+            "totalStaked": "  total staked amount"
+          }
+        },
+        "supportsInterface(bytes4)": {
+          "details": "See {IERC165-supportsInterface}."
+        },
+        "sync(address)": {
+          "params": {
+            "layer2": "layer2's address"
+          },
+          "returns": {
+            "_0": "snashotId of layer2"
+          }
+        },
+        "sync(address,address)": {
+          "params": {
+            "account": "account's address",
+            "layer2": "layer2's address"
+          },
+          "returns": {
+            "_0": "snashotId of layer2"
+          }
+        },
+        "syncBactchOffline(address,address[],uint256[],uint256[],uint256[],uint256[3],uint256[2])": {
+          "params": {
+            "accounts": "accounts's addresses",
+            "balances": "balances of AutoRefactorCoinageI(coinage).balances(account);",
+            "layer2": "layer2's addresses",
+            "layerFactor": "_factor, refactorCount of AutoRefactorCoinage(coinage)",
+            "layerTotal": "_totalSupply of AutoRefactorCoinage(coinage)",
+            "refactoredCounts": "refactoredCounts of AutoRefactorCoinageI(coinage).balances(account);",
+            "remains": "remains of AutoRefactorCoinageI(coinage).balances(account);"
+          },
+          "returns": {
+            "_0": "bool  true"
+          }
+        },
+        "syncBatch(address,address[])": {
+          "params": {
+            "accounts": "accounts's address",
+            "layer2": "layer2's address"
+          }
+        },
+        "totalSupply()": {
+          "returns": {
+            "_0": "total staked amount"
+          }
+        },
+        "totalSupply(address)": {
+          "params": {
+            "layer2": "a layer2 address"
+          },
+          "returns": {
+            "_0": "amount layer2's staked amount"
+          }
+        },
+        "totalSupplyAt(address,uint256)": {
+          "params": {
+            "layer2": "a layer2 address",
+            "snapshotId": "a snapshotId"
+          },
+          "returns": {
+            "_0": "layer2's staked amount"
+          }
+        },
+        "totalSupplyAt(uint256)": {
+          "params": {
+            "snashotAggregatorId": "snashotAggregatorId"
+          },
+          "returns": {
+            "totalStaked": "total staked amount"
+          }
+        }
+      },
+      "title": "A snapshot contract that records the amount of staked TON on the tokamak network.",
+      "version": 1
+    },
+    "userdoc": {
+      "events": {
+        "AddSync(address,address)": {
+          "notice": "This event is emitted when the PowerTONSwapper calls during staking and unstaking,         and you can know the Layer2 and account information that are saved for later syncs."
+        },
+        "Snapshot(uint256)": {
+          "notice": "This event is emitted when taking a snapshot. You can check the snashotAggregatorId."
+        },
+        "SnapshotLayer2(address,uint256)": {
+          "notice": "This event is emitted when taking a snapshot of a specific layer2,         You can check the snapshot ID of a specific layer2."
+        },
+        "SyncLayer2(address,uint256)": {
+          "notice": "This event is emitted when a specific layer2's staking information is synchronized and a snapshot is taken."
+        },
+        "SyncLayer2Address(address,address,uint256)": {
+          "notice": "This event is emitted when a specific layer2's and account's  staking information is synchronized and a snapshot is taken."
+        },
+        "SyncLayer2Batch(address,uint256)": {
+          "notice": "This event is emitted when synchronizes multiple accounts of a specific layer2, takes a snapshot."
+        }
+      },
+      "kind": "user",
+      "methods": {
+        "addLayer2s(address[])": {
+          "notice": "Managed Layer 2 addresses can be added by the administrator."
+        },
+        "addSync(address,address)": {
+          "notice": "This functions is called when the PowerTONSwapper calls during staking and unstaking,         and  Layer2 and account information are saved for later syncs. onlyRole(ADMIN_ROLE) can call it."
+        },
+        "applyFactor(uint256,uint256,uint256,uint256)": {
+          "notice": "You can calculate the balance with the saved snapshot information."
+        },
+        "balanceOf(address)": {
+          "notice": "account's balance staked amount"
+        },
+        "balanceOf(address,address)": {
+          "notice": "account's balance staked amount in current snapshot"
+        },
+        "balanceOfAt(address,address,uint256)": {
+          "notice": "account's balance staked amount in snapshotId"
+        },
+        "balanceOfAt(address,uint256)": {
+          "notice": "account's balance staked amount in snashotAggregatorId"
+        },
+        "currentFactorSnapshots(address)": {
+          "notice": "Returns factor in the current tokamak of layer2 and factor stored in the current snapshot."
+        },
+        "delLayer2(address)": {
+          "notice": "Managed Layer2 address can be deleted by the administrator."
+        },
+        "getAccountBalanceSnapsByIds(uint256,address,address)": {
+          "notice": "snapshot's information by snapshotIndex"
+        },
+        "getAccountBalanceSnapsBySnapshotId(uint256,address,address)": {
+          "notice": "snapshot's information by snapshotId"
+        },
+        "getBalanceOfInTokamak(address)": {
+          "notice": "balance amount staked in account of Tokamak"
+        },
+        "getCurrentLayer2SnapshotId(address)": {
+          "notice": "Current snapshotId of the layer2"
+        },
+        "getLayer2BalanceOfInTokamak(address,address)": {
+          "notice": "balance amount staked in Layer2's account of Tokamak"
+        },
+        "getLayer2TotalSupplyInTokamak(address)": {
+          "notice": "Total amount staked in Layer2 of Tokamak"
+        },
+        "getTotalStakedInTokamak()": {
+          "notice": "total amount staked in Tokamak"
+        },
+        "lastSnapShotIndex(address)": {
+          "notice": "last SnapShotIndex"
+        },
+        "layerSnapshotIds(uint256)": {
+          "notice": "return snapshot ids for all layer2."
+        },
+        "setAddress(address,address)": {
+          "notice": "Set the address of seigManager and layer2Registry."
+        },
+        "setNameSymbolDecimals(string,string,uint256)": {
+          "notice": "To support the basic interface of ERC20, set name, symbol, decimals."
+        },
+        "snapshot()": {
+          "notice": "Snapshot all layer2 staking information."
+        },
+        "snapshot(address)": {
+          "notice": "Snapshot the current staking information of a specific Layer2."
+        },
+        "stakedAmountWithSnashotAggregator(address,uint256)": {
+          "notice": "account's staked amount in snashotAggregatorId"
+        },
+        "sync(address)": {
+          "notice": "Synchronize the staking information of specific layer 2."
+        },
+        "sync(address,address)": {
+          "notice": "Synchronize the staking information of specific layer2's account."
+        },
+        "syncBactchOffline(address,address[],uint256[],uint256[],uint256[],uint256[3],uint256[2])": {
+          "notice": "This function is used to execute batch synchronization for the first time after contract deployment.          onlyRole(ADMIN_ROLE) can call it."
+        },
+        "syncBatch(address,address[])": {
+          "notice": "Synchronize the staking information of specific layer2's accounts."
+        },
+        "totalSupply()": {
+          "notice": "total staked amount in tokamak"
+        },
+        "totalSupply(address)": {
+          "notice": "layer2's staked amount in current snapshot"
+        },
+        "totalSupplyAt(address,uint256)": {
+          "notice": "layer2's staked amount in snapshotId"
+        },
+        "totalSupplyAt(uint256)": {
+          "notice": "total staked amount in snashotAggregatorId"
+        }
+      },
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "contracts/tokens/AutoCoinageSnapshot2.sol": "AutoCoinageSnapshot2"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    },
+    "remappings": []
+  },
+  "sources": {
+    "@openzeppelin/contracts/access/AccessControl.sol": {
+      "keccak256": "0xb9a137b317dc4806805f2259686186c0c053c32d80fe9c15ecdbf2eb1cf52849",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8910762bea89696c6dc68a63be98c6ddd597955f8a29418661cc99d0ce090663",
+        "dweb:/ipfs/Qmed14MXXFdNYE22bCuVy5XVAMKUo1DncY8BF8VkyrvXmh"
+      ]
+    },
+    "@openzeppelin/contracts/access/IAccessControl.sol": {
+      "keccak256": "0x59ce320a585d7e1f163cd70390a0ef2ff9cec832e2aa544293a00692465a7a57",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://bb2c137c343ef0c4c7ce7b18c1d108afdc9d315a04e48307288d2d05adcbde3a",
+        "dweb:/ipfs/QmUxhrAQM3MM3FF5j7AtcXLXguWCJBHJ14BRdVtuoQc8Fh"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Arrays.sol": {
+      "keccak256": "0xa7bc891be2bc5948340a8fb14ad36c8846230c9086269e37f3febf0dc239c9f7",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a002427adcb3b71f2c2ad8212fa789997d5662b0c7be941bc5c52b26b83433cc",
+        "dweb:/ipfs/QmR1EfpL9zQ3zT25kRZdjcjWBqaBhdSun5MLnJV1ZdzEn1"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Context.sol": {
+      "keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+        "dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Counters.sol": {
+      "keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+        "dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Strings.sol": {
+      "keccak256": "0x32c202bd28995dd20c4347b7c6467a6d3241c74c8ad3edcbb610cd9205916c45",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8179c356adb19e70d6b31a1eedc8c5c7f0c00e669e2540f4099e3844c6074d30",
+        "dweb:/ipfs/QmWFbivarEobbqhS1go64ootVuHfVohBseerYy9FTEd1W2"
+      ]
+    },
+    "@openzeppelin/contracts/utils/introspection/ERC165.sol": {
+      "keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
+        "dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
+      ]
+    },
+    "@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+        "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+      ]
+    },
+    "@openzeppelin/contracts/utils/math/Math.sol": {
+      "keccak256": "0xfaad496c1c944b6259b7dc70b4865eb1775d6402bc0c81b38a0b24d9f525ae37",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://2f60ddc4639589b1d7a87cd647561be4c71ddf9a9dcf55f38db75e24ef1f6c5b",
+        "dweb:/ipfs/QmTocvyQx3DPrzsFePtrhDGM6eYxUh3v8iBN3D59yoeuBt"
+      ]
+    },
+    "contracts/interfaces/IAutoCoinageSnapshot2.sol": {
+      "keccak256": "0xc1a30c979421364d0f7854829d10af375f8edf4239192c04825287e94933c2c3",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://52b7711c2b0443f34ce45385a9d1c44a1ab990ef740f7701f43f09a3a0272494",
+        "dweb:/ipfs/QmVV5jtiPXP16V3um4YDsG673HHXFShyBKzdVb4CgXXBNo"
+      ]
+    },
+    "contracts/libraries/DSMath.sol": {
+      "keccak256": "0x7cd1f333d8f4f78f31eb9cc719e0495dc956bf883cce9ffc7d1254b7c0318bf3",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://75af7d73a2115e457b928482eabed5acbbc56b1893827522037c41a1705d56e4",
+        "dweb:/ipfs/QmauC1GtCMSaFjdq8dUb5CnUoVynBF1N5Pw4i8goge1wRA"
+      ]
+    },
+    "contracts/libraries/SArrays.sol": {
+      "keccak256": "0xf688d36c5b184a35de3964c03636006f4df307b7324f09f3b494c75716087f89",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://073ad023150cf517c205ae6b463099800599a0e83a4aada68c1fc436310cd8d9",
+        "dweb:/ipfs/Qmc5Z4gspkt4LSvCuyVqDXmgtv7CU8VAHt9EFTEocreiMp"
+      ]
+    },
+    "contracts/powerton/AutoRefactorCoinageI.sol": {
+      "keccak256": "0xa4204fb3c1b8ac35a1d4f77c7b9b57937a18cb2e88795830d8ab543be31be0dc",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://5fc64a01f3be71844cfc87cc1ff779dc332796ffe16eae55183059177beadff8",
+        "dweb:/ipfs/QmW689jq89Tstyhhafcdz9QU7nM42kasp6uxkmztMMrbAo"
+      ]
+    },
+    "contracts/powerton/Layer2RegistryI.sol": {
+      "keccak256": "0x18ef8a4c4c70702d03d851138e2103856014a8d80dbc91eb85fdbf3d24a11d06",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a5cbc10ba50a808ef1db25662ebc83006f15656419c6d15d404f7caae119c493",
+        "dweb:/ipfs/QmdR3BeTYT8eTbVmRCAtvrRkrPdcrtaxBE269c3ssBJtqj"
+      ]
+    },
+    "contracts/powerton/SeigManagerI.sol": {
+      "keccak256": "0xf662fcf8b3dc56fdc97496dd6c34e7cc592ccc6bc80536793a5e3e121e4282b8",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0b78bacfb3f0c9c2bc98095f539af9c58fd6d10bfc1048ea220048a636cbb1ca",
+        "dweb:/ipfs/QmQrsZ9EJWGRCTh5JdXvhQHiEUVfFpUcunenTThnYpeMPN"
+      ]
+    },
+    "contracts/tokens/AutoCoinageSnapshot2.sol": {
+      "keccak256": "0x0c4f6a2b8170554d1952655044a531f97d181e416234064a7c77dbe5105adfe1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://575106ac631093148218f123b234be74557c6f1d0cec920b61a944c30ea8c525",
+        "dweb:/ipfs/QmR33wCVgnjhptNwcR3H5qsJ6jJ8nnighCuWFBpVFAS97H"
+      ]
+    },
+    "contracts/tokens/AutoCoinageSnapshotStorage2.sol": {
+      "keccak256": "0xaea858b70ca0c7854fadba2cb9beb628aa53997edf567ffe0026f6668fe038c8",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f21761adb0654244aed32a8cdce397bd2e92c91b25aa2e3a9e18575b334be43e",
+        "dweb:/ipfs/QmWTsGUtzTU9q7KmEf9eyqc279kwKYafxzTMBq1NE3vz3u"
+      ]
+    },
+    "hardhat/console.sol": {
+      "keccak256": "0x72b6a1d297cd3b033d7c2e4a7e7864934bb767db6453623f1c3082c6534547f4",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a8cb8681076e765c214e0d51cac989325f6b98e315eaae06ee0cbd5a9f084763",
+        "dweb:/ipfs/QmNWGHi4zmjxQTYN3NMGnJd49jBT5dE4bxTdWEaDuJrC6N"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Solidity Upgrade Transactions 100
 
-A research dataset of **100 Ethereum mainnet upgrade transactions mapped to their new implementation addresses**.
+A research dataset of **100 Ethereum mainnet upgrade transactions mapped to their new implementation addresses and linked code artifacts**.
 
 ## Dataset files
 
@@ -11,9 +11,13 @@ A research dataset of **100 Ethereum mainnet upgrade transactions mapped to thei
 | [`data/upgrade_transactions_100.xlsx`](data/upgrade_transactions_100.xlsx) | Filterable spreadsheet with a README sheet |
 | [`data/metadata.json`](data/metadata.json) | Selection, source, validation, and limitation metadata |
 | [`data/schema.json`](data/schema.json) | JSON Schema for the JSON release |
+| [`contracts/index.csv`](contracts/index.csv) | One row per distinct new implementation and its artifact paths |
+| [`contracts/index.json`](contracts/index.json) | Typed contract-artifact index |
+| [`contracts/<address>/`](contracts/) | Runtime bytecode, source, ABI, compiler, metadata, and storage-layout artifacts |
+| [`contracts/CHECKSUMS.sha256`](contracts/CHECKSUMS.sha256) | Integrity manifest for every contract artifact |
 | [`CHECKSUMS.sha256`](CHECKSUMS.sha256) | SHA-256 integrity checks for release files |
 
-The sample contains 87 `upgradeTo(address)` and 13 `upgradeToAndCall(address,bytes)` transactions, covering 100 distinct event-emitting proxies and 85 distinct new implementation addresses. Its block timestamps range from 2018-10-25 to 2023-06-05 UTC.
+The sample contains 87 `upgradeTo(address)` and 13 `upgradeToAndCall(address,bytes)` transactions, covering 100 distinct event-emitting proxies and 85 distinct new implementation addresses. Its block timestamps range from 2018-10-25 to 2023-06-05 UTC. Code artifacts are deduplicated by implementation address and linked from every mapping row.
 
 ## What each row confirms
 
@@ -33,6 +37,18 @@ upgrade_transaction_hash -> new_implementation_address
 
 `proxy_address` is the address that emitted the matching event. `upgrade_entrypoint_address` is the transaction target. They are retained separately even though they are equal in this 100-row sample.
 
+## Contract-code coverage
+
+All **85/85 distinct new implementations** include latest-state Ethereum runtime bytecode and its SHA-256 digest. Human-readable verified source/build artifacts are available for **48/85** implementations:
+
+- 47 from Sourcify: 20 exact matches and 27 matches;
+- 1 partially verified source set from Blockscout; and
+- 37 explicitly marked `source_provider=none` and `source_match=unavailable`.
+
+Each `contracts/<address>/` directory contains `runtime-bytecode.hex` and `verification.json`. When public verification data exists, the directory also contains `sources/`, `abi.json`, `compiler.json`, and—when supplied by the provider—`metadata.json`, `standard-json-input.json`, and `storage-layout.json`.
+
+Source availability is evidence metadata, not a correctness claim. Consult each `verification.json` for provider, match type, lookup URL, source-file hashes, and collection time.
+
 ## Selection protocol
 
 - Candidate source: USCDetector's published grouped upgrade-transaction artifact.
@@ -51,11 +67,11 @@ This is suitable for experiments that need known upgrade transaction → new imp
 It is **not yet** a complete incremental-verification benchmark. In particular, it does not provide:
 
 - a historically pinned old implementation for every row;
-- verified Solidity source for both versions;
+- complete verified Solidity source for every new implementation or either version of every transition;
 - formal properties, proof obligations, or expected verification outcomes;
 - Beacon, Diamond, metamorphic, or nonstandard upgrade mechanisms.
 
-For an old/new verification benchmark, add archive-state resolution at `blockNumber - 1` and `blockNumber`, pin source/compiler metadata for both implementations, and attach properties with checker-verifiable expected results.
+For an old/new verification benchmark, add archive-state resolution at `blockNumber - 1` and `blockNumber`, pin historical code/state and source/compiler metadata for both implementations, and attach properties with checker-verifiable expected results.
 
 ## Reproduce and validate
 
@@ -63,10 +79,12 @@ Requirements: Python 3 and an Ethereum mainnet JSON-RPC endpoint. The builder de
 
 ```bash
 python3 scripts/build_dataset.py
+python3 scripts/collect_contract_artifacts.py
+node scripts/build_spreadsheet.mjs
 python3 scripts/validate_dataset.py
 ```
 
-The selection is deterministic, but `validated_at_utc` and the latest-state bytecode-size field can change when regenerated later.
+The spreadsheet builder requires `@oai/artifact-tool`. The selection is deterministic, but collection timestamps, source-service coverage, and latest-state bytecode fields can change when regenerated later.
 
 ## Source citation
 

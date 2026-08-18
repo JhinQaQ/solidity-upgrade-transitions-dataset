@@ -1,0 +1,17 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "metadata": {
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 2000
+    }
+  },
+  "compilerVersion": "0.8.13+commit.abaa5c0e",
+  "fullyQualifiedName": "src/habibiz/Bibiz/BibizStakeUpgradeable.sol:BibizStakeUpgradeable",
+  "language": "Solidity",
+  "name": "BibizStakeUpgradeable"
+}

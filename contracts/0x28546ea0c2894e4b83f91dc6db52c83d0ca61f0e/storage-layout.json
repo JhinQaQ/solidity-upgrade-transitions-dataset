@@ -1,0 +1,558 @@
+{
+  "storage": [
+    {
+      "astId": 993,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 996,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 1305,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "_status",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1363,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2064,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 3847,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "_trustedForwarder",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 3955,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2343,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 184,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "_roles",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_mapping(t_bytes32,t_struct(RoleData)179_storage)"
+    },
+    {
+      "astId": 479,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 975,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1290,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "301",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 4320,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "nativeTokenWrapper",
+      "offset": 0,
+      "slot": "351",
+      "type": "t_address"
+    },
+    {
+      "astId": 4322,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "tokenWrapper",
+      "offset": 0,
+      "slot": "352",
+      "type": "t_address"
+    },
+    {
+      "astId": 4325,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "totalListings",
+      "offset": 0,
+      "slot": "353",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 4328,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "platformFeeRecipient",
+      "offset": 0,
+      "slot": "354",
+      "type": "t_address"
+    },
+    {
+      "astId": 4335,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "platformFeeBps",
+      "offset": 20,
+      "slot": "354",
+      "type": "t_uint64"
+    },
+    {
+      "astId": 4338,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "timeBuffer",
+      "offset": 0,
+      "slot": "355",
+      "type": "t_uint64"
+    },
+    {
+      "astId": 4341,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "bidBufferBps",
+      "offset": 8,
+      "slot": "355",
+      "type": "t_uint64"
+    },
+    {
+      "astId": 4346,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "allowedContracts",
+      "offset": 0,
+      "slot": "356",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 4352,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "listings",
+      "offset": 0,
+      "slot": "357",
+      "type": "t_mapping(t_uint256,t_struct(Listing)4106_storage)"
+    },
+    {
+      "astId": 4360,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "exsist",
+      "offset": 0,
+      "slot": "358",
+      "type": "t_mapping(t_address,t_mapping(t_uint256,t_struct(ExsistListing)4122_storage))"
+    },
+    {
+      "astId": 4368,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "offers",
+      "offset": 0,
+      "slot": "359",
+      "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(Offer)4055_storage))"
+    },
+    {
+      "astId": 4374,
+      "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+      "label": "winningBid",
+      "offset": 0,
+      "slot": "360",
+      "type": "t_mapping(t_uint256,t_struct(Offer)4055_storage)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_enum(ListingType)4042": {
+      "encoding": "inplace",
+      "label": "enum IMarketplace.ListingType",
+      "numberOfBytes": "1"
+    },
+    "t_enum(TokenType)4039": {
+      "encoding": "inplace",
+      "label": "enum IMarketplace.TokenType",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_uint256,t_struct(ExsistListing)4122_storage))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(uint256 => struct IMarketplace.ExsistListing))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_struct(ExsistListing)4122_storage)"
+    },
+    "t_mapping(t_address,t_struct(Offer)4055_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct IMarketplace.Offer)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Offer)4055_storage"
+    },
+    "t_mapping(t_bytes32,t_struct(RoleData)179_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(RoleData)179_storage"
+    },
+    "t_mapping(t_uint256,t_mapping(t_address,t_struct(Offer)4055_storage))": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => mapping(address => struct IMarketplace.Offer))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_struct(Offer)4055_storage)"
+    },
+    "t_mapping(t_uint256,t_struct(ExsistListing)4122_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct IMarketplace.ExsistListing)",
+      "numberOfBytes": "32",
+      "value": "t_struct(ExsistListing)4122_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Listing)4106_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct IMarketplace.Listing)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Listing)4106_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Offer)4055_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct IMarketplace.Offer)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Offer)4055_storage"
+    },
+    "t_struct(ExsistListing)4122_storage": {
+      "encoding": "inplace",
+      "label": "struct IMarketplace.ExsistListing",
+      "members": [
+        {
+          "astId": 4108,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "listingId",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4110,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "buyoutPricePerToken",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4112,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "reservePricePerToken",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4114,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "isExist",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_bool"
+        },
+        {
+          "astId": 4116,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "startTime",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4118,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "endTime",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4121,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "listingType",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_enum(ListingType)4042"
+        }
+      ],
+      "numberOfBytes": "224"
+    },
+    "t_struct(Listing)4106_storage": {
+      "encoding": "inplace",
+      "label": "struct IMarketplace.Listing",
+      "members": [
+        {
+          "astId": 4079,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "listingId",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4081,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "tokenHash",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 4083,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "tokenOwner",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_address"
+        },
+        {
+          "astId": 4085,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "assetContract",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_address"
+        },
+        {
+          "astId": 4087,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "tokenId",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4089,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "startTime",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4091,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "endTime",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4093,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "quantity",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4095,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "currency",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_address"
+        },
+        {
+          "astId": 4097,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "reservePricePerToken",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4099,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "buyoutPricePerToken",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4102,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "tokenType",
+          "offset": 0,
+          "slot": "11",
+          "type": "t_enum(TokenType)4039"
+        },
+        {
+          "astId": 4105,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "listingType",
+          "offset": 1,
+          "slot": "11",
+          "type": "t_enum(ListingType)4042"
+        }
+      ],
+      "numberOfBytes": "384"
+    },
+    "t_struct(Offer)4055_storage": {
+      "encoding": "inplace",
+      "label": "struct IMarketplace.Offer",
+      "members": [
+        {
+          "astId": 4044,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "listingId",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4046,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "offeror",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 4048,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "quantityWanted",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4050,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "currency",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_address"
+        },
+        {
+          "astId": 4052,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "pricePerToken",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 4054,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "expirationTimestamp",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "192"
+    },
+    "t_struct(RoleData)179_storage": {
+      "encoding": "inplace",
+      "label": "struct AccessControlUpgradeable.RoleData",
+      "members": [
+        {
+          "astId": 176,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "members",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 178,
+          "contract": "contracts/DAOMarketplace.sol:DaoMarketPlace",
+          "label": "adminRole",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

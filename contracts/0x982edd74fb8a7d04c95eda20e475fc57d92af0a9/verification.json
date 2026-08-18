@@ -1,0 +1,107 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "17238766",
+    "deployer": "0xB1c3e88Becf5461d7a36D6Ff4ED0F34050ef578b",
+    "transactionHash": "0x40e9ca7a631616c82c665adf7141229b678997ad2aa5afd767b81d89285d52ed",
+    "transactionIndex": "87"
+  },
+  "implementation_address": "0x982edd74fb8a7d04c95eda20e475fc57d92af0a9",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/runtime-bytecode.hex",
+    "sha256": "8b0b4bbdd579b5a93b69a0756e92adb822e572d04bf54dcfe818e42f329169e5",
+    "size_bytes": 14355,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "sha256": "da66c17044345dc892d85bd7ddc9745d25df0b3dacfba8f84eb87c60d6e40fe3",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "sha256": "98ce2984e449716f24043a8c11bbe969a6d34878b1d522b92c88d62708ba3376",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+      "sha256": "4e09a7479aa3e7c313f8fc141c4c8fc04e0abfeb8754615ef7d78ec94c298b07",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/draft-IERC20PermitUpgradeable.sol",
+      "sha256": "b97515a88e75c313eacf0a27c9439ef371d86d4c2730d3b13076640942f813df",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/token/ERC20/extensions/draft-IERC20PermitUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol",
+      "sha256": "45b47dd617d02875a7e6c896d1842ff9d8362ab15b8180645f3f4b180d4f028f",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "sha256": "1d7d481b79fd54d957c9a0696f6227f7799fec01d8ba41f5c130a7cc6b4eddc9",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "sha256": "5fb301961e45cb482fe4e05646d2f529aa449fe0e90c6671475d6a32356fa2d4",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+      "sha256": "4039686a509394aed475619c4e0b3a2df1df34fe59e90b9add8669de371eb731",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol"
+    },
+    {
+      "original_path": "contracts/MEMEKONG.sol",
+      "sha256": "cd815ea851d418268f89176b80c9920decca8f67f2fae4e794aae243e90ef68a",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/contracts/MEMEKONG.sol"
+    },
+    {
+      "original_path": "contracts/TokenEvents.sol",
+      "sha256": "03aad283e732fbe1e962918da85d14084dcf81f07f19042ced59977ab5498497",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/contracts/TokenEvents.sol"
+    },
+    {
+      "original_path": "uniswap-v2-contract/contracts/uniswap-v2-core/interfaces/IUniswapV2Factory.sol",
+      "sha256": "51d056199e3f5e41cb1a9f11ce581aa3e190cc982db5771ffeef8d8d1f962a0d",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/uniswap-v2-contract/contracts/uniswap-v2-core/interfaces/IUniswapV2Factory.sol"
+    },
+    {
+      "original_path": "uniswap-v2-contract/contracts/uniswap-v2-core/interfaces/IUniswapV2Pair.sol",
+      "sha256": "29c75e69ce173ff8b498584700fef76bc81498c1d98120e2877a1439f0c31b5a",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/uniswap-v2-contract/contracts/uniswap-v2-core/interfaces/IUniswapV2Pair.sol"
+    },
+    {
+      "original_path": "uniswap-v2-contract/contracts/uniswap-v2-periphery/interfaces/IUniswapV2Router01.sol",
+      "sha256": "0439ffe0fd4a5e1f4e22d71ddbda76d63d61679947d158cba4ee0a1da60cf663",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/uniswap-v2-contract/contracts/uniswap-v2-periphery/interfaces/IUniswapV2Router01.sol"
+    },
+    {
+      "original_path": "uniswap-v2-contract/contracts/uniswap-v2-periphery/interfaces/IUniswapV2Router02.sol",
+      "sha256": "a2900701961cb0b6152fc073856b972564f7c798797a4a044e83d2ab8f0e8d38",
+      "stored_path": "contracts/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9/sources/uniswap-v2-contract/contracts/uniswap-v2-periphery/interfaces/IUniswapV2Router02.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T14:27:22Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "2044462",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x982edd74fb8a7d04c95eda20e475fc57d92af0a9?fields=all"
+}

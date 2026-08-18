@@ -1,0 +1,20 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs",
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 1200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.13+commit.abaa5c0e",
+  "fullyQualifiedName": "src/ERC721Burnable.sol:ERC721Burnable",
+  "language": "Solidity",
+  "name": "ERC721Burnable"
+}

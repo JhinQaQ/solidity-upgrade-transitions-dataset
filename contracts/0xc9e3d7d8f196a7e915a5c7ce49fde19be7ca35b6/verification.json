@@ -1,0 +1,130 @@
+{
+  "blockscout_is_fully_verified": false,
+  "blockscout_is_partially_verified": true,
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "implementation_address": "0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6",
+  "provider_lookups": {
+    "blockscout": {
+      "status": 200,
+      "url": "https://eth.blockscout.com/api/v2/smart-contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6"
+    },
+    "sourcify": {
+      "status": 404,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/runtime-bytecode.hex",
+    "sha256": "41ed8a9d2036a678db3883fb04100b19b2af68678a738e9833677c593561b65e",
+    "size_bytes": 7813,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Bridge.sol",
+      "sha256": "81a59c4b9a102c17d967ef923d859bc411ad492f38fbde5e754ecf60196fa8cd",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/Bridge.sol"
+    },
+    {
+      "original_path": "AccessControlUpgradeable.sol",
+      "sha256": "c8d26ca5344183966bf91913589ec6820be5ea849ef5411a1a1e76bd6e60574e",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/AccessControlUpgradeable.sol"
+    },
+    {
+      "original_path": "AddressUpgradeable.sol",
+      "sha256": "44edc4d7099c781d11421cea2d82a52948e738f5f6191c8ad01dfc0f9858549c",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/AddressUpgradeable.sol"
+    },
+    {
+      "original_path": "ContextUpgradeable.sol",
+      "sha256": "ff99d95e150e64fee961979659ea37b0c39f0681ff5dc7fc0031d1a12d388fab",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/ContextUpgradeable.sol"
+    },
+    {
+      "original_path": "ERC165Upgradeable.sol",
+      "sha256": "c90606ab2fa8c5cbfc3496866c6e308073768d5cf65252a0ad9474d72d0be529",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/ERC165Upgradeable.sol"
+    },
+    {
+      "original_path": "ERC1967UpgradeUpgradeable.sol",
+      "sha256": "8c7414b53208b7b3bb9f6815f9d7b211241401af127f3ab5c0562c71704d32b1",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/ERC1967UpgradeUpgradeable.sol"
+    },
+    {
+      "original_path": "ERC721HolderUpgradeable.sol",
+      "sha256": "7b2079a7e5dc4209c23da1786b09f839c8bac94254c9f4c19299946fd6b561ad",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/ERC721HolderUpgradeable.sol"
+    },
+    {
+      "original_path": "IAccessControlUpgradeable.sol",
+      "sha256": "6d3fbd4566bc123db1ee6ba2a1b79544b572df9b9cc9be360ddb3244dd07c86b",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IAccessControlUpgradeable.sol"
+    },
+    {
+      "original_path": "IBeaconUpgradeable.sol",
+      "sha256": "e0ac7115916f0dce0a8e80769694736f3e674bdc5b2e5853964c82004b1e1cc5",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IBeaconUpgradeable.sol"
+    },
+    {
+      "original_path": "IBridge.sol",
+      "sha256": "dbb992c17900868c7f72e4a9fc200f823e5ff27555e3bc58eda8f649817faabc",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IBridge.sol"
+    },
+    {
+      "original_path": "IERC165Upgradeable.sol",
+      "sha256": "a39bc026ad6214e9ecd526bd4a1ddf9862d80bd4a9d0d031d9bafa4c3c147c0b",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IERC165Upgradeable.sol"
+    },
+    {
+      "original_path": "IERC721MetadataUpgradeable.sol",
+      "sha256": "0ee873b30f76643b7a092bbd2fb610950b3026c60a299c4ead1014e1d40f2236",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IERC721MetadataUpgradeable.sol"
+    },
+    {
+      "original_path": "IERC721ReceiverUpgradeable.sol",
+      "sha256": "ad8f8e470e39cde97310b6366c8d440aaa000789a7b8c257587fc2075de7cff6",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IERC721ReceiverUpgradeable.sol"
+    },
+    {
+      "original_path": "IERC721Upgradeable.sol",
+      "sha256": "c1d0baacd7c62da8eae71998410f9e0609006863d298e50466a56fe34a47ddf8",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/IERC721Upgradeable.sol"
+    },
+    {
+      "original_path": "ISimpleAssets.sol",
+      "sha256": "06b53febd573cc69d376a759bf7cdd4078bf13e332cfa30c1bc7a4cfc0f6a313",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/ISimpleAssets.sol"
+    },
+    {
+      "original_path": "Initializable.sol",
+      "sha256": "79fbd9fe6143a24a0842a4ab38d7f32808a5e3c546c5001bbfc651d3c89957cd",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/Initializable.sol"
+    },
+    {
+      "original_path": "StorageSlotUpgradeable.sol",
+      "sha256": "8253b7fb367ad6bdb028d020b73a063caf353d2f9f7f4d63d6ff0ceb65e73344",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/StorageSlotUpgradeable.sol"
+    },
+    {
+      "original_path": "StringsUpgradeable.sol",
+      "sha256": "16a0e36f8dc6a83df3fec4344a11ad166ba99649d1cc52613c7ebe8015bd81a3",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/StringsUpgradeable.sol"
+    },
+    {
+      "original_path": "UUPSUpgradeable.sol",
+      "sha256": "432f7e77afbe442b16a76a16d7bf13c17dd604985373771146bdfb6f55640398",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/UUPSUpgradeable.sol"
+    },
+    {
+      "original_path": "draft-IERC1822Upgradeable.sol",
+      "sha256": "a94576fd98585c07b2a9725f7c89c910a3a1909a03f49ec2df465327c6a0ffc3",
+      "stored_path": "contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6/sources/draft-IERC1822Upgradeable.sol"
+    }
+  ],
+  "source_match": "partial_match",
+  "source_provider": "blockscout",
+  "source_verified_at": "2024-02-06T12:14:53.638060Z",
+  "verification_url": "https://eth.blockscout.com/api/v2/smart-contracts/0xc9e3d7d8f196a7e915a5c7ce49fde19be7ca35b6"
+}

@@ -1,0 +1,16 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.4.24+commit.e67f0147",
+  "fullyQualifiedName": "OKb.sol:OKBImplementation",
+  "language": "Solidity",
+  "name": "OKBImplementation"
+}

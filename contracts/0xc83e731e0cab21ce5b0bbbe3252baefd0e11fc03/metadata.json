@@ -1,0 +1,617 @@
+{
+  "compiler": {
+    "version": "0.6.10+commit.00c0fcaf"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "repaid",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "contract IDeficiencyToken",
+            "name": "deficiencyToken",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "deficit",
+            "type": "uint256"
+          }
+        ],
+        "name": "Liquidated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "reclaimed",
+            "type": "uint256"
+          }
+        ],
+        "name": "Reclaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "burnedAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "redeemedAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "Redeemed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "srcToken",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "returnAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "dstToken",
+            "type": "address"
+          }
+        ],
+        "name": "Swapped",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "_1Inch",
+        "outputs": [
+          {
+            "internalType": "contract I1Inch3",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "claimOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract ILoanToken2",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "deficiencyToken",
+        "outputs": [
+          {
+            "internalType": "contract IDeficiencyToken",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract ILoanFactory2",
+            "name": "_loanFactory",
+            "type": "address"
+          },
+          {
+            "internalType": "contract ILiquidator2",
+            "name": "_liquidator",
+            "type": "address"
+          },
+          {
+            "internalType": "contract I1Inch3",
+            "name": "__1Inch",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "isInitialized",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          }
+        ],
+        "name": "liquidate",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "liquidator",
+        "outputs": [
+          {
+            "internalType": "contract ILiquidator2",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "loanFactory",
+        "outputs": [
+          {
+            "internalType": "contract ILoanFactory2",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "pendingOwner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "poolDeficit",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "reclaim",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract ILoanToken2",
+            "name": "loan",
+            "type": "address"
+          }
+        ],
+        "name": "redeem",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minReturnAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "swap",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract IERC20",
+            "name": "token",
+            "type": "address"
+          }
+        ],
+        "name": "tokenBalance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "claimOwnership()": {
+          "details": "Allows the pendingOwner address to finalize the transfer."
+        },
+        "isInitialized()": {
+          "details": "Return true if and only if the contract has been initialized",
+          "returns": {
+            "_0": "whether the contract has been initialized"
+          }
+        },
+        "liquidate(address)": {
+          "details": "Liquidates a defaulted Loan, withdraws a portion of tru from staking pool then tries to cover the loan with own funds, to compensate TrueFiPool If SAFU does not have enough funds, deficit is saved to be redeemed later",
+          "params": {
+            "loan": "Loan to be liquidated"
+          }
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "pendingOwner()": {
+          "details": "Returns the address of the pending owner."
+        },
+        "reclaim(address,uint256)": {
+          "details": "Reclaims deficit funds, after a loan is repaid and transfers them to the pool",
+          "params": {
+            "amount": "Amount of deficiency tokens to be reclaimed",
+            "loan": "Loan with a deficit to be reclaimed"
+          }
+        },
+        "redeem(address)": {
+          "details": "Redeems a loan for underlying repaid debt",
+          "params": {
+            "loan": "Loan token to be redeemed"
+          }
+        },
+        "swap(bytes,uint256)": {
+          "details": "Swap any asset owned by SAFU to any other asset, using 1inch protocol"
+        },
+        "tokenBalance(address)": {
+          "details": "Returns SAFU's balance of a specific token",
+          "params": {
+            "token": "A token which balance is to be returned"
+          }
+        },
+        "transferOwnership(address)": {
+          "details": "Allows the current owner to set the pendingOwner address.",
+          "params": {
+            "newOwner": "The address to transfer ownership to."
+          }
+        }
+      }
+    },
+    "userdoc": {
+      "methods": {}
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "SAFU.sol": "SAFU"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 20000
+    },
+    "remappings": []
+  },
+  "sources": {
+    "Address.sol": {
+      "keccak256": "0x42b040c5389fef91ea8637793e754d7c059a718275c9c12d6e21204b2a9b46e2",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d192b621b224665760aa1ac8e9ac75c576f1f0480c889001eadd9c56b742928d",
+        "dweb:/ipfs/QmfZbQkahUYPjhKXMLjKQmqcTN7hWR8GiHqNqXCy7t43Tv"
+      ]
+    },
+    "Context.sol": {
+      "keccak256": "0xb6232cf1921a36b072814b88b8508f2cf9890919fd9e678f1bdade789a0620cd",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://3e8724a72d8e6c11ebd6ccb727e01ee7fa68895ece92207c08dba57be21a8088",
+        "dweb:/ipfs/QmaVZaBFmxmid2FYb6ERk5kPoNUij8xqyErUxDwhTLSryW"
+      ]
+    },
+    "DeficiencyToken.sol": {
+      "keccak256": "0x35c052613e0f73cac3f6121f3dd4a610ace64d2c10d5e8f77cec1089153bc325",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://e4621574010eeda93d302ad251290631f2cdfbe2a8aa0155831f781373bed028",
+        "dweb:/ipfs/QmYAfD9Eqm3r9Tf39bm2fBuoYGtSmoBEtbTKSBjZ8KmVG5"
+      ]
+    },
+    "I1Inch3.sol": {
+      "keccak256": "0x18e6b5d63c2f9a51f0731447f1f4a4d5481ae7310b447a595cccb3ded09e507b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://1dac93c57e09dad448c6ba70fea4852e6ae44abe2fb5850220ab246f79fafd24",
+        "dweb:/ipfs/QmcFpDiCmkDmzTvuppWKn14ivbj22NgBjhkWBDFPi6764G"
+      ]
+    },
+    "IDeficiencyToken.sol": {
+      "keccak256": "0x5d08ade7ae56819816b1b97569bad218164b99328beab818f8386abb98649a68",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://fcaf97b70a284094230924013f191b40fee5aa26ecf302b6e437961ecff42f0b",
+        "dweb:/ipfs/QmSewmTLDtHpLdXuwCzLmagsC7PEza4w1WN7Pcue7RK67B"
+      ]
+    },
+    "IERC20.sol": {
+      "keccak256": "0x7521d73c0b2001a87ce17fdc3ff40191c0b7893b0c48a695011d615d8fda254f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a8e2574c57b1cd86bb792748ad24bc1d7d62cce413f18d029a0217456926b067",
+        "dweb:/ipfs/QmUuF5cqnokP3MAQtu4VKnewB8F5tycbvmAqbgEuQu7tTt"
+      ]
+    },
+    "IERC20WithDecimals.sol": {
+      "keccak256": "0xb493c16f45160e015eece6938d0b126a78720c922c2f34ee92d53151367643fb",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://1f233f90da65bf5d51d666cc98deba2685681b216929015f10343f1387138262",
+        "dweb:/ipfs/QmUCrHqdyvG9PLfcAeNFGsQyWrHxmk294gdN2UhKRTZW5f"
+      ]
+    },
+    "ILiquidator2.sol": {
+      "keccak256": "0xf429a7e9c786eff53472167deeabe8a9e4b93e28c2f2f12e6113e684c729ea35",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://40baf1643740dd82425c5d1e80e4fe242ade26f3446448a46f84f1cdded2b363",
+        "dweb:/ipfs/QmRXEdTPDxiKcHEXihHVWXwjquAS2U1eUgNjrWkLDuqqy9"
+      ]
+    },
+    "ILoanFactory2.sol": {
+      "keccak256": "0x3d899727d75937a2aebfebf67ebbe4239842e51558cb76d7cb3d5a4c0efbc57b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://7b2b7401229d77616c54e9a2e4558d46b23d14d7a0d58d485df0f4bcd77957b7",
+        "dweb:/ipfs/QmZBHzhAUdbVzvKgbt4Uot6Zujs3S9vW1eiAuhVRWMRZov"
+      ]
+    },
+    "ILoanToken2.sol": {
+      "keccak256": "0x501af1f115c20144c6cb8fa8b288c4e64192325d2b9c3d2f58cff85fb19e30bd",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6be786505a3cec3fcdae24d0866c3697076bdc02dc3e6835fda143e42e208f5",
+        "dweb:/ipfs/QmdZB53rM93abMtLLZ7g5pR2YmoQKtXShBoxbBy9AuyhNr"
+      ]
+    },
+    "ISAFU.sol": {
+      "keccak256": "0x9c4e61db2b889ada9c0674cad63f67bd448bc3638d7611762e1598dba2d30881",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://38d08e90a32b4e3ff49ee61896e78afa0aaacd4df25760b372011b8752361e45",
+        "dweb:/ipfs/QmTWh3AHcnYiuL3YYjpnK2EC1r2tscx18Hz4NN6y7sPYLT"
+      ]
+    },
+    "ITrueFiPool2.sol": {
+      "keccak256": "0xb330e89c29eae09d8b89b6cd65e4ddb818fdc2dccd1ed586ab9860529802437e",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://c805f593647d8938c201ca718906fe58265cfe61f1711d3676f4f9b1d46800ec",
+        "dweb:/ipfs/QmZEFfffnitkba21daGj4EPUqapziZhUfNoRgCVtPUW1to"
+      ]
+    },
+    "ITrueFiPoolOracle.sol": {
+      "keccak256": "0x399984c1a72bb78107ce1dad39e9aeaa09c24abba7335a6ea2b880a703c17e52",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4dfbad1ba7c72a80c4441da5996004d7542dbf4ce25b8a6ed1a74a332d1fb995",
+        "dweb:/ipfs/QmSnYco8XANeDK41VjSV19Wf3BKEwMB9XvJ2p5j89SX1rB"
+      ]
+    },
+    "ITrueLender2.sol": {
+      "keccak256": "0x684aebcd60b2163fc08ace6171ef66469ebc98677ba17ea302f506117fec2568",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://35f4dbbaabf6e84d115123c626757928a50e5261e62953f5bb0120960609d39e",
+        "dweb:/ipfs/QmdSPdfHiiticiVoh5gtEZAM87xsmbYCqoaV55PnYssqwd"
+      ]
+    },
+    "Initializable.sol": {
+      "keccak256": "0x9f68ec4b0a55d47e9611f8469e2b8468c95efdafe644926ae7f7796748daff15",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://69ddf0bf5b18e5ca8e4d27fd4d34d225a85c564337444fa6dd9a661563254544",
+        "dweb:/ipfs/QmQCV57j2dA16LpLfD4WqAEpxFvhVwNcNUZ5RwenJsRCLi"
+      ]
+    },
+    "OneInchExchange.sol": {
+      "keccak256": "0xaa1012d36e30652c5ebf48bdd8bd64e411fb74601c96a82d01453d0624318fb2",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8899f6297ee1345d7b09c3fcad6b4046b47fe1a61f0124554b242f389db9c839",
+        "dweb:/ipfs/QmVUZBuoj4V9Bvqwb6MYBooPWEi5C3Er2Fh7pRday9F3Bf"
+      ]
+    },
+    "SAFU.sol": {
+      "keccak256": "0x3769078c4439a21382e6bf13c42cb2513c2968c8702b3f936fd1fa8a6dfa05f4",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8e83663f996c62473ee48204663bcf9467930bb89397c43f134b3a74038f0f14",
+        "dweb:/ipfs/QmNbqd4mhApRCMoGJyVhgvZmRZTqus4kJDjAPvzCN2uXXH"
+      ]
+    },
+    "SafeERC20.sol": {
+      "keccak256": "0x3c1995940bd12951b82f98c4b67805101756f3ce57b0d8d13e3e26d978a65bbf",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://2df7030dc9c11da2c64732cc2c38590db12827044a31770a8fa83b4cda25a8ff",
+        "dweb:/ipfs/QmVgPpu6vhPMLYk4uFLKb3DBUqwNmktu2YxabDcvokjwc6"
+      ]
+    },
+    "SafeMath.sol": {
+      "keccak256": "0x2e1df665169560627c2a0dce65572e63de974bb41c759cdeed973cd570b4d7cf",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0785d9859de8fd9d90e10e085500fd9aceebd71bbb018f7959b5bd4de5759878",
+        "dweb:/ipfs/QmPC3ockcg49rizy1DJiBErQLsH4FR7W4KRfcoxEMFAgPS"
+      ]
+    },
+    "UpgradeableClaimable.sol": {
+      "keccak256": "0x80469258bd3e2282c9c5c21e23d510f44747223361396540ef711d12fd9d70d5",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f6f781444ef6b64d4f7d08582d85200de36faa6330db6190357b5639f7def6a6",
+        "dweb:/ipfs/QmRZFy8TR5gXCB9XTDgbnRSWiSrsdCGw5y1tJCYbxbzqBf"
+      ]
+    },
+    "UpgradeableERC20.sol": {
+      "keccak256": "0x07dfd3ffe4b36663217c9e7e60b129212f4bec19fefb8347df3f2163584db7f0",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://3c10ef621c40ff2c4cef7870af71e04b01bfbbecfa16afa8abc5647a9803a8ed",
+        "dweb:/ipfs/QmZUFX6W4gp6gnQUFp5dmDWxJAK1xaoE41mnd3RAwoQyuQ"
+      ]
+    }
+  },
+  "version": 1
+}

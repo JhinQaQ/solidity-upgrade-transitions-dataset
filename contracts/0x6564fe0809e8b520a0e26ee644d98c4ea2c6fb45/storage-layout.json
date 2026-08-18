@@ -1,0 +1,150 @@
+{
+  "storage": [
+    {
+      "astId": 416,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 419,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 1151,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1283,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 590,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 599,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_address"
+    },
+    {
+      "astId": 711,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "152",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1597,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "token",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_contract(IERC20Upgradeable)1361"
+    },
+    {
+      "astId": 1599,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "vaultController",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_address"
+    },
+    {
+      "astId": 1602,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "stakeController",
+      "offset": 0,
+      "slot": "203",
+      "type": "t_contract(IStaking)169"
+    },
+    {
+      "astId": 1606,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "204",
+      "type": "t_array(t_uint256)10_storage"
+    },
+    {
+      "astId": 1765,
+      "contract": "OperatorVault.sol:OperatorVault",
+      "label": "operator",
+      "offset": 0,
+      "slot": "214",
+      "type": "t_address"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)10_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[10]",
+      "numberOfBytes": "320"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(IERC20Upgradeable)1361": {
+      "encoding": "inplace",
+      "label": "contract IERC20Upgradeable",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IStaking)169": {
+      "encoding": "inplace",
+      "label": "contract IStaking",
+      "numberOfBytes": "20"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.15+commit.e14f2714",
+  "fullyQualifiedName": "OperatorVault.sol:OperatorVault",
+  "language": "Solidity",
+  "name": "OperatorVault"
+}

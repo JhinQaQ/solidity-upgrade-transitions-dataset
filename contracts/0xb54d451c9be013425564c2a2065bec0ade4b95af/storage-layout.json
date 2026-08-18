@@ -1,0 +1,167 @@
+{
+  "storage": [
+    {
+      "astId": 527,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 530,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 509,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 824,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1223,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 10,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_address"
+    },
+    {
+      "astId": 130,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "152",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 839,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "_status",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 897,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2124,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "nftCollection",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_contract(IERC721)1795"
+    },
+    {
+      "astId": 2128,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "shares",
+      "offset": 0,
+      "slot": "252",
+      "type": "t_mapping(t_uint256,t_uint256)"
+    },
+    {
+      "astId": 2132,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "cashbacks",
+      "offset": 0,
+      "slot": "253",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 2135,
+      "contract": "contracts/2_Owner.sol:WAGMIClaimable",
+      "label": "vipTokenIds",
+      "offset": 0,
+      "slot": "254",
+      "type": "t_array(t_uint256)dyn_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_array(t_uint256)dyn_storage": {
+      "base": "t_uint256",
+      "encoding": "dynamic_array",
+      "label": "uint256[]",
+      "numberOfBytes": "32"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(IERC721)1795": {
+      "encoding": "inplace",
+      "label": "contract IERC721",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

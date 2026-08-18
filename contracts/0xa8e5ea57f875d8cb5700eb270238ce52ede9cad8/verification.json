@@ -1,0 +1,62 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "13009639",
+    "deployer": "0x5F38A8Cf7147Ef29Cb18fE79B2405d1bc45e697C",
+    "transactionHash": "0xd98965c0fdc6a6e7daff1e5ae4ad50a4e7d76db3719fb48cd954c4cea94807db",
+    "transactionIndex": "117"
+  },
+  "implementation_address": "0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/runtime-bytecode.hex",
+    "sha256": "74c87970983c756d7f97c2e244d1d04fc3edfe350df90f9ca552cb5e3b1d21ba",
+    "size_bytes": 19047,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Ownable.sol",
+      "sha256": "b1bd440e045df59cf8d9fd2a0b42806a5fa1d2b233879527015617527116acbe",
+      "stored_path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/sources/Ownable.sol"
+    },
+    {
+      "original_path": "ReentrancyGuard.sol",
+      "sha256": "d655cb3bb8a83d2abf79715f35bc3c6e1e55a879214852a38258aff4d92aad9e",
+      "stored_path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/sources/ReentrancyGuard.sol"
+    },
+    {
+      "original_path": "SafeMath.sol",
+      "sha256": "66fef9eed1833f585b65e830475cbf7664bbdca9059cd9e6680ddc93f296c7c1",
+      "stored_path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/sources/SafeMath.sol"
+    },
+    {
+      "original_path": "StakingVault.sol",
+      "sha256": "24b8c0784649000cf3660d2a16078c1acd32490e56a8f08ca4e14a118e7d87c8",
+      "stored_path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/sources/StakingVault.sol"
+    },
+    {
+      "original_path": "TransferHelper.sol",
+      "sha256": "1f05455b69f5112df11a17fca2de09e519e9cbaf1993a4bddf07ac9da5683128",
+      "stored_path": "contracts/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8/sources/TransferHelper.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2026-01-22T22:08:40Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "14565057",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xa8e5ea57f875d8cb5700eb270238ce52ede9cad8?fields=all"
+}

@@ -1,0 +1,431 @@
+{
+  "storage": [
+    {
+      "astId": 2373,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 2376,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 2933,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2158,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_address"
+    },
+    {
+      "astId": 2278,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2549,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "_status",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2607,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2365,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 55,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "addressbook",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_contract(AddressBookWrapperInterface)1685"
+    },
+    {
+      "astId": 58,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "marginRequirements",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_contract(MarginRequirementsWrapperInterface)1795"
+    },
+    {
+      "astId": 61,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "controller",
+      "offset": 0,
+      "slot": "203",
+      "type": "t_contract(ControllerWrapperInterface)1718"
+    },
+    {
+      "astId": 64,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "oracle",
+      "offset": 0,
+      "slot": "204",
+      "type": "t_contract(OracleWrapperInterface)1915"
+    },
+    {
+      "astId": 67,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "whitelist",
+      "offset": 0,
+      "slot": "205",
+      "type": "t_contract(WhitelistWrapperInterface)2101"
+    },
+    {
+      "astId": 70,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "OTokenFactory",
+      "offset": 0,
+      "slot": "206",
+      "type": "t_contract(IOtokenFactoryWrapperInterface)1755"
+    },
+    {
+      "astId": 137,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "latestOrder",
+      "offset": 0,
+      "slot": "207",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 140,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "fillDeadline",
+      "offset": 0,
+      "slot": "208",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 143,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "beneficiary",
+      "offset": 0,
+      "slot": "209",
+      "type": "t_address"
+    },
+    {
+      "astId": 199,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "minMaxNotional",
+      "offset": 0,
+      "slot": "210",
+      "type": "t_mapping(t_address,t_struct(MinMaxNotional)193_storage)"
+    },
+    {
+      "astId": 205,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "orders",
+      "offset": 0,
+      "slot": "211",
+      "type": "t_mapping(t_uint256,t_struct(Order)175_storage)"
+    },
+    {
+      "astId": 211,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "orderStatus",
+      "offset": 0,
+      "slot": "212",
+      "type": "t_mapping(t_uint256,t_enum(OrderStatus)150)"
+    },
+    {
+      "astId": 216,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "isWhitelistedMarketMaker",
+      "offset": 0,
+      "slot": "213",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 221,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "fee",
+      "offset": 0,
+      "slot": "214",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 227,
+      "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+      "label": "ordersByAcct",
+      "offset": 0,
+      "slot": "215",
+      "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_array(t_uint256)dyn_storage": {
+      "base": "t_uint256",
+      "encoding": "dynamic_array",
+      "label": "uint256[]",
+      "numberOfBytes": "32"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(AddressBookWrapperInterface)1685": {
+      "encoding": "inplace",
+      "label": "contract AddressBookWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_contract(ControllerWrapperInterface)1718": {
+      "encoding": "inplace",
+      "label": "contract ControllerWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IOtokenFactoryWrapperInterface)1755": {
+      "encoding": "inplace",
+      "label": "contract IOtokenFactoryWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_contract(MarginRequirementsWrapperInterface)1795": {
+      "encoding": "inplace",
+      "label": "contract MarginRequirementsWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_contract(OracleWrapperInterface)1915": {
+      "encoding": "inplace",
+      "label": "contract OracleWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_contract(WhitelistWrapperInterface)2101": {
+      "encoding": "inplace",
+      "label": "contract WhitelistWrapperInterface",
+      "numberOfBytes": "20"
+    },
+    "t_enum(OrderStatus)150": {
+      "encoding": "inplace",
+      "label": "enum OTCWrapper.OrderStatus",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256[])",
+      "numberOfBytes": "32",
+      "value": "t_array(t_uint256)dyn_storage"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_struct(MinMaxNotional)193_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct OTCWrapper.MinMaxNotional)",
+      "numberOfBytes": "32",
+      "value": "t_struct(MinMaxNotional)193_storage"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_enum(OrderStatus)150)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => enum OTCWrapper.OrderStatus)",
+      "numberOfBytes": "32",
+      "value": "t_enum(OrderStatus)150"
+    },
+    "t_mapping(t_uint256,t_struct(Order)175_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct OTCWrapper.Order)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Order)175_storage"
+    },
+    "t_struct(MinMaxNotional)193_storage": {
+      "encoding": "inplace",
+      "label": "struct OTCWrapper.MinMaxNotional",
+      "members": [
+        {
+          "astId": 190,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "min",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 192,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "max",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(Order)175_storage": {
+      "encoding": "inplace",
+      "label": "struct OTCWrapper.Order",
+      "members": [
+        {
+          "astId": 152,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "underlying",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 154,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "collateral",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 156,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "isPut",
+          "offset": 20,
+          "slot": "1",
+          "type": "t_bool"
+        },
+        {
+          "astId": 158,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "strikePrice",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 160,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "expiry",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 162,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "premium",
+          "offset": 0,
+          "slot": "4",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 164,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "notional",
+          "offset": 0,
+          "slot": "5",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 166,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "buyer",
+          "offset": 0,
+          "slot": "6",
+          "type": "t_address"
+        },
+        {
+          "astId": 168,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "seller",
+          "offset": 0,
+          "slot": "7",
+          "type": "t_address"
+        },
+        {
+          "astId": 170,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "vaultID",
+          "offset": 0,
+          "slot": "8",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 172,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "oToken",
+          "offset": 0,
+          "slot": "9",
+          "type": "t_address"
+        },
+        {
+          "astId": 174,
+          "contract": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+          "label": "openedAt",
+          "offset": 0,
+          "slot": "10",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "352"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

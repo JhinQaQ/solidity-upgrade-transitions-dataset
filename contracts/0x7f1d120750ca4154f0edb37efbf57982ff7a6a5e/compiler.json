@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.6.12+commit.27d51765",
+  "fullyQualifiedName": "OptionFactory.sol:OptionFactory",
+  "language": "Solidity",
+  "name": "OptionFactory"
+}

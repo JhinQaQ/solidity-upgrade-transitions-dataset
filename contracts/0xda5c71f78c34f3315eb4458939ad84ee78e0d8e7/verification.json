@@ -1,0 +1,26 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "implementation_address": "0xda5c71f78c34f3315eb4458939ad84ee78e0d8e7",
+  "provider_lookups": {
+    "blockscout": {
+      "status": 200,
+      "url": "https://eth.blockscout.com/api/v2/smart-contracts/0xda5c71f78c34f3315eb4458939ad84ee78e0d8e7"
+    },
+    "sourcify": {
+      "status": 404,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xda5c71f78c34f3315eb4458939ad84ee78e0d8e7?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xda5c71f78c34f3315eb4458939ad84ee78e0d8e7/runtime-bytecode.hex",
+    "sha256": "e8358bce56a22dc4d4ffc169f295181d701a9b3e05254b694b79bd3a081802c9",
+    "size_bytes": 8309,
+    "state": "latest"
+  },
+  "source_available": false,
+  "source_files": [],
+  "source_match": "unavailable",
+  "source_provider": "none",
+  "verification_url": ""
+}

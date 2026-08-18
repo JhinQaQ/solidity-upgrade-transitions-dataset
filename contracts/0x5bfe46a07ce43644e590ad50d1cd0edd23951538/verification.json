@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "10057477",
+    "deployer": "0xEea1027f6336a826D435A93E188667dAdd8b6121",
+    "transactionHash": "0x8d5c15adb9b591da70208488c69f26e3267301016a63ee41bb85921e1862c9f6",
+    "transactionIndex": "2"
+  },
+  "implementation_address": "0x5bfe46a07ce43644e590ad50d1cd0edd23951538",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x5bfe46a07ce43644e590ad50d1cd0edd23951538?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x5bfe46a07ce43644e590ad50d1cd0edd23951538/runtime-bytecode.hex",
+    "sha256": "d81a72901cdf4043a17ed8a5d5d43e6ae97083c6839e088bf7a8e3853ca94d9c",
+    "size_bytes": 16193,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "EdgeTokenConstructorUpgrade.sol",
+      "sha256": "e7e760fb30f0142ef0370612aac4dbe971bfb20b785bfb38a7e6e1d5e51c1b4b",
+      "stored_path": "contracts/0x5bfe46a07ce43644e590ad50d1cd0edd23951538/sources/EdgeTokenConstructorUpgrade.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-22T07:57:13Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6565928",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x5bfe46a07ce43644e590ad50d1cd0edd23951538?fields=all"
+}

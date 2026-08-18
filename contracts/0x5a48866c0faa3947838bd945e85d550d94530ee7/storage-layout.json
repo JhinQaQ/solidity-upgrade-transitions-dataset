@@ -1,0 +1,204 @@
+{
+  "storage": [
+    {
+      "astId": 3,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 5,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 67,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "______gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 321,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "owner",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_address_payable"
+    },
+    {
+      "astId": 323,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "newOwnerCandidate",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_address_payable"
+    },
+    {
+      "astId": 325,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "support1",
+      "offset": 0,
+      "slot": "53",
+      "type": "t_address_payable"
+    },
+    {
+      "astId": 327,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "support2",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_address_payable"
+    },
+    {
+      "astId": 340,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "totalUsers",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 344,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "investors",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_mapping(t_address,t_struct(InvestorData)338_storage)"
+    },
+    {
+      "astId": 346,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "rateIn",
+      "offset": 0,
+      "slot": "57",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 348,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "rateOut",
+      "offset": 0,
+      "slot": "58",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 352,
+      "contract": "ShareholderVomer.sol:ShareholderVomer",
+      "label": "refList",
+      "offset": 0,
+      "slot": "59",
+      "type": "t_mapping(t_address,t_address)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_address_payable": {
+      "encoding": "inplace",
+      "label": "address payable",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_address)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_address,t_struct(InvestorData)338_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct ShareholderVomer.InvestorData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(InvestorData)338_storage"
+    },
+    "t_struct(InvestorData)338_storage": {
+      "encoding": "inplace",
+      "label": "struct ShareholderVomer.InvestorData",
+      "members": [
+        {
+          "astId": 329,
+          "contract": "ShareholderVomer.sol:ShareholderVomer",
+          "label": "fundsVMR",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint128"
+        },
+        {
+          "astId": 331,
+          "contract": "ShareholderVomer.sol:ShareholderVomer",
+          "label": "totalProfit",
+          "offset": 16,
+          "slot": "0",
+          "type": "t_uint128"
+        },
+        {
+          "astId": 333,
+          "contract": "ShareholderVomer.sol:ShareholderVomer",
+          "label": "pendingReward",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint128"
+        },
+        {
+          "astId": 335,
+          "contract": "ShareholderVomer.sol:ShareholderVomer",
+          "label": "lastDatetime",
+          "offset": 16,
+          "slot": "1",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 337,
+          "contract": "ShareholderVomer.sol:ShareholderVomer",
+          "label": "percent",
+          "offset": 24,
+          "slot": "1",
+          "type": "t_uint8"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint128": {
+      "encoding": "inplace",
+      "label": "uint128",
+      "numberOfBytes": "16"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

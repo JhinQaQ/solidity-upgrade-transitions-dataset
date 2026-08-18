@@ -1,0 +1,789 @@
+{
+  "compiler": {
+    "version": "0.4.24+commit.e67f0147"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_from",
+            "type": "address"
+          },
+          {
+            "name": "_to",
+            "type": "address"
+          },
+          {
+            "name": "_value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "addedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "increaseAllowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newLawEnforcementRole",
+            "type": "address"
+          }
+        ],
+        "name": "setLawEnforcementRole",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "unpause",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_addr",
+            "type": "address"
+          }
+        ],
+        "name": "unfreeze",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newSupplyController",
+            "type": "address"
+          }
+        ],
+        "name": "setSupplyController",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "paused",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_addr",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "initialize",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "pause",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_addr",
+            "type": "address"
+          }
+        ],
+        "name": "freeze",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_value",
+            "type": "uint256"
+          }
+        ],
+        "name": "decreaseSupply",
+        "outputs": [
+          {
+            "name": "success",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "subtractedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "decreaseAllowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "lawEnforcementRole",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_to",
+            "type": "address"
+          },
+          {
+            "name": "_value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_value",
+            "type": "uint256"
+          }
+        ],
+        "name": "increaseSupply",
+        "outputs": [
+          {
+            "name": "success",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_owner",
+            "type": "address"
+          },
+          {
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_addr",
+            "type": "address"
+          }
+        ],
+        "name": "wipeFrozenAddress",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_addr",
+            "type": "address"
+          }
+        ],
+        "name": "isFrozen",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "supplyController",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "oldOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [],
+        "name": "Pause",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [],
+        "name": "Unpause",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "addr",
+            "type": "address"
+          }
+        ],
+        "name": "AddressFrozen",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "addr",
+            "type": "address"
+          }
+        ],
+        "name": "AddressUnfrozen",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "addr",
+            "type": "address"
+          }
+        ],
+        "name": "FrozenAddressWiped",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "oldLawEnforcementRole",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "newLawEnforcementRole",
+            "type": "address"
+          }
+        ],
+        "name": "LawEnforcementRoleSet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "SupplyIncreased",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "SupplyDecreased",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "oldSupplyController",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "newSupplyController",
+            "type": "address"
+          }
+        ],
+        "name": "SupplyControllerSet",
+        "type": "event"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "allowance(address,address)": {
+          "details": "Function to check the amount of tokens that an owner allowed to a spender.",
+          "params": {
+            "_owner": "address The address which owns the funds.",
+            "spender": "address The address which will spend the funds."
+          },
+          "return": "A uint256 specifying the amount of tokens still available for the spender."
+        },
+        "approve(address,uint256)": {
+          "details": "Approve the passed address to spend the specified amount of tokens on behalf of msg.sender. Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729",
+          "params": {
+            "spender": "The address which will spend the funds.",
+            "value": "The amount of tokens to be spent."
+          }
+        },
+        "balanceOf(address)": {
+          "details": "Gets the balance of the specified address.",
+          "params": {
+            "_addr": "The address to query the the balance of."
+          },
+          "return": "An uint256 representing the amount owned by the passed address."
+        },
+        "decreaseAllowance(address,uint256)": {
+          "details": "Decrease the amount of tokens that an owner allowed to a spender. approve should be called when _allowed[msg.sender][spender] == 0. To decrement allowed value is better to use this function to avoid 2 calls (and wait until the first transaction is mined) From MonolithDAO Token.sol Emits an Approval event.",
+          "params": {
+            "spender": "The address which will spend the funds.",
+            "subtractedValue": "The amount of tokens to decrease the allowance by."
+          }
+        },
+        "decreaseSupply(uint256)": {
+          "details": "Decreases the total supply by burning the specified number of tokens from the supply controller account.",
+          "params": {
+            "_value": "The number of tokens to remove."
+          },
+          "return": "A boolean that indicates if the operation was successful."
+        },
+        "freeze(address)": {
+          "details": "Freezes an address balance from being transferred.",
+          "params": {
+            "_addr": "The new address to freeze."
+          }
+        },
+        "increaseAllowance(address,uint256)": {
+          "details": "Increase the amount of tokens that an owner allowed to a spender. approve should be called when _allowed[msg.sender][spender] == 0. To increment allowed value is better to use this function to avoid 2 calls (and wait until the first transaction is mined) From MonolithDAO Token.sol Emits an Approval event.",
+          "params": {
+            "addedValue": "The amount of tokens to increase the allowance by.",
+            "spender": "The address which will spend the funds."
+          }
+        },
+        "increaseSupply(uint256)": {
+          "details": "Increases the total supply by minting the specified number of tokens to the supply controller account.",
+          "params": {
+            "_value": "The number of tokens to add."
+          },
+          "return": "A boolean that indicates if the operation was successful."
+        },
+        "initialize()": {
+          "details": "sets 0 initials tokens, the owner, and the supplyController. this serves as the constructor for the proxy but compiles to the memory model of the Implementation contract."
+        },
+        "isFrozen(address)": {
+          "details": "Gets the balance of the specified address.",
+          "params": {
+            "_addr": "The address to check if frozen."
+          },
+          "return": "A bool representing whether the given address is frozen."
+        },
+        "pause()": {
+          "details": "called by the owner to pause, triggers stopped state"
+        },
+        "setLawEnforcementRole(address)": {
+          "details": "Sets a new law enforcement role address.",
+          "params": {
+            "_newLawEnforcementRole": "The new address allowed to freeze/unfreeze addresses and seize their tokens."
+          }
+        },
+        "setSupplyController(address)": {
+          "details": "Sets a new supply controller address.",
+          "params": {
+            "_newSupplyController": "The address allowed to burn/mint tokens to control supply."
+          }
+        },
+        "totalSupply()": {
+          "details": "Total number of tokens in existence"
+        },
+        "transfer(address,uint256)": {
+          "details": "Transfer token for a specified address",
+          "params": {
+            "_to": "The address to transfer to.",
+            "_value": "The amount to be transferred."
+          }
+        },
+        "transferFrom(address,address,uint256)": {
+          "details": "Transfer tokens from one address to another",
+          "params": {
+            "_from": "address The address which you want to send tokens from",
+            "_to": "address The address which you want to transfer to",
+            "_value": "uint256 the amount of tokens to be transferred"
+          }
+        },
+        "transferOwnership(address)": {
+          "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+          "params": {
+            "_newOwner": "The address to transfer ownership to."
+          }
+        },
+        "unfreeze(address)": {
+          "details": "Unfreezes an address balance allowing transfer.",
+          "params": {
+            "_addr": "The new address to unfreeze."
+          }
+        },
+        "unpause()": {
+          "details": "called by the owner to unpause, returns to normal state"
+        },
+        "wipeFrozenAddress(address)": {
+          "details": "Wipes the balance of a frozen address, burning the tokens",
+          "params": {
+            "_addr": "The new frozen address to wipe."
+          }
+        }
+      },
+      "title": "OKBImplementation"
+    },
+    "userdoc": {
+      "methods": {}
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "OKb.sol": "OKBImplementation"
+    },
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "OKb.sol": {
+      "keccak256": "0x7efa0183b779c346ff1645cc2dcb6bcb7e805298ca02da0b5e6e7c3894112089",
+      "urls": [
+        "bzzr://fa836c9414b864801cf6fa1db6362bce8faad731a54b2d7cf582eb18e0b2d31b"
+      ]
+    },
+    "SafeMath.sol": {
+      "keccak256": "0xac6da263eace45451ba5dabfdf3cf527ef68a6c404f1a412f7e4717c4ee7d716",
+      "urls": [
+        "bzzr://65ac51c3001eda02fc2927b523380f0c3201dcdef877f3829ca3b8316692604b"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,17 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "metadata": {
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.11+commit.d7f03943",
+  "fullyQualifiedName": "contracts/Fibswap.sol:Fibswap",
+  "language": "Solidity",
+  "name": "Fibswap"
+}

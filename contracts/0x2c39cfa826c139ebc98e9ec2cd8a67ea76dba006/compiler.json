@@ -1,0 +1,20 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs",
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.9+commit.e5eed63a",
+  "fullyQualifiedName": "contracts/ProfitRecord.sol:ProfitRecord",
+  "language": "Solidity",
+  "name": "ProfitRecord"
+}

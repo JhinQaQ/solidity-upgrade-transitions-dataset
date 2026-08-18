@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "14532358",
+    "deployer": "0x3E32324277e96b69750bC6f7c4Ba27E122413E07",
+    "transactionHash": "0x20c37bca63ec172cb28c32186efb12ef8040f63bc2f173f77d94057f5f0b8832",
+    "transactionIndex": "168"
+  },
+  "implementation_address": "0x03fa83d1cff019eee2ea1e12e2b8c4f2abcdd709",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x03fa83d1cff019eee2ea1e12e2b8c4f2abcdd709?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x03fa83d1cff019eee2ea1e12e2b8c4f2abcdd709/runtime-bytecode.hex",
+    "sha256": "0d21511a2938456a031768f57bb8a05247edc1980bfe9df1c8f7a9b09ac89192",
+    "size_bytes": 14941,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "SROOT.sol",
+      "sha256": "5c68db33c5430ceb9a9f1455fa3570492d42674d7a5208cbdeddabb101e85a65",
+      "stored_path": "contracts/0x03fa83d1cff019eee2ea1e12e2b8c4f2abcdd709/sources/SROOT.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T14:42:22Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "2153780",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x03fa83d1cff019eee2ea1e12e2b8c4f2abcdd709?fields=all"
+}
