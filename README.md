@@ -68,10 +68,3 @@ python3 scripts/validate_dataset.py
 
 The selection is deterministic, but `validated_at_utc` and the latest-state bytecode-size field can change when regenerated later.
 
-## Source citation
-
-This dataset derives its candidate pool from [USCDetector](https://github.com/xiaofan88/USCDetector). If you use it, cite:
-
-> Xiaofan Li, Jin Yang, Jiaqi Chen, Yuzhe Tang, and Xing Gao. “Characterizing Ethereum Upgradable Smart Contracts and Their Security Implications.” Proceedings of the ACM Web Conference 2024, pp. 1847–1858.
-
-BibTeX is available in [`CITATION.bib`](CITATION.bib). Review [`NOTICE.md`](NOTICE.md) before redistribution.
