@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JhinQaQ/solidity-upgrade-transitions-dataset/blob/main/data/schema.json",
+  "title": "Solidity Upgrade Transactions 100",
+  "description": "Validated Ethereum mainnet upgrade-transaction to new-implementation mappings.",
+  "type": "array",
+  "minItems": 100,
+  "maxItems": 100,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "dataset_id",
+      "chain_id",
+      "network",
+      "upgrade_entrypoint_address",
+      "proxy_address",
+      "upgrade_transaction_hash",
+      "upgrade_block_number",
+      "upgrade_block_hash",
+      "block_timestamp_utc",
+      "transaction_sender",
+      "upgrade_function",
+      "calldata_selector",
+      "new_implementation_address",
+      "new_implementation_code_size_bytes_latest",
+      "receipt_status",
+      "upgraded_event_log_index",
+      "upgraded_event_matches",
+      "source_timestamp_utc",
+      "source_timestamp_matches_block",
+      "source_dataset",
+      "source_commit",
+      "source_record_index",
+      "selection_rank_sha256",
+      "validation_rpc_host",
+      "validated_at_utc"
+    ],
+    "properties": {
+      "dataset_id": { "type": "string", "pattern": "^SUT-[0-9]{4}$" },
+      "chain_id": { "const": 1 },
+      "network": { "const": "ethereum-mainnet" },
+      "upgrade_entrypoint_address": { "$ref": "#/$defs/address" },
+      "proxy_address": { "$ref": "#/$defs/address" },
+      "upgrade_transaction_hash": { "$ref": "#/$defs/hash" },
+      "upgrade_block_number": { "type": "integer", "minimum": 1 },
+      "upgrade_block_hash": { "$ref": "#/$defs/hash" },
+      "block_timestamp_utc": { "$ref": "#/$defs/timestamp" },
+      "transaction_sender": { "$ref": "#/$defs/address" },
+      "upgrade_function": {
+        "enum": ["upgradeTo", "upgradeToAndCall"]
+      },
+      "calldata_selector": {
+        "enum": ["0x3659cfe6", "0x4f1ef286"]
+      },
+      "new_implementation_address": { "$ref": "#/$defs/address" },
+      "new_implementation_code_size_bytes_latest": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "receipt_status": { "const": "success" },
+      "upgraded_event_log_index": { "type": "integer", "minimum": 0 },
+      "upgraded_event_matches": { "const": true },
+      "source_timestamp_utc": { "$ref": "#/$defs/timestamp" },
+      "source_timestamp_matches_block": { "const": true },
+      "source_dataset": { "const": "USCDetector" },
+      "source_commit": {
+        "const": "9b2bf71d1929a8bc27c88b52fe9224c24325cd68"
+      },
+      "source_record_index": { "type": "integer", "minimum": 0 },
+      "selection_rank_sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "validation_rpc_host": { "type": "string", "minLength": 1 },
+      "validated_at_utc": { "type": "string", "format": "date-time" }
+    }
+  },
+  "$defs": {
+    "address": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{40}$"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^0x[0-9a-f]{64}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} UTC$"
+    }
+  }
+}
