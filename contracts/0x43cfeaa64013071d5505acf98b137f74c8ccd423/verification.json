@@ -1,0 +1,167 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "13095159",
+    "deployer": "0x691c87dc570563D1D0AD7Fd0bb099ED367858863",
+    "transactionHash": "0xda896e6f7b8207c2607202237a9fe5b816d39b3ef0629eccfb3cc37f6155daeb",
+    "transactionIndex": "87"
+  },
+  "implementation_address": "0x43cfeaa64013071d5505acf98b137f74c8ccd423",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x43cfeaa64013071d5505acf98b137f74c8ccd423?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/runtime-bytecode.hex",
+    "sha256": "8761e354790a2dceafe50fcab6a6e1bab794a6e8474c91db97ecd9652a64fd3f",
+    "size_bytes": 22911,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol",
+      "sha256": "4d148e038344167b7506ee0efd58b38f8787c6229e43800fb1129a0d4215327f",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol",
+      "sha256": "dabaab4d3d3f03e6bfb86eec1d54f31edf0429f4bfc4dff717d5776d5231c145",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/math/SafeMathUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol",
+      "sha256": "2c3a3edc2b1a4ac2c4a8645475b51f2668b1ad5ea22df074d0c0ebd3122ce2e7",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/proxy/Initializable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+      "sha256": "ec4e64141d513f43e67542294c76cdbeaeece2eb54196e3f57d1a854bdf3bff3",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+      "sha256": "57cf669fc8977ccd1738280e0a39c0156ecbde0af6142d6dd845ab1c055ca61d",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "sha256": "877bc9cb396d0f50330bb9c0057c029407e159739b6fab0b110f19451c8681e4",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "sha256": "b9c1700bc8c28217952147b408dc67aa128eb2f71a45fceb4a8e73dff43fedac",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol",
+      "sha256": "06e73664cf2eed972058697327c00d2595da4fe9a51398073bf8829e6307532a",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts-upgradeable/utils/ReentrancyGuardUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/math/SafeMath.sol",
+      "sha256": "4a04d0a20a19e3ef1dcabae9cad9ba006430a4e7eec4d9b519db87999722c98a",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts/math/SafeMath.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "sha256": "0573c2961569aa4906845d0cd428b5b7394956170054ceeaa8f8af96cd44875c",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts/token/ERC20/IERC20.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+      "sha256": "eea796f96939e7dd6119de00941717ce5772d8a942b184f5e48d2b962d0ab655",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts/token/ERC20/SafeERC20.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Address.sol",
+      "sha256": "11ad5e3e21434e00c4ceba1f5a977b7a68bdd7d16b849276ce4ff4495129eec7",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/@openzeppelin/contracts/utils/Address.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/GammaInterface.sol",
+      "sha256": "a31e405e5ea87b95addcdb07e90fa67e90a75a96a86ff4dd99ccb2b4ea052e13",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/GammaInterface.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IERC20Detailed.sol",
+      "sha256": "049263e173a2a5cedbe7d17c402ee8a6831beeedaa61f4b4daf166b4fd369eaf",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/IERC20Detailed.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IGnosisAuction.sol",
+      "sha256": "fc706950a06c58a4fe27de57379593af27c1cc3e5bb81a0ea3f4edb07b6cd9af",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/IGnosisAuction.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IRibbon.sol",
+      "sha256": "dd3a650d14b8ebed6426c9d66e302a4ce8ff5e25fda909391fe53d648e470b47",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/IRibbon.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IRibbonThetaVault.sol",
+      "sha256": "d45fd0ccee26c66be542edb5abd1cabc450cebaf5187e0749293309c7045cc7a",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/IRibbonThetaVault.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IWETH.sol",
+      "sha256": "227accc7a8af3b727af5a71381b2567140c77888778d4813ca92a41270508a54",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/interfaces/IWETH.sol"
+    },
+    {
+      "original_path": "contracts/libraries/GnosisAuction.sol",
+      "sha256": "6760ae20b6b222ad94d3a4d1347cbf4d84de1e4ce61ee1944dbb1fa0c27bbacc",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/libraries/GnosisAuction.sol"
+    },
+    {
+      "original_path": "contracts/libraries/ShareMath.sol",
+      "sha256": "28fa08633f93b7004e207f00fd8a19a3242a32e77651d30f4c142e12f8f02595",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/libraries/ShareMath.sol"
+    },
+    {
+      "original_path": "contracts/libraries/SupportsNonCompliantERC20.sol",
+      "sha256": "23f560784327c66fa26dfd7a9542811f5330884e052cb1ea6663247ed7cc9b9b",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/libraries/SupportsNonCompliantERC20.sol"
+    },
+    {
+      "original_path": "contracts/libraries/Vault.sol",
+      "sha256": "8ed075e309903469778a5d9ea5f28b6a0d0fdb62fe30e24d5fcbcb69cd6820f5",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/libraries/Vault.sol"
+    },
+    {
+      "original_path": "contracts/libraries/VaultLifecycle.sol",
+      "sha256": "363b8314a7c82e8023313329cd021dcbf9646ea85dbb93899aa3391281e75db1",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/libraries/VaultLifecycle.sol"
+    },
+    {
+      "original_path": "contracts/storage/OptionsVaultStorage.sol",
+      "sha256": "d8d25eec8882fbf6268a5daf18624252ecb25406c6def41caff377c0f862cd20",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/storage/OptionsVaultStorage.sol"
+    },
+    {
+      "original_path": "contracts/vaults/BaseVaults/RibbonThetaVault.sol",
+      "sha256": "1541422785fb3f48763940da578e7ca651e0a95a98e52d4b0789699a31fe498f",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/vaults/BaseVaults/RibbonThetaVault.sol"
+    },
+    {
+      "original_path": "contracts/vaults/BaseVaults/base/RibbonVault.sol",
+      "sha256": "59af69ae78d23c35fcc27c3faee94d4226764797d55c1a5425924918e30c1f0a",
+      "stored_path": "contracts/0x43cfeaa64013071d5505acf98b137f74c8ccd423/sources/contracts/vaults/BaseVaults/base/RibbonVault.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T15:09:33Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "2344414",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x43cfeaa64013071d5505acf98b137f74c8ccd423?fields=all"
+}

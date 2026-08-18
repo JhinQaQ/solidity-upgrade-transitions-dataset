@@ -1,0 +1,518 @@
+{
+  "compiler": {
+    "version": "0.8.17+commit.8df45f5f"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "previousAdmin",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "newAdmin",
+            "type": "address"
+          }
+        ],
+        "name": "AdminChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "beacon",
+            "type": "address"
+          }
+        ],
+        "name": "BeaconUpgraded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "version",
+            "type": "uint8"
+          }
+        ],
+        "name": "Initialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "implementation",
+            "type": "address"
+          }
+        ],
+        "name": "Upgraded",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "calculateShare",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "cashbacks",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "claimCashback",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "claimShare",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct WAGMIClaimable.Cashback[]",
+            "name": "_cashbacks",
+            "type": "tuple[]"
+          }
+        ],
+        "name": "distributeCashbacks",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "distributeVIP",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract IERC721",
+            "name": "_nftCollection",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_vipTokenIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "nftCollection",
+        "outputs": [
+          {
+            "internalType": "contract IERC721",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "proxiableUUID",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "_vipTokenIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "setVipTokenIds",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "shares",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          }
+        ],
+        "name": "upgradeTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "upgradeToAndCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "vipTokenIds",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdrawAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "proxiableUUID()": {
+          "details": "Implementation of the ERC1822 {proxiableUUID} function. This returns the storage slot used by the implementation. It is used to validate the implementation's compatibility when performing an upgrade. IMPORTANT: A proxy pointing at a proxiable contract should not be considered proxiable itself, because this risks bricking a proxy that upgrades to it, by delegating to itself until out of gas. Thus it is critical that this function revert if invoked through a proxy. This is guaranteed by the `notDelegated` modifier."
+        },
+        "renounceOwnership()": {
+          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+        },
+        "transferOwnership(address)": {
+          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+        },
+        "upgradeTo(address)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        },
+        "upgradeToAndCall(address,bytes)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`, and subsequently execute the function call encoded in `data`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {
+        "initialize(address,uint256[])": {
+          "notice": "Contract initializer"
+        }
+      },
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "contracts/2_Owner.sol": "WAGMIClaimable"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
+      "keccak256": "0x247c62047745915c0af6b955470a72d1696ebad4352d7d3011aef1a2463cd888",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7fc8396619de513c96b6e00301b88dd790e83542aab918425633a5f7297a15a",
+        "dweb:/ipfs/QmXbP4kiZyp7guuS7xe8KaybnwkRPGrBc2Kbi3vhcTfpxb"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol": {
+      "keccak256": "0x77c89f893e403efc6929ba842b7ccf6534d4ffe03afe31670b4a528c0ad78c0f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://496bd9b3df2455d571018c09f0c6badd29713fdeb907c6aa09d8d28cb603f053",
+        "dweb:/ipfs/QmXdJDyYs6WMwMh21dez2BYPxhSUaUYFMDtVNcn2cgFR79"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
+      "keccak256": "0x315887e846f1e5f8d8fa535a229d318bb9290aaa69485117f1ee8a9a6b3be823",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://29dda00da6d269685b555e710e4abf1c3eb6d00c15b888a7880a2f8dd3c4fdc2",
+        "dweb:/ipfs/QmSqcjtdECygtT1Gy7uEo42x8542srpgGEeKKHfcnQqXgn"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol": {
+      "keccak256": "0x24b86ac8c005b8c654fbf6ac34a5a4f61580d7273541e83e013e89d66fbf0908",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4dbfe1a3b3b3fb64294ce41fd2ad362e7b7012208117864f42c1a67620a6d5c1",
+        "dweb:/ipfs/QmVMU5tWt7zBQMmf5cpMX8UMHV86T3kFeTxBTBjFqVWfoJ"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "keccak256": "0xf2efdd01f01f127e8b631675a359cd8cabfbcdcd2e8587ecf906181bcd667bc9",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://e5d8670ec00368fa7ff56ae265337d0b7d454709e639e350e5c9677ae32574ed",
+        "dweb:/ipfs/QmPRmAmjKkZLatrKjbrj78GqW34b5hwx72WqwoBvyg4QcV"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
+      "keccak256": "0xf7db9b91442fb9426403fda8893b60444066d9682f2913e14a96f12196afb96e",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://c2bd84e37357b89a4f19dee68a5b8667083d4b85681b36bf7eda2d38d8c162a6",
+        "dweb:/ipfs/QmULmgN6yaoax1wA66SffeJCkZijDSugu4GGD8DSWLLxQN"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol": {
+      "keccak256": "0xbf46574f5b3e5ae4d823b06fef6fe20ed32a4c4cd5bb9cd07d1712da624321fc",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://766b8ea4848c5149e79f0e24fe0c0ff949acaeb029973675d3839070fea95de6",
+        "dweb:/ipfs/QmSuhrQn1kMfHxU85GS11JY1WzaWR27fq1MhduRnTF5Wwo"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
+      "keccak256": "0xabed77589961adbaaa36817e0914bcbe4c447311c9451bf3fc9b073c1f092d8d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9b8f12b15b67cc26a684dc7913e279fe016a0baa44778fa5406e38b17b027b5a",
+        "dweb:/ipfs/QmejTVV9v4E6WtztCfpbVHDNV8rd2p3qMzrCiBgvTepQby"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+        "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+      ]
+    },
+    "@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol": {
+      "keccak256": "0x09864aea84f01e39313375b5610c73a3c1c68abbdc51e5ccdd25ff977fdadf9a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://aedb48081190fa828d243529ce25c708202c7d4ccfe99f0e4ecd6bc0cfcd03f3",
+        "dweb:/ipfs/QmWyiDQHPZA56iqsAwTmiJoxvNeRQLUVr4gTfzpdpXivpo"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+        "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "keccak256": "0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
+        "dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "keccak256": "0x032807210d1d7d218963d7355d62e021a84bf1b3339f4f50be2f63b53cccaf29",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://11756f42121f6541a35a8339ea899ee7514cfaa2e6d740625fcc844419296aa6",
+        "dweb:/ipfs/QmekMuk6BY4DAjzeXr4MSbKdgoqqsZnA8JPtuyWc6CwXHf"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+      "keccak256": "0xed6a749c5373af398105ce6ee3ac4763aa450ea7285d268c85d9eeca809cdb1f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://20a97f891d06f0fe91560ea1a142aaa26fdd22bed1b51606b7d48f670deeb50f",
+        "dweb:/ipfs/QmTbCtZKChpaX5H2iRiTDMcSz29GSLCpTCDgJpcMR4wg8x"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Address.sol": {
+      "keccak256": "0xd6153ce99bcdcce22b124f755e72553295be6abcd63804cfdffceb188b8bef10",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://35c47bece3c03caaa07fab37dd2bb3413bfbca20db7bd9895024390e0a469487",
+        "dweb:/ipfs/QmPGWT2x3QHcKxqe6gRmAkdakhbaRgx3DLzcakHz5M4eXG"
+      ]
+    },
+    "@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+      "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+        "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+      ]
+    },
+    "contracts/2_Owner.sol": {
+      "keccak256": "0xf2b6a5b5e9a8d722698b6db5b95474d50ab38297ac0b609175515288f8ada80f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://1ed6960c6141a3960e58821971ae4f907ead05af4be83e876fcb135d624f7be5",
+        "dweb:/ipfs/Qmck86NY5MMBgRECUxuPas4eA2B73QxHDutqz3Jn6zsV2a"
+      ]
+    }
+  },
+  "version": 1
+}

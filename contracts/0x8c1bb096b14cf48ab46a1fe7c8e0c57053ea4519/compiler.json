@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.6.12+commit.27d51765",
+  "fullyQualifiedName": "Sales721ForEth.sol:Sales721ForEth",
+  "language": "Solidity",
+  "name": "Sales721ForEth"
+}

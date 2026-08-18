@@ -1,0 +1,1154 @@
+{
+  "compiler": {
+    "version": "0.5.0+commit.1d4f565a"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_baseOperators",
+            "type": "address"
+          }
+        ],
+        "name": "setOperatorsContract",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "initializedConstructorUpgrade",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "getOperatorsPending",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "burnFor",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isAdmin",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isOperatorOrSystem",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_confiscatees",
+            "type": "address[]"
+          },
+          {
+            "name": "_receivers",
+            "type": "address[]"
+          },
+          {
+            "name": "_values",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "batchConfiscate",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          },
+          {
+            "name": "_toggled",
+            "type": "bool"
+          }
+        ],
+        "name": "toggleWhitelist",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isSystem",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "isInitialized",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "addedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "increaseAllowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isWhitelisted",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "unpause",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "burn",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "getOperatorsContract",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_recipients",
+            "type": "address[]"
+          },
+          {
+            "name": "_values",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "batchMint",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isOperator",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "burnFrom",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "isNotPaused",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "pause",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_addresses",
+            "type": "address[]"
+          },
+          {
+            "name": "_toggled",
+            "type": "bool"
+          }
+        ],
+        "name": "batchToggleFreeze",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "confirmOperatorsContract",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          },
+          {
+            "name": "_toggled",
+            "type": "bool"
+          }
+        ],
+        "name": "toggleFreeze",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_confiscatee",
+            "type": "address"
+          },
+          {
+            "name": "_receiver",
+            "type": "address"
+          },
+          {
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "confiscate",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "name": "subtractedValue",
+            "type": "uint256"
+          }
+        ],
+        "name": "decreaseAllowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_recipients",
+            "type": "address[]"
+          },
+          {
+            "name": "_values",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "batchBurnFor",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_baseOperators",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "initializeConstructor",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "frozen",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isAdminOrSystem",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_addresses",
+            "type": "address[]"
+          },
+          {
+            "name": "_toggled",
+            "type": "bool"
+          }
+        ],
+        "name": "batchToggleWhitelist",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "whitelisted",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_account",
+            "type": "address"
+          }
+        ],
+        "name": "isFrozen",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "minter",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Minted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "burner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Burned",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "burner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "BurnedFor",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "frozen",
+            "type": "bool"
+          }
+        ],
+        "name": "FreezeToggled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "Paused",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "Unpaused",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "whitelisted",
+            "type": "bool"
+          }
+        ],
+        "name": "WhitelistToggled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "caller",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "operatorsAddress",
+            "type": "address"
+          }
+        ],
+        "name": "OperatorsContractChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "caller",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "operatorsAddress",
+            "type": "address"
+          }
+        ],
+        "name": "OperatorsContractPending",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "allowance(address,address)": {
+          "details": "See `IERC20.allowance`.\r"
+        },
+        "balanceOf(address)": {
+          "details": "See `IERC20.balanceOf`.\r"
+        },
+        "batchBurnFor(address[],uint256[])": {
+          "details": "Batch burn from an operator or admin address.\r",
+          "params": {
+            "_recipients": "Array of recipient addresses.\r",
+            "_values": "Array of amount to burn.\r"
+          }
+        },
+        "batchConfiscate(address[],address[],uint256[])": {
+          "details": "Batch confiscate to a macimum of 255 addresses. \r",
+          "params": {
+            "_confiscatees": "array addresses who's funds are being confiscated\r",
+            "_receivers": "array addresses who's receiving the funds\r",
+            "_values": "array of values of funds being confiscated\r"
+          }
+        },
+        "batchMint(address[],uint256[])": {
+          "details": "Batch mint to a maximum of 255 addresses, for a custom amount for each address.\r",
+          "params": {
+            "_recipients": "Array of recipient addresses.\r",
+            "_values": "Array of amount to mint.\r"
+          }
+        },
+        "batchToggleFreeze(address[],bool)": {
+          "details": "Batch freeze/unfreeze multiple addresses, with _toggled being true/false.\r",
+          "params": {
+            "_addresses": "address array.\r",
+            "_toggled": "freeze/unfreeze.\r"
+          }
+        },
+        "batchToggleWhitelist(address[],bool)": {
+          "details": "Batch whitelisted/unwhitelist multiple addresses, with _toggled being true/false.\r",
+          "params": {
+            "_addresses": "address array.\r",
+            "_toggled": "whitelist/unwhitelist.\r"
+          }
+        },
+        "burn(uint256)": {
+          "details": "Burn.\r",
+          "params": {
+            "_amount": "Amount of tokens to burn.\r"
+          }
+        },
+        "burnFor(address,uint256)": {
+          "details": "BurnFor.\r",
+          "params": {
+            "_account": "Account to burn tokens from.\r",
+            "_amount": "Amount of tokens to burn.\r"
+          }
+        },
+        "burnFrom(address,uint256)": {
+          "details": "burnFrom.\r",
+          "params": {
+            "_account": "Account to burn from.\r",
+            "_amount": "Amount of tokens to burn.\r"
+          }
+        },
+        "confirmOperatorsContract()": {
+          "details": "The function should be called from new operators contract by admin to insure that operatorsPending address\r      is the real contract address.\r"
+        },
+        "confiscate(address,address,uint256)": {
+          "details": "confiscate.\r",
+          "params": {
+            "_amount": "Amount of tokens to burn.\r",
+            "_confiscatee": "Account to confiscate funds from.\r",
+            "_receiver": "Account to transfer confiscated funds too.\r"
+          }
+        },
+        "decimals()": {
+          "details": "Returns the number of decimals used to get its user representation.\r For example, if `decimals` equals `2`, a balance of `505` tokens should\r be displayed to a user as `5,05` (`505 / 10 ** 2`).\r      * Tokens usually opt for a value of 18, imitating the relationship between\r Ether and Wei.\r      * NOTE: This information is only used for _display_ purposes: it in\r no way affects any of the arithmetic of the contract, including\r {IERC20-balanceOf} and {IERC20-transfer}.\r"
+        },
+        "getOperatorsContract()": {
+          "return": "The address of the BaseOperators contract.\r"
+        },
+        "getOperatorsPending()": {
+          "return": "The pending address of the BaseOperators contract.\r"
+        },
+        "initialize(address)": {
+          "details": "Initialization instead of constructor, only called once.\r",
+          "params": {
+            "_baseOperators": "Address of baseOperators contract.\r"
+          }
+        },
+        "isAdmin(address)": {
+          "return": "If '_account' has admin privileges.\r"
+        },
+        "isAdminOrSystem(address)": {
+          "return": "If '_account' has admin or system privileges.\r"
+        },
+        "isFrozen(address)": {
+          "details": "Getter to determine if address is frozen.\r",
+          "params": {
+            "_account": "address to determine if frozen or not.\r"
+          },
+          "return": "bool is frozen\r"
+        },
+        "isNotPaused()": {
+          "return": "If child contract is already paused or not.\r"
+        },
+        "isOperator(address)": {
+          "return": "If '_account' has operator privileges.\r"
+        },
+        "isOperatorOrSystem(address)": {
+          "return": "If '_account' has operator or system privileges.\r"
+        },
+        "isSystem(address)": {
+          "return": "If '_account' has system privileges.\r"
+        },
+        "isWhitelisted(address)": {
+          "details": "Getter to determine if address is whitelisted.\r",
+          "params": {
+            "_account": "address to determine if whitelisted or not.\r"
+          },
+          "return": "bool is whitelisted\r"
+        },
+        "mint(address,uint256)": {
+          "details": "Mint.\r",
+          "params": {
+            "_account": "Address to mint tokens to.\r",
+            "_amount": "Amount to mint.\r"
+          }
+        },
+        "name()": {
+          "details": "Returns the name of the token.\r"
+        },
+        "pause()": {
+          "details": "Called by operator to pause child contract. The contract\r     must not already be paused.\r"
+        },
+        "setOperatorsContract(address)": {
+          "details": "Set the new the address of Operators contract, should be confirmed from operators contract by calling confirmFor(addr)\r      where addr is the address of current contract instance. This is done to prevent the case when the new contract address is\r      broken and control of the contract can be lost in such case\r",
+          "params": {
+            "_baseOperators": "BaseOperators contract address.\r"
+          }
+        },
+        "symbol()": {
+          "details": "Returns the symbol of the token, usually a shorter version of the\r name.\r"
+        },
+        "toggleFreeze(address,bool)": {
+          "details": "Toggle freeze/unfreeze on _account address, with _toggled being true/false.\r",
+          "params": {
+            "_account": "address to toggle.\r",
+            "_toggled": "freeze/unfreeze.\r"
+          }
+        },
+        "toggleWhitelist(address,bool)": {
+          "details": "Toggle whitelisted/unwhitelisted on _account address, with _toggled being true/false.\r",
+          "params": {
+            "_account": "address to toggle.\r",
+            "_toggled": "whitelist/unwhitelist.\r"
+          }
+        },
+        "totalSupply()": {
+          "details": "See `IERC20.totalSupply`.\r"
+        },
+        "unpause()": {
+          "details": "Called by operator to pause child contract. The contract\r      must already be paused.\r"
+        }
+      }
+    },
+    "userdoc": {
+      "methods": {}
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "EdgeTokenConstructorUpgrade.sol": "EdgeTokenConstructorUpgrade"
+    },
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "EdgeTokenConstructorUpgrade.sol": {
+      "keccak256": "0x4c9a0b345e76a75622618e1455551807b36448d5acdf78524926d547664f0d7f",
+      "urls": [
+        "bzzr://cda892068076b270a526c8d0bb1599d07285788cfd140255dab90698e116c8ee"
+      ]
+    }
+  },
+  "version": 1
+}

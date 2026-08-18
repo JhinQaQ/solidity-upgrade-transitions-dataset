@@ -1,0 +1,27 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    },
+    "remappings": [
+      "ds-test/=lib/forge-std/lib/ds-test/src/",
+      "forge-std/=lib/forge-std/src/",
+      "openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+      "safe-contracts/=lib/safe-contracts/contracts/",
+      "solmate/=lib/solmate/src/"
+    ],
+    "viaIR": true
+  },
+  "compilerVersion": "0.8.17+commit.8df45f5f",
+  "fullyQualifiedName": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+  "language": "Solidity",
+  "name": "ENSAvatarMirror"
+}

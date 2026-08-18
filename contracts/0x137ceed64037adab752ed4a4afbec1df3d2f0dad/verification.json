@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "7524053",
+    "deployer": "0xCc6045C1FA35CD3E38D5ACb8069Df0AF244b2c51",
+    "transactionHash": "0x60c29c4163217c77cb5d1309a393d839c574e61e43a0c9af9d671a98e214f318",
+    "transactionIndex": "128"
+  },
+  "implementation_address": "0x137ceed64037adab752ed4a4afbec1df3d2f0dad",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x137ceed64037adab752ed4a4afbec1df3d2f0dad?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x137ceed64037adab752ed4a4afbec1df3d2f0dad/runtime-bytecode.hex",
+    "sha256": "507e3afe457f66437858843b6a81588a8b2169f17b38833f97f316db9220e8f2",
+    "size_bytes": 5551,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Registry.sol",
+      "sha256": "be84f3bb459fb14bedc4d34039dd01884b61154995e17de9c822f6e3912f65ea",
+      "stored_path": "contracts/0x137ceed64037adab752ed4a4afbec1df3d2f0dad/sources/Registry.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-14T13:00:50Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "5131052",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x137ceed64037adab752ed4a4afbec1df3d2f0dad?fields=all"
+}

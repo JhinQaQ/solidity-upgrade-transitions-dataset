@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.0+commit.c7dfd78e",
+  "fullyQualifiedName": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/BadgerRenCrv+.sol:BadgerRenCrvPlus",
+  "language": "Solidity",
+  "name": "BadgerRenCrvPlus"
+}

@@ -1,0 +1,2683 @@
+{
+  "compiler": {
+    "version": "0.8.17+commit.8df45f5f"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_zoraERC721TransferHelper",
+            "type": "address"
+          },
+          {
+            "internalType": "contract IFactoryUpgradeGate",
+            "name": "_factoryUpgradeGate",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_marketFilterDAOAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_mintFeeAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address payable",
+            "name": "_mintFeeRecipient",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          }
+        ],
+        "name": "Access_MissingRoleOrAdmin",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Access_OnlyAdmin",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Access_WithdrawNotAllowed",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "proposedAddress",
+            "type": "address"
+          }
+        ],
+        "name": "Admin_InvalidUpgradeAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Admin_UnableToFinalizeNotOpenEdition",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ApprovalCallerNotOwnerNorApproved",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ApprovalQueryForNonexistentToken",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ApprovalToCurrentOwner",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ApproveToCaller",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "BalanceQueryForZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ExternalMetadataRenderer_CallFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "MarketFilterDAOAddressNotSupportedForChain",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "MintFee_FundsSendFailure",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "MintToZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "MintZeroQuantity",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Mint_SoldOut",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ONLY_OWNER",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "ONLY_PENDING_OWNER",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          }
+        ],
+        "name": "OperatorNotAllowed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "OwnerQueryForNonexistentToken",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Presale_Inactive",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Presale_MerkleNotApproved",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Presale_TooManyForAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Purchase_TooManyForAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "correctPrice",
+            "type": "uint256"
+          }
+        ],
+        "name": "Purchase_WrongPrice",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "RemoteOperatorFilterRegistryCallFailed",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Sale_Inactive",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint16",
+            "name": "maxRoyaltyBPS",
+            "type": "uint16"
+          }
+        ],
+        "name": "Setup_RoyaltyPercentageTooHigh",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferCallerNotOwnerNorApproved",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferFromIncorrectOwner",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferToNonERC721ReceiverImplementer",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "TransferToZeroAddress",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "URIQueryForNonexistentToken",
+        "type": "error"
+      },
+      {
+        "inputs": [],
+        "name": "Withdraw_FundsSendFailure",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "previousAdmin",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "newAdmin",
+            "type": "address"
+          }
+        ],
+        "name": "AdminChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "approved",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "approved",
+            "type": "bool"
+          }
+        ],
+        "name": "ApprovalForAll",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "_fromTokenId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "_toTokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "BatchMetadataUpdate",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "beacon",
+            "type": "address"
+          }
+        ],
+        "name": "BeaconUpgraded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "source",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "FundsReceived",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newAddress",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "changedBy",
+            "type": "address"
+          }
+        ],
+        "name": "FundsRecipientChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "withdrawnBy",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "withdrawnTo",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "feeRecipient",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "feeAmount",
+            "type": "uint256"
+          }
+        ],
+        "name": "FundsWithdrawn",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "_tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "MetadataUpdate",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "mintFeeAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "mintFeeRecipient",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "success",
+            "type": "bool"
+          }
+        ],
+        "name": "MintFeePayout",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "numberOfMints",
+            "type": "uint256"
+          }
+        ],
+        "name": "OpenMintFinalized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "potentialNewOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnerCanceled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "potentialNewOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnerPending",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "previousAdminRole",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "newAdminRole",
+            "type": "bytes32"
+          }
+        ],
+        "name": "RoleAdminChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
+        ],
+        "name": "RoleGranted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          }
+        ],
+        "name": "RoleRevoked",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "pricePerToken",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "firstPurchasedTokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Sale",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "changedBy",
+            "type": "address"
+          }
+        ],
+        "name": "SalesConfigChanged",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "contract IMetadataRenderer",
+            "name": "renderer",
+            "type": "address"
+          }
+        ],
+        "name": "UpdatedMetadataRenderer",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "implementation",
+            "type": "address"
+          }
+        ],
+        "name": "Upgraded",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "DEFAULT_ADMIN_ROLE",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "MINTER_ROLE",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "SALES_MANAGER_ROLE",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "adminMint",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "recipients",
+            "type": "address[]"
+          }
+        ],
+        "name": "adminMintAirdrop",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "burn",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "callMetadataRenderer",
+        "outputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "config",
+        "outputs": [
+          {
+            "internalType": "contract IMetadataRenderer",
+            "name": "metadataRenderer",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "editionSize",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint16",
+            "name": "royaltyBPS",
+            "type": "uint16"
+          },
+          {
+            "internalType": "address payable",
+            "name": "fundsRecipient",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "contractURI",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "contractVersion",
+        "outputs": [
+          {
+            "internalType": "uint32",
+            "name": "",
+            "type": "uint32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "factoryUpgradeGate",
+        "outputs": [
+          {
+            "internalType": "contract IFactoryUpgradeGate",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "finalizeOpenEdition",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getApproved",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getRoleAdmin",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "grantRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "hasRole",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "string",
+            "name": "_contractName",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "_contractSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "_initialOwner",
+            "type": "address"
+          },
+          {
+            "internalType": "address payable",
+            "name": "_fundsRecipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "_editionSize",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint16",
+            "name": "_royaltyBPS",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes[]",
+            "name": "_setupCalls",
+            "type": "bytes[]"
+          },
+          {
+            "internalType": "contract IMetadataRenderer",
+            "name": "_metadataRenderer",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_metadataRendererInit",
+            "type": "bytes"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+          }
+        ],
+        "name": "isAdmin",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "nftOwner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          }
+        ],
+        "name": "isApprovedForAll",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "enable",
+            "type": "bool"
+          }
+        ],
+        "name": "manageMarketFilterDAOSubscription",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "marketFilterDAOAddress",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "metadataRenderer",
+        "outputs": [
+          {
+            "internalType": "contract IMetadataRenderer",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "minter",
+            "type": "address"
+          }
+        ],
+        "name": "mintedPerAddress",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "totalMints",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "presaleMints",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "publicMints",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IERC721Drop.AddressMintDetails",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes[]",
+            "name": "data",
+            "type": "bytes[]"
+          }
+        ],
+        "name": "multicall",
+        "outputs": [
+          {
+            "internalType": "bytes[]",
+            "name": "results",
+            "type": "bytes[]"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "ownerOf",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "presaleMintsByAddress",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "proxiableUUID",
+        "outputs": [
+          {
+            "internalType": "bytes32",
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "purchase",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxQuantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pricePerToken",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32[]",
+            "name": "merkleProof",
+            "type": "bytes32[]"
+          }
+        ],
+        "name": "purchasePresale",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "renounceRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "role",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          }
+        ],
+        "name": "revokeRole",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_salePrice",
+            "type": "uint256"
+          }
+        ],
+        "name": "royaltyInfo",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "royaltyAmount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "_data",
+            "type": "bytes"
+          }
+        ],
+        "name": "safeTransferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "saleDetails",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "publicSaleActive",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "presaleActive",
+                "type": "bool"
+              },
+              {
+                "internalType": "uint256",
+                "name": "publicSalePrice",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint64",
+                "name": "publicSaleStart",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "publicSaleEnd",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "presaleStart",
+                "type": "uint64"
+              },
+              {
+                "internalType": "uint64",
+                "name": "presaleEnd",
+                "type": "uint64"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "presaleMerkleRoot",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSalePurchasePerAddress",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "totalMinted",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSupply",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct IERC721Drop.SaleDetails",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "salesConfig",
+        "outputs": [
+          {
+            "internalType": "uint104",
+            "name": "publicSalePrice",
+            "type": "uint104"
+          },
+          {
+            "internalType": "uint32",
+            "name": "maxSalePurchasePerAddress",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "publicSaleStart",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "publicSaleEnd",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "presaleStart",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "presaleEnd",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "presaleMerkleRoot",
+            "type": "bytes32"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "approved",
+            "type": "bool"
+          }
+        ],
+        "name": "setApprovalForAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address payable",
+            "name": "newRecipientAddress",
+            "type": "address"
+          }
+        ],
+        "name": "setFundsRecipient",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "contract IMetadataRenderer",
+            "name": "newRenderer",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "setupRenderer",
+            "type": "bytes"
+          }
+        ],
+        "name": "setMetadataRenderer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "setOwner",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint104",
+            "name": "publicSalePrice",
+            "type": "uint104"
+          },
+          {
+            "internalType": "uint32",
+            "name": "maxSalePurchasePerAddress",
+            "type": "uint32"
+          },
+          {
+            "internalType": "uint64",
+            "name": "publicSaleStart",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "publicSaleEnd",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "presaleStart",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint64",
+            "name": "presaleEnd",
+            "type": "uint64"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "presaleMerkleRoot",
+            "type": "bytes32"
+          }
+        ],
+        "name": "setSaleConfiguration",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes4",
+            "name": "interfaceId",
+            "type": "bytes4"
+          }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "tokenURI",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "args",
+            "type": "bytes"
+          }
+        ],
+        "name": "updateMarketFilterSettings",
+        "outputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          }
+        ],
+        "name": "upgradeTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newImplementation",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          }
+        ],
+        "name": "upgradeToAndCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "zoraERC721TransferHelper",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "quantity",
+            "type": "uint256"
+          }
+        ],
+        "name": "zoraFeeForAmount",
+        "outputs": [
+          {
+            "internalType": "address payable",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fee",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ],
+    "devdoc": {
+      "author": "iain@zora.co",
+      "details": "For drops: assumes 1. linear mint order, 2. max number of mints needs to be less than max_uint64       (if you have more than 18 quintillion linear mints you should probably not be using this contract)",
+      "errors": {
+        "MarketFilterDAOAddressNotSupportedForChain()": [
+          {
+            "details": "Used for enabling and disabling filter for the given chain."
+          }
+        ],
+        "OperatorNotAllowed(address)": [
+          {
+            "details": "Used when strict enforcement of marketplaces for creator royalties is desired."
+          }
+        ],
+        "RemoteOperatorFilterRegistryCallFailed()": [
+          {
+            "details": "Used for bubbling error up to clients."
+          }
+        ]
+      },
+      "kind": "dev",
+      "methods": {
+        "adminMint(address,uint256)": {
+          "params": {
+            "quantity": "quantity to mint",
+            "recipient": "recipient to mint to"
+          }
+        },
+        "adminMintAirdrop(address[])": {
+          "details": "This mints multiple editions to the given list of addresses.",
+          "params": {
+            "recipients": "list of addresses to send the newly minted editions to"
+          }
+        },
+        "approve(address,uint256)": {
+          "details": "See {IERC721-approve}."
+        },
+        "balanceOf(address)": {
+          "details": "See {IERC721-balanceOf}."
+        },
+        "burn(uint256)": {
+          "params": {
+            "tokenId": "Token ID to burn"
+          }
+        },
+        "callMetadataRenderer(bytes)": {
+          "details": "Only accessible via an admin role",
+          "params": {
+            "data": "raw calldata to call the metadata renderer contract with."
+          }
+        },
+        "constructor": {
+          "details": "Marked as an initializer to prevent storage being used of base implementation. Can only be init'd by a proxy.",
+          "params": {
+            "_factoryUpgradeGate": "Factory upgrade gate address",
+            "_marketFilterDAOAddress": "Market filter DAO address",
+            "_zoraERC721TransferHelper": "Transfer helper"
+          }
+        },
+        "contractURI()": {
+          "returns": {
+            "_0": "Contract URI"
+          }
+        },
+        "contractVersion()": {
+          "returns": {
+            "_0": "The version ID of this contract implementation"
+          }
+        },
+        "getApproved(uint256)": {
+          "details": "See {IERC721-getApproved}."
+        },
+        "getRoleAdmin(bytes32)": {
+          "details": "Returns the admin role that controls `role`. See {grantRole} and {revokeRole}. To change a role's admin, use {_setRoleAdmin}."
+        },
+        "grantRole(bytes32,address)": {
+          "details": "Grants `role` to `account`. If `account` had not been already granted `role`, emits a {RoleGranted} event. Requirements: - the caller must have ``role``'s admin role."
+        },
+        "hasRole(bytes32,address)": {
+          "details": "Returns `true` if `account` has been granted `role`."
+        },
+        "initialize(string,string,address,address,uint64,uint16,bytes[],address,bytes)": {
+          "details": "Create a new drop contract",
+          "params": {
+            "_contractName": "Contract name",
+            "_contractSymbol": "Contract symbol",
+            "_editionSize": "Number of editions that can be minted in total. If type(uint64).max, unlimited editions can be minted as an open edition.",
+            "_fundsRecipient": "Wallet/user that receives funds from sale",
+            "_initialOwner": "User that owns and can mint the edition, gets royalty and sales payouts and can update the base url if needed.",
+            "_metadataRenderer": "Renderer contract to use",
+            "_metadataRendererInit": "Renderer data initial contract",
+            "_royaltyBPS": "BPS of the royalty set on the contract. Can be 0 for no royalty.",
+            "_setupCalls": "Bytes-encoded list of setup multicalls"
+          }
+        },
+        "isAdmin(address)": {
+          "details": "Getter for admin role associated with the contract to handle metadata",
+          "returns": {
+            "_0": "boolean if address is admin"
+          }
+        },
+        "isApprovedForAll(address,address)": {
+          "details": "Setup auto-approval for Zora v3 access to sell NFT      Still requires approval for module",
+          "params": {
+            "nftOwner": "owner of the nft",
+            "operator": "operator wishing to transfer/burn/etc the NFTs"
+          }
+        },
+        "manageMarketFilterDAOSubscription(bool)": {
+          "params": {
+            "enable": "Enable filtering to non-royalty payout marketplaces"
+          }
+        },
+        "mintedPerAddress(address)": {
+          "details": "Number of NFTs the user has minted per address",
+          "params": {
+            "minter": "to get counts for"
+          }
+        },
+        "multicall(bytes[])": {
+          "details": "Receives and executes a batch of function calls on this contract."
+        },
+        "name()": {
+          "details": "See {IERC721Metadata-name}."
+        },
+        "owner()": {
+          "returns": {
+            "_0": "user owner address"
+          }
+        },
+        "ownerOf(uint256)": {
+          "details": "See {IERC721-ownerOf}."
+        },
+        "proxiableUUID()": {
+          "details": "Implementation of the ERC1822 {proxiableUUID} function. This returns the storage slot used by the implementation. It is used to validate that the this implementation remains valid after an upgrade. IMPORTANT: A proxy pointing at a proxiable contract should not be considered proxiable itself, because this risks bricking a proxy that upgrades to it, by delegating to itself until out of gas. Thus it is critical that this function revert if invoked through a proxy. This is guaranteed by the `notDelegated` modifier."
+        },
+        "purchase(uint256)": {
+          "details": "This allows the user to purchase a edition edition at the given price in the contract."
+        },
+        "purchasePresale(uint256,uint256,uint256,bytes32[])": {
+          "params": {
+            "maxQuantity": "max quantity that can be purchased via merkle proof #",
+            "merkleProof": "proof for presale mint",
+            "pricePerToken": "price that each token is purchased at",
+            "quantity": "quantity to purchase"
+          }
+        },
+        "renounceRole(bytes32,address)": {
+          "details": "Revokes `role` from the calling account. Roles are often managed via {grantRole} and {revokeRole}: this function's purpose is to provide a mechanism for accounts to lose their privileges if they are compromised (such as when a trusted device is misplaced). If the calling account had been revoked `role`, emits a {RoleRevoked} event. Requirements: - the caller must be `account`."
+        },
+        "revokeRole(bytes32,address)": {
+          "details": "Revokes `role` from `account`. If `account` had been granted `role`, emits a {RoleRevoked} event. Requirements: - the caller must have ``role``'s admin role."
+        },
+        "royaltyInfo(uint256,uint256)": {
+          "details": "Get royalty information for token",
+          "params": {
+            "_salePrice": "Sale price for the token"
+          }
+        },
+        "safeTransferFrom(address,address,uint256)": {
+          "details": "See {IERC721-safeTransferFrom}."
+        },
+        "safeTransferFrom(address,address,uint256,bytes)": {
+          "details": "See {IERC721-safeTransferFrom}."
+        },
+        "saleDetails()": {
+          "returns": {
+            "_0": "IERC721Drop.SaleDetails sale information details"
+          }
+        },
+        "setApprovalForAll(address,bool)": {
+          "details": "See {IERC721-setApprovalForAll}."
+        },
+        "setFundsRecipient(address)": {
+          "params": {
+            "newRecipientAddress": "new funds recipient address"
+          }
+        },
+        "setMetadataRenderer(address,bytes)": {
+          "params": {
+            "newRenderer": "new renderer address to use",
+            "setupRenderer": "data to setup new renderer with"
+          }
+        },
+        "setOwner(address)": {
+          "details": "Set new owner for royalties / opensea",
+          "params": {
+            "newOwner": "new owner to set"
+          }
+        },
+        "setSaleConfiguration(uint104,uint32,uint64,uint64,uint64,uint64,bytes32)": {
+          "details": "This sets the sales configuration",
+          "params": {
+            "maxSalePurchasePerAddress": "Max # of purchases (public) per address allowed",
+            "presaleEnd": "unix timestamp when the presale ends",
+            "presaleMerkleRoot": "merkle root for the presale information",
+            "presaleStart": "unix timestamp when the presale starts",
+            "publicSaleEnd": "unix timestamp when the public sale ends (set to 0 to disable)",
+            "publicSalePrice": "New public sale price",
+            "publicSaleStart": "unix timestamp when the public sale starts"
+          }
+        },
+        "supportsInterface(bytes4)": {
+          "params": {
+            "interfaceId": "interface id to check if supported"
+          }
+        },
+        "symbol()": {
+          "details": "See {IERC721Metadata-symbol}."
+        },
+        "tokenURI(uint256)": {
+          "params": {
+            "tokenId": "id of token to get URI for"
+          },
+          "returns": {
+            "_0": "Token URI"
+          }
+        },
+        "totalSupply()": {
+          "details": "Burned tokens are calculated here, use _totalMinted() if you want to count just minted tokens."
+        },
+        "transferFrom(address,address,uint256)": {
+          "details": "See {IERC721-transferFrom}."
+        },
+        "updateMarketFilterSettings(bytes)": {
+          "params": {
+            "args": "Calldata args to pass to the registry"
+          }
+        },
+        "upgradeTo(address)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        },
+        "upgradeToAndCall(address,bytes)": {
+          "details": "Upgrade the implementation of the proxy to `newImplementation`, and subsequently execute the function call encoded in `data`. Calls {_authorizeUpgrade}. Emits an {Upgraded} event."
+        },
+        "zoraFeeForAmount(uint256)": {
+          "details": "Gets the zora fee for amount of withdraw"
+        }
+      },
+      "stateVariables": {
+        "FUNDS_SEND_GAS_LIMIT": {
+          "details": "Gas limit to send funds"
+        },
+        "MAX_MINT_BATCH_SIZE": {
+          "details": "This is the max mint batch size for the optimized ERC721A mint contract"
+        },
+        "factoryUpgradeGate": {
+          "details": "Factory upgrade gate"
+        },
+        "zoraERC721TransferHelper": {
+          "details": "ZORA V3 transfer helper address for auto-approval"
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "errors": {
+        "Access_MissingRoleOrAdmin(bytes32)": [
+          {
+            "notice": "Missing the given role or admin access"
+          }
+        ],
+        "Access_OnlyAdmin()": [
+          {
+            "notice": "Only admin can access this function"
+          }
+        ],
+        "Access_WithdrawNotAllowed()": [
+          {
+            "notice": "Withdraw is not allowed by this user"
+          }
+        ],
+        "Admin_InvalidUpgradeAddress(address)": [
+          {
+            "notice": "Invalid admin upgrade address"
+          }
+        ],
+        "Admin_UnableToFinalizeNotOpenEdition()": [
+          {
+            "notice": "Unable to finalize an edition not marked as open (size set to uint64_max_value)"
+          }
+        ],
+        "ApprovalCallerNotOwnerNorApproved()": [
+          {
+            "notice": "The caller must own the token or be an approved operator."
+          }
+        ],
+        "ApprovalQueryForNonexistentToken()": [
+          {
+            "notice": "The token does not exist."
+          }
+        ],
+        "ApprovalToCurrentOwner()": [
+          {
+            "notice": "The caller cannot approve to the current owner."
+          }
+        ],
+        "ApproveToCaller()": [
+          {
+            "notice": "The caller cannot approve to their own address."
+          }
+        ],
+        "BalanceQueryForZeroAddress()": [
+          {
+            "notice": "Cannot query the balance for the zero address."
+          }
+        ],
+        "ExternalMetadataRenderer_CallFailed()": [
+          {
+            "notice": "Call to external metadata renderer failed."
+          }
+        ],
+        "MarketFilterDAOAddressNotSupportedForChain()": [
+          {
+            "notice": "Thrown when there is no active market filter DAO address supported for the current chain"
+          }
+        ],
+        "MintFee_FundsSendFailure()": [
+          {
+            "notice": "Mint fee send failure"
+          }
+        ],
+        "MintToZeroAddress()": [
+          {
+            "notice": "Cannot mint to the zero address."
+          }
+        ],
+        "MintZeroQuantity()": [
+          {
+            "notice": "The quantity of tokens minted must be more than zero."
+          }
+        ],
+        "Mint_SoldOut()": [
+          {
+            "notice": "NFT sold out"
+          }
+        ],
+        "OperatorNotAllowed(address)": [
+          {
+            "notice": "Thrown when the operator for the contract is not allowed"
+          }
+        ],
+        "OwnerQueryForNonexistentToken()": [
+          {
+            "notice": "The token does not exist."
+          }
+        ],
+        "Presale_Inactive()": [
+          {
+            "notice": "Presale is inactive"
+          }
+        ],
+        "Presale_MerkleNotApproved()": [
+          {
+            "notice": "Presale merkle root is invalid"
+          }
+        ],
+        "Presale_TooManyForAddress()": [
+          {
+            "notice": "Too many presale for address"
+          }
+        ],
+        "Purchase_TooManyForAddress()": [
+          {
+            "notice": "Too many purchase for address"
+          }
+        ],
+        "Purchase_WrongPrice(uint256)": [
+          {
+            "notice": "Wrong price for purchase"
+          }
+        ],
+        "RemoteOperatorFilterRegistryCallFailed()": [
+          {
+            "notice": "Used when the operator filter registry external call fails"
+          }
+        ],
+        "Sale_Inactive()": [
+          {
+            "notice": "Sale is inactive"
+          }
+        ],
+        "Setup_RoyaltyPercentageTooHigh(uint16)": [
+          {
+            "notice": "Royalty percentage too high"
+          }
+        ],
+        "TransferCallerNotOwnerNorApproved()": [
+          {
+            "notice": "The caller must own the token or be an approved operator."
+          }
+        ],
+        "TransferFromIncorrectOwner()": [
+          {
+            "notice": "The token must be owned by `from`."
+          }
+        ],
+        "TransferToNonERC721ReceiverImplementer()": [
+          {
+            "notice": "Cannot safely transfer to a contract that does not implement the ERC721Receiver interface."
+          }
+        ],
+        "TransferToZeroAddress()": [
+          {
+            "notice": "Cannot transfer to the zero address."
+          }
+        ],
+        "URIQueryForNonexistentToken()": [
+          {
+            "notice": "The token does not exist."
+          }
+        ],
+        "Withdraw_FundsSendFailure()": [
+          {
+            "notice": "Cannot withdraw funds due to ETH send failure."
+          }
+        ]
+      },
+      "events": {
+        "FundsRecipientChanged(address,address)": {
+          "notice": "Event emitted when the funds recipient is changed"
+        },
+        "FundsWithdrawn(address,address,uint256,address,uint256)": {
+          "notice": "Event emitted when the funds are withdrawn from the minting contract"
+        },
+        "MintFeePayout(uint256,address,bool)": {
+          "notice": "Event emitted for mint fee payout"
+        },
+        "OpenMintFinalized(address,uint256)": {
+          "notice": "Event emitted when an open mint is finalized and further minting is closed forever on the contract."
+        },
+        "Sale(address,uint256,uint256,uint256)": {
+          "notice": "Event emitted for each sale"
+        },
+        "SalesConfigChanged(address)": {
+          "notice": "Sales configuration has been changed"
+        },
+        "UpdatedMetadataRenderer(address,address)": {
+          "notice": "Event emitted when metadata renderer is updated."
+        }
+      },
+      "kind": "user",
+      "methods": {
+        "MINTER_ROLE()": {
+          "notice": "Access control roles"
+        },
+        "adminMint(address,uint256)": {
+          "notice": "Mint admin"
+        },
+        "burn(uint256)": {
+          "notice": "User burn function for token id"
+        },
+        "callMetadataRenderer(bytes)": {
+          "notice": "Calls the metadata renderer contract to make an update and uses the EIP4906 event to notify"
+        },
+        "config()": {
+          "notice": "Configuration for NFT minting contract storage"
+        },
+        "constructor": {
+          "notice": "Global constructor \u2013\u00a0these variables will not change with further proxy deploys"
+        },
+        "contractURI()": {
+          "notice": "Contract URI Getter, proxies to metadataRenderer"
+        },
+        "contractVersion()": {
+          "notice": "The version of the contract"
+        },
+        "finalizeOpenEdition()": {
+          "notice": "Admin function to finalize and open edition sale"
+        },
+        "manageMarketFilterDAOSubscription(bool)": {
+          "notice": "Manage subscription to the DAO for marketplace filtering based off royalty payouts."
+        },
+        "marketFilterDAOAddress()": {
+          "notice": "Market filter DAO address for opensea filter registry"
+        },
+        "metadataRenderer()": {
+          "notice": "Getter for metadataRenderer contract"
+        },
+        "owner()": {
+          "notice": "Simple override for owner interface."
+        },
+        "purchasePresale(uint256,uint256,uint256,bytes32[])": {
+          "notice": "Merkle-tree based presale purchase function"
+        },
+        "saleDetails()": {
+          "notice": "Sale details"
+        },
+        "salesConfig()": {
+          "notice": "Sales configuration"
+        },
+        "setFundsRecipient(address)": {
+          "notice": "Set a different funds recipient"
+        },
+        "setMetadataRenderer(address,bytes)": {
+          "notice": "Set a new metadata renderer"
+        },
+        "supportsInterface(bytes4)": {
+          "notice": "ERC165 supports interface"
+        },
+        "tokenURI(uint256)": {
+          "notice": "Token URI Getter, proxies to metadataRenderer"
+        },
+        "updateMarketFilterSettings(bytes)": {
+          "notice": "Proxy to update market filter settings in the main registry contractsRequires admin permissions"
+        },
+        "withdraw()": {
+          "notice": "This withdraws ETH from the contract to the contract owner."
+        },
+        "zoraFeeForAmount(uint256)": {
+          "notice": "ZORA fee is fixed now per mint"
+        }
+      },
+      "notice": "ZORA NFT Base contract for Drops and Editions",
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "src/ERC721Drop.sol": "ERC721Drop"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 5000
+    },
+    "remappings": [
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+      ":base64/=lib/base64/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc721a-upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+      ":forge-std/=lib/forge-std/src/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/"
+    ]
+  },
+  "sources": {
+    "lib/ERC721A-Upgradeable/contracts/ERC721AUpgradeable.sol": {
+      "keccak256": "0x09f0f04dc4afd6e4e5c2c297c0ef667425fba3b72e5f7eb49cff730e302f66b9",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://6fc9aa5cdd560666b104af810a83c221684291518fbedefdf4a246d86e9bc7b4",
+        "dweb:/ipfs/QmVFzLRvLKt3MJ2Ta96tU7SNtFcoVsFZuv1qqYSHqDbfq4"
+      ]
+    },
+    "lib/ERC721A-Upgradeable/contracts/IERC721AUpgradeable.sol": {
+      "keccak256": "0x761343df9ec8e5a785ac31bd71231abde512731d39a661589e9985b4a31afd42",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://ecb7dde639c588b68e6d2fa88b0cd6e4a7fa8e8e976a9c92947a2c1dc07f30ab",
+        "dweb:/ipfs/QmW47sC5tG41dA9ba1jWDBRq5U1ASTQbkw4N4XCY6HYLSB"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/access/AccessControlUpgradeable.sol": {
+      "keccak256": "0xe7924d4b22ae4a764da606d6967417f50fd0d09d59deb54f5faefac8d145e81d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://34feefd84ca432b5d12c593f297bd2fc93b13ab70ad46c7ccab61cb772ea2e40",
+        "dweb:/ipfs/QmQ6sK6wqDAVTjcd7sjkKuLgWvRKU2HQoKrLWwx81H48nB"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/access/IAccessControlUpgradeable.sol": {
+      "keccak256": "0xb8f5302f12138c5561362e88a78d061573e6298b7a1a5afe84a1e2c8d4d5aeaa",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://740cf4dc535e3082560cf5a031473029f322690fc8037fe9d5e3a8bef42e757c",
+        "dweb:/ipfs/QmTQxFdfxcaueQa23VX34wAPqzruZbkzyeN58tZK2yav2b"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC165Upgradeable.sol": {
+      "keccak256": "0x121966b3220d263a6669dcf59c1254bd48ed237adf4d8a595add70a7927eada1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://440dc242517ca29e9802f32dd237a185b4f7aaab67ceb2c1d6307c57636e0904",
+        "dweb:/ipfs/QmeQZeMCMmxca8hA4oUFXEwLAzspiwMTQ9CaqFQutYk9ag"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC2981Upgradeable.sol": {
+      "keccak256": "0xf710fb524203921ca2fca7201672900fbfb354a37b56dd3f4f2e1592b3edb999",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://e01e4cb3900882f32553c918886fa2f509e1a3e2a75fab6b3a5486423b00f8f4",
+        "dweb:/ipfs/QmQh7wmu2bgudYE99vy7VKLB7NVRBFoH5tLwR6zxtgsKRP"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC721Upgradeable.sol": {
+      "keccak256": "0x9256117dac3a66dbce2e7245c6ceb7361f8ae7425e3d896ac26ecece3e3d12e3",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4e0cd6ddcc1752ba1f1cd878b75e7371ec4879a618afe16c615fcf0e28b02d88",
+        "dweb:/ipfs/QmaLMWkUnySXW4xVWGTEcrtX7V7CHgMagbkKaYyurEhj4o"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol": {
+      "keccak256": "0x77c89f893e403efc6929ba842b7ccf6534d4ffe03afe31670b4a528c0ad78c0f",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://496bd9b3df2455d571018c09f0c6badd29713fdeb907c6aa09d8d28cb603f053",
+        "dweb:/ipfs/QmXdJDyYs6WMwMh21dez2BYPxhSUaUYFMDtVNcn2cgFR79"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
+      "keccak256": "0x315887e846f1e5f8d8fa535a229d318bb9290aaa69485117f1ee8a9a6b3be823",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://29dda00da6d269685b555e710e4abf1c3eb6d00c15b888a7880a2f8dd3c4fdc2",
+        "dweb:/ipfs/QmSqcjtdECygtT1Gy7uEo42x8542srpgGEeKKHfcnQqXgn"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol": {
+      "keccak256": "0x24b86ac8c005b8c654fbf6ac34a5a4f61580d7273541e83e013e89d66fbf0908",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4dbfe1a3b3b3fb64294ce41fd2ad362e7b7012208117864f42c1a67620a6d5c1",
+        "dweb:/ipfs/QmVMU5tWt7zBQMmf5cpMX8UMHV86T3kFeTxBTBjFqVWfoJ"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+      "keccak256": "0x372b0bc04e3b4c074559bbbfb1317afddb56de5504158ca25a7f9cd403980445",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://88b812365459a042c2aab5c689ff723098e0e19cb372718d3dd028b3c406e4f6",
+        "dweb:/ipfs/QmTsLrMYzPjnB85pyAy85NNcBg64RPVueJARzwNg9xMyR1"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol": {
+      "keccak256": "0x6e36e9b4b71de699c2f3f0d4e4d1aa0b35da99a26e8d5b91ef09ba234b4ef270",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://abfa467c53a0d60b4d09bf04aa952b1d1d44e5766fcc053aace078d7859b8419",
+        "dweb:/ipfs/QmebVTZpyNxYfKYTuLMywzEJTdc1Ca8ME4xm3kR9gQgToG"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/security/ReentrancyGuardUpgradeable.sol": {
+      "keccak256": "0x8cc03c5ac17e8a7396e487cda41fc1f1dfdb91db7d528e6da84bee3b6dd7e167",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://607818f1b44548c2d8268176f73cdb290e1faed971b1061930d92698366e2a11",
+        "dweb:/ipfs/QmQibMe3r5no95b6q7isGT5R75V8xSofWEDLXzp95b7LgZ"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol": {
+      "keccak256": "0x6c4dd0c916c4d69014b1a430f5803d3ea1f35c1a8021aefafde55ca4c2d20c2a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://93fd17a1502ac391fd929e9c585032efed0b2ed1fb6fe6026dbc44621538b84d",
+        "dweb:/ipfs/Qmd3S9HaNGe83wctpj7Bvn6p2veG5P6QH1nPcRuKNJfUqN"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721Upgradeable.sol": {
+      "keccak256": "0x714a33fd66816f608f6eda908da24eb6009eee50adf4062c86639d4fe508a7b6",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://1222806a46ee6d877cff1f609cdb548271a0ae85228716c8d1427462a16bd59b",
+        "dweb:/ipfs/QmZVjwuTFqhoFBuug3fvHFVC5Y9ompwdHMwUy5upevMfJ5"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/extensions/IERC721MetadataUpgradeable.sol": {
+      "keccak256": "0x95a471796eb5f030fdc438660bebec121ad5d063763e64d92376ffb4b5ce8b70",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4ffbd627e6958983d288801acdedbf3491ee0ebf1a430338bce47c96481ce9e3",
+        "dweb:/ipfs/QmUM1vpmNgBV34sYf946SthDJNGhwwqjoRggmj4TUUQmdB"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+      "keccak256": "0x55cf2bd9fc76704ddcdc19834cd288b7de00fc0f298a40ea16a954ae8991db2d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://37e4df53c8d2e3c1062c1c7b2c17366db7de03bfd2559d340ca95c588aa49c2f",
+        "dweb:/ipfs/QmQ9vsG3o4wED3FRogiSUhdzJvZSjjYFtydzXvFEJtgZk4"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+      "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+        "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol": {
+      "keccak256": "0x422c3d27d0d5681cea93acbb0dcb175fa5b461b5b7731da7ff77e51f0f0174c7",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://feb47206935cf956f60ffd76b8bad047102c7acbf2aab10157a235b7af66fa39",
+        "dweb:/ipfs/QmZQ39kpPhCdN9fyZ7BMwnK26tHjiP6QZDeL8tMSPDjxan"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/StringsUpgradeable.sol": {
+      "keccak256": "0x398d3323c1932a5986bf36be7c57593e121e69d5db5b6574b4ee0d031443de37",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://8b268304e03daf22c349abe3c318bc6a6badd6542d62311716ab401eec745f78",
+        "dweb:/ipfs/QmNYy2sc2RoTjDhyT6HAibmeDGqfhDiDpsWRbHFHoGVHLr"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/cryptography/MerkleProofUpgradeable.sol": {
+      "keccak256": "0xa11b70c83ab745c0fbfe48e2edccbb9ded3de3ba9dd3b92ac2814ca5555179f0",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f337bba3063f7f6750e12bbdaf249c9c6ee56478463da15473b07a8877360685",
+        "dweb:/ipfs/QmcLC3GiQ8dkKqapfX7urbtfvYEed1VuvWJi6Xk7gDtHf7"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol": {
+      "keccak256": "0x9a3b990bd56d139df3e454a9edf1c64668530b5a77fc32eb063bc206f958274a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0895399d170daab2d69b4c43a0202e5a07f2e67a93b26e3354dcbedb062232f7",
+        "dweb:/ipfs/QmUM1VH3XDk559Dsgh4QPvupr3YVKjz87HrSyYzzVFZbxw"
+      ]
+    },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol": {
+      "keccak256": "0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://92ad7e572cf44e6b4b37631b44b62f9eb9fb1cf14d9ce51c1504d5dc7ccaf758",
+        "dweb:/ipfs/QmcnbqX85tsWnUXPmtuPLE4SczME2sJaTfmqEFkuAJvWhy"
+      ]
+    },
+    "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+      "keccak256": "0x2ccf9d2313a313d41a791505f2b5abfdc62191b5d4334f7f7a82691c088a1c87",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b3a57d0854b2fdce6ebff933a48dca2445643d1eccfc27f00292e937f26c6a58",
+        "dweb:/ipfs/QmW45rZooS9TqR4YXUbjRbtf2Bpb5ouSarBvfW1LdGprvV"
+      ]
+    },
+    "src/ERC721Drop.sol": {
+      "keccak256": "0xd923eec161941785f2c28bc4262ada947002abfa95ba399dd656e1c6e714d404",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f6c7dcfeb62d9a103eb11b06cb7c794613cdd71e2a0b0578aac0dc187967e9ba",
+        "dweb:/ipfs/QmW9J92iUhf1e1HYZLXJG6Q1ZVpGnrWURyFHB9XfCWRtBD"
+      ]
+    },
+    "src/interfaces/IERC4906.sol": {
+      "keccak256": "0x9cb770e2d516a658d33dfe8a2c8c1b62535753174bed089ce32de0e1cadee759",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d5dbb1cb337a2db16eeeec29a34a55c26abace6a891fa5e788ff100eb6971c53",
+        "dweb:/ipfs/QmcLxmCLWEh1Y2jZaErQ7oJFPxL7Cjap3nax2kk6YpgYDQ"
+      ]
+    },
+    "src/interfaces/IERC721Drop.sol": {
+      "keccak256": "0xfb5431b4cc36023ccbf798b014bb70e0d753c29ab898d7fa6fe4b53bd85c00f4",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://2ed4d967f5d4d02aba72fde16612b0f84bd8a621e06d2342f6a918dd10adf5ef",
+        "dweb:/ipfs/QmUpiskLQUjG8hQp9jaxSMgJUngVZqksp8rYdMmP6uocc6"
+      ]
+    },
+    "src/interfaces/IFactoryUpgradeGate.sol": {
+      "keccak256": "0x04e26e7e753faa9433dc2af8c6371fb8ef61a3c967aaa119bf7cc14f998c90b1",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://4603628a3d23c7720ae511b414962eb2216e16f03c79441ea49219f162f27c18",
+        "dweb:/ipfs/QmYLDTws4LxcXGYrK4uuTFXvGQgnEQwAPUJPR2BhHzfsdo"
+      ]
+    },
+    "src/interfaces/IMetadataRenderer.sol": {
+      "keccak256": "0x028ca6812523430e51bea0d94e262061bcac07918eff7fa4e632d514cfc14fa4",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://9b36c0ab8ee6e91e4c0e728e6139f71df1cb80c602ee0c70563850900a945370",
+        "dweb:/ipfs/QmZqgJAidibh69iDdHKdCgh7WErw8kadoyePPS1h6WqwPg"
+      ]
+    },
+    "src/interfaces/IOperatorFilterRegistry.sol": {
+      "keccak256": "0x1ee4c3631e723b0154901bd07a2aceea22131d412f9f4165a8758feefab7b5c6",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://27786a9acec5e3e7cbf4f228ce9767faaca0e78d1289be0d75a066015e2a656c",
+        "dweb:/ipfs/QmaZvWGszsd8wxhKBw3vWMu6bS3CKEpgZGBrLxqTvURr6s"
+      ]
+    },
+    "src/interfaces/IOwnable.sol": {
+      "keccak256": "0xba93a359629e4a26fe553e07c20fb7b5c58ab0e4ac00bed71f06d5e79059f423",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://48b94f75f9952ef4b17c85da4c85aa25506552b45c65401b4d02a3f76aae6b86",
+        "dweb:/ipfs/QmNwnj6jqMhf6Urg2tJ47ZfzTRwpBkiGCGwYE1sf4wJLdU"
+      ]
+    },
+    "src/storage/ERC721DropStorageV1.sol": {
+      "keccak256": "0xe6f5a209fc6cbd0a775d86968e31a0aa3d46ab2b5edfcaeda6b9711175645c02",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://37501ec631b4cc81e5f6cc91ae2b0c9255c099b23be549a8d56c79c5aefe7055",
+        "dweb:/ipfs/QmSYVCu3tzSsW1pdUd36mvGFdaVSmpWfLeYHENyvAiVdX8"
+      ]
+    },
+    "src/utils/FundsReceiver.sol": {
+      "keccak256": "0x09d04ed0af6f95cd6c958c877d22cb953f538cd90b96008a619bbb2082a17e43",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f095e5cf82457698f2b6b385a750270cf626dd245f5886beede827b9eaa0bd22",
+        "dweb:/ipfs/QmSbegrPAumh2c3RsrJLw1vYKR5kSFjXwbod5Byi7ksYLa"
+      ]
+    },
+    "src/utils/OwnableSkeleton.sol": {
+      "keccak256": "0x4146c66a6287c3bef63c7ce65613eadcc7d64392623d3ab1713ef3d60c6bfc3d",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://09a1b5c9732242bf0d560fe910ea6c9525b2f4ab38b2a0acafd8310c6f785ae4",
+        "dweb:/ipfs/Qmd4FoKnJwMLvFPQmQNRrQP7NzYjN9GwQPpw4rBphQcnU6"
+      ]
+    },
+    "src/utils/PublicMulticall.sol": {
+      "keccak256": "0x115d8891263dd4e29df67d9d307297d4ea0faae7c95e2cd37ae62ad3d5608b73",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://a0da818e6967e2dde2131d8b653f3b0112134c6857d9a5dc0e5b038ff210f9b1",
+        "dweb:/ipfs/QmfKoVKd9ykoqSgQMhN9hQWf78jpDopUPBmSTUvFhmuDfH"
+      ]
+    },
+    "src/utils/Version.sol": {
+      "keccak256": "0x4f3c7d0bdbc3c4b7e6d96d7680625967a41470b78c3679b4e8631df7dd5b5ff9",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7259fbfd1cb12bcec3f984012e30228ef74bdd343349037c95221d7bd9c5b4c",
+        "dweb:/ipfs/QmYMiqfszdMBypLPfNpWZKrch7CY8jCf6u71FbG2ydxyzQ"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,14 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    }
+  },
+  "compilerVersion": "0.7.6+commit.7338295f",
+  "fullyQualifiedName": "contracts/stake/LockTOSv2Proxy.sol:LockTOSv2Proxy",
+  "language": "Solidity",
+  "name": "LockTOSv2Proxy"
+}

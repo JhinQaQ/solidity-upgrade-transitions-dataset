@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "useLiteralContent": true
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.5.16+commit.9c3226ce",
+  "fullyQualifiedName": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+  "language": "Solidity",
+  "name": "MozartCoreV2"
+}

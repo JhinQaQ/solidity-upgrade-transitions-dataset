@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "6780899",
+    "deployer": "0x9ECaAf6f3bc5cFAf596Ff8317e2cCd688Ca40Bd7",
+    "transactionHash": "0x823dbc266fa5b57f199acce4f6a04593a8d9b1e7c2b55d85fd7529e392c49d3f",
+    "transactionIndex": "93"
+  },
+  "implementation_address": "0xcfdffa11672688131bbeba3af1596055e0fa7498",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xcfdffa11672688131bbeba3af1596055e0fa7498?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xcfdffa11672688131bbeba3af1596055e0fa7498/runtime-bytecode.hex",
+    "sha256": "5e200d6718a6e02fa003036c5f784795fc64f4ce606ae939d1fa01e38d5c40f2",
+    "size_bytes": 6682,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Winner.sol",
+      "sha256": "d2cbf2076bcbe90a21e3b285ac26a148679297ed4b8a1c1381613749320fdcac",
+      "stored_path": "contracts/0xcfdffa11672688131bbeba3af1596055e0fa7498/sources/Winner.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-04T18:43:28Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6742463",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xcfdffa11672688131bbeba3af1596055e0fa7498?fields=all"
+}

@@ -1,15 +1,40 @@
 {
   "chain_id": 1,
+  "contract_artifacts": {
+    "collected_at_utc": "2026-08-18T19:11:43+00:00",
+    "rpc_host": "ethereum.publicnode.com",
+    "runtime_bytecode_available_count": 85,
+    "runtime_bytecode_state": "latest",
+    "source_available_count": 48,
+    "source_match_counts": {
+      "exact_match": 20,
+      "match": 27,
+      "partial_match": 1,
+      "unavailable": 37
+    },
+    "source_provider_counts": {
+      "blockscout": 1,
+      "none": 37,
+      "sourcify": 47
+    },
+    "source_services": {
+      "blockscout": "https://eth.blockscout.com/api/v2/smart-contracts",
+      "sourcify": "https://sourcify.dev/server/v2/contract/1"
+    },
+    "source_unavailable_count": 37,
+    "unique_implementation_count": 85
+  },
   "dataset_name": "Solidity Upgrade Transactions 100",
-  "dataset_version": "1.0.0",
+  "dataset_version": "1.1.0",
   "network": "ethereum-mainnet",
   "row_count": 100,
   "scope_limitations": [
     "Only direct upgradeTo and upgradeToAndCall transactions are included.",
-    "This is an upgrade-transaction-to-new-implementation mapping dataset; it does not claim a fully pinned old/new snapshot pair.",
+    "This maps upgrade transactions to new implementations; it does not claim a fully pinned old/new snapshot pair.",
     "Beacon, Diamond, metamorphic, and nonstandard upgrade functions are excluded.",
-    "The bytecode-presence check is at latest state because the public validation endpoint does not provide archive state.",
-    "The dataset does not contain verified Solidity source code or formal properties."
+    "Runtime bytecode is collected at latest state because the public validation endpoint does not provide archive state.",
+    "Verified human-readable source is preserved when available and explicitly marked unavailable otherwise.",
+    "The dataset does not contain formal properties or expected verification outcomes."
   ],
   "selection": {
     "candidate_count": 4361,
@@ -28,6 +53,7 @@
     "repository": "xiaofan88/USCDetector",
     "url": "https://raw.githubusercontent.com/xiaofan88/USCDetector/9b2bf71d1929a8bc27c88b52fe9224c24325cd68/upgrade_chains_data/proxy_upgrade_transactions_group_all_remove_repeat.json"
   },
+  "unique_new_implementation_count": 85,
   "unique_proxy_count": 100,
   "unique_transaction_count": 100,
   "validation": {

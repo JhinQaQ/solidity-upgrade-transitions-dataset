@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 20000
+    }
+  },
+  "compilerVersion": "0.4.23+commit.124ca40d",
+  "fullyQualifiedName": "TrueAUDMock.sol:TrueAUDMock",
+  "language": "Solidity",
+  "name": "TrueAUDMock"
+}

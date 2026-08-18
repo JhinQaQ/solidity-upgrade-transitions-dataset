@@ -1,0 +1,507 @@
+{
+  "storage": [
+    {
+      "astId": 2303,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 2306,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 3010,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 3410,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 25,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_currentIndex",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 27,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_burnCounter",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 29,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_name",
+      "offset": 0,
+      "slot": "103",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 31,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "104",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 36,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_ownerships",
+      "offset": 0,
+      "slot": "105",
+      "type": "t_mapping(t_uint256,t_struct(TokenOwnership)1453_storage)"
+    },
+    {
+      "astId": 41,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_addressData",
+      "offset": 0,
+      "slot": "106",
+      "type": "t_mapping(t_address,t_struct(AddressData)1462_storage)"
+    },
+    {
+      "astId": 45,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_tokenApprovals",
+      "offset": 0,
+      "slot": "107",
+      "type": "t_mapping(t_uint256,t_address)"
+    },
+    {
+      "astId": 51,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_operatorApprovals",
+      "offset": 0,
+      "slot": "108",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 1397,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "109",
+      "type": "t_array(t_uint256)42_storage"
+    },
+    {
+      "astId": 2285,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2505,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2520,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_status",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2564,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "252",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1509,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_roles",
+      "offset": 0,
+      "slot": "301",
+      "type": "t_mapping(t_bytes32,t_struct(RoleData)1504_storage)"
+    },
+    {
+      "astId": 1808,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "302",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 5878,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "351",
+      "type": "t_address"
+    },
+    {
+      "astId": 5838,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "config",
+      "offset": 0,
+      "slot": "352",
+      "type": "t_struct(Configuration)5420_storage"
+    },
+    {
+      "astId": 5842,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "salesConfig",
+      "offset": 0,
+      "slot": "354",
+      "type": "t_struct(SalesConfiguration)5442_storage"
+    },
+    {
+      "astId": 5847,
+      "contract": "src/ERC721Drop.sol:ERC721Drop",
+      "label": "presaleMintsByAddress",
+      "offset": 0,
+      "slot": "357",
+      "type": "t_mapping(t_address,t_uint256)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_address_payable": {
+      "encoding": "inplace",
+      "label": "address payable",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)42_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[42]",
+      "numberOfBytes": "1344"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IMetadataRenderer)5604": {
+      "encoding": "inplace",
+      "label": "contract IMetadataRenderer",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_struct(AddressData)1462_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct IERC721AUpgradeable.AddressData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(AddressData)1462_storage"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes32,t_struct(RoleData)1504_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(RoleData)1504_storage"
+    },
+    "t_mapping(t_uint256,t_address)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_uint256,t_struct(TokenOwnership)1453_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct IERC721AUpgradeable.TokenOwnership)",
+      "numberOfBytes": "32",
+      "value": "t_struct(TokenOwnership)1453_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(AddressData)1462_storage": {
+      "encoding": "inplace",
+      "label": "struct IERC721AUpgradeable.AddressData",
+      "members": [
+        {
+          "astId": 1455,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "balance",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 1457,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "numberMinted",
+          "offset": 8,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 1459,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "numberBurned",
+          "offset": 16,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 1461,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "aux",
+          "offset": 24,
+          "slot": "0",
+          "type": "t_uint64"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(Configuration)5420_storage": {
+      "encoding": "inplace",
+      "label": "struct IERC721Drop.Configuration",
+      "members": [
+        {
+          "astId": 5410,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "metadataRenderer",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_contract(IMetadataRenderer)5604"
+        },
+        {
+          "astId": 5413,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "editionSize",
+          "offset": 20,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 5416,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "royaltyBPS",
+          "offset": 28,
+          "slot": "0",
+          "type": "t_uint16"
+        },
+        {
+          "astId": 5419,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "fundsRecipient",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address_payable"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(RoleData)1504_storage": {
+      "encoding": "inplace",
+      "label": "struct AccessControlUpgradeable.RoleData",
+      "members": [
+        {
+          "astId": 1501,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "members",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 1503,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "adminRole",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(SalesConfiguration)5442_storage": {
+      "encoding": "inplace",
+      "label": "struct IERC721Drop.SalesConfiguration",
+      "members": [
+        {
+          "astId": 5423,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "publicSalePrice",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint104"
+        },
+        {
+          "astId": 5426,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "maxSalePurchasePerAddress",
+          "offset": 13,
+          "slot": "0",
+          "type": "t_uint32"
+        },
+        {
+          "astId": 5429,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "publicSaleStart",
+          "offset": 17,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 5432,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "publicSaleEnd",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 5435,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "presaleStart",
+          "offset": 8,
+          "slot": "1",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 5438,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "presaleEnd",
+          "offset": 16,
+          "slot": "1",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 5441,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "presaleMerkleRoot",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_bytes32"
+        }
+      ],
+      "numberOfBytes": "96"
+    },
+    "t_struct(TokenOwnership)1453_storage": {
+      "encoding": "inplace",
+      "label": "struct IERC721AUpgradeable.TokenOwnership",
+      "members": [
+        {
+          "astId": 1448,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "addr",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 1450,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "startTimestamp",
+          "offset": 20,
+          "slot": "0",
+          "type": "t_uint64"
+        },
+        {
+          "astId": 1452,
+          "contract": "src/ERC721Drop.sol:ERC721Drop",
+          "label": "burned",
+          "offset": 28,
+          "slot": "0",
+          "type": "t_bool"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_uint104": {
+      "encoding": "inplace",
+      "label": "uint104",
+      "numberOfBytes": "13"
+    },
+    "t_uint16": {
+      "encoding": "inplace",
+      "label": "uint16",
+      "numberOfBytes": "2"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint32": {
+      "encoding": "inplace",
+      "label": "uint32",
+      "numberOfBytes": "4"
+    },
+    "t_uint64": {
+      "encoding": "inplace",
+      "label": "uint64",
+      "numberOfBytes": "8"
+    }
+  }
+}

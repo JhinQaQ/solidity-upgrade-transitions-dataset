@@ -1,0 +1,16 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.0+commit.c7dfd78e",
+  "fullyQualifiedName": "/Users/shengdading/git/BTC-Plus/contracts/composite/eth/CurveBTC+.sol:CurveBTCPlus",
+  "language": "Solidity",
+  "name": "CurveBTCPlus"
+}

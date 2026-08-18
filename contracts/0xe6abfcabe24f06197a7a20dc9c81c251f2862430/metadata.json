@@ -1,0 +1,695 @@
+{
+  "compiler": {
+    "version": "0.7.0+commit.9e61f92b"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Approval",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint96",
+            "name": "burnAmount",
+            "type": "uint96"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint96[]",
+            "name": "amounts",
+            "type": "uint96[]"
+          }
+        ],
+        "name": "ForcedExitProcessed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint96",
+                "name": "burnAmount",
+                "type": "uint96"
+              },
+              {
+                "internalType": "uint32",
+                "name": "burnStorageID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "uint96[]",
+                "name": "exitMinAmounts",
+                "type": "uint96[]"
+              },
+              {
+                "internalType": "uint96",
+                "name": "fee",
+                "type": "uint96"
+              },
+              {
+                "internalType": "uint32",
+                "name": "validUntil",
+                "type": "uint32"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct AmmData.PoolExit",
+            "name": "exit",
+            "type": "tuple"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "force",
+            "type": "bool"
+          }
+        ],
+        "name": "PoolExitRequested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint96[]",
+                "name": "joinAmounts",
+                "type": "uint96[]"
+              },
+              {
+                "internalType": "uint32[]",
+                "name": "joinStorageIDs",
+                "type": "uint32[]"
+              },
+              {
+                "internalType": "uint96",
+                "name": "mintMinAmount",
+                "type": "uint96"
+              },
+              {
+                "internalType": "uint32",
+                "name": "validUntil",
+                "type": "uint32"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct AmmData.PoolJoin",
+            "name": "join",
+            "type": "tuple"
+          }
+        ],
+        "name": "PoolJoinRequested",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "Shutdown",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "Transfer",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          }
+        ],
+        "name": "allowance",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "approve",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "balanceOf",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "balance",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint8",
+                "name": "blockType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint16",
+                "name": "blockSize",
+                "type": "uint16"
+              },
+              {
+                "internalType": "uint8",
+                "name": "blockVersion",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+              },
+              {
+                "internalType": "uint256[8]",
+                "name": "proof",
+                "type": "uint256[8]"
+              },
+              {
+                "internalType": "bool",
+                "name": "storeBlockInfoOnchain",
+                "type": "bool"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "uint256",
+                    "name": "txIndex",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "bool",
+                    "name": "approved",
+                    "type": "bool"
+                  },
+                  {
+                    "internalType": "bytes",
+                    "name": "data",
+                    "type": "bytes"
+                  }
+                ],
+                "internalType": "struct ExchangeData.AuxiliaryData[]",
+                "name": "auxiliaryData",
+                "type": "tuple[]"
+              },
+              {
+                "internalType": "bytes",
+                "name": "offchainData",
+                "type": "bytes"
+              }
+            ],
+            "internalType": "struct ExchangeData.Block",
+            "name": "_block",
+            "type": "tuple"
+          },
+          {
+            "internalType": "bytes",
+            "name": "data",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint256",
+            "name": "txIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "numTxs",
+            "type": "uint256"
+          }
+        ],
+        "name": "beforeBlockSubmission",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "decimals",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint96",
+            "name": "burnAmount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint96[]",
+            "name": "exitMinAmounts",
+            "type": "uint96[]"
+          }
+        ],
+        "name": "exitPool",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint96",
+            "name": "burnAmount",
+            "type": "uint96"
+          },
+          {
+            "internalType": "uint96[]",
+            "name": "exitMinAmounts",
+            "type": "uint96[]"
+          }
+        ],
+        "name": "forceExitPool",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "isOnline",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint96[]",
+            "name": "joinAmounts",
+            "type": "uint96[]"
+          },
+          {
+            "internalType": "uint96",
+            "name": "mintMinAmount",
+            "type": "uint96"
+          }
+        ],
+        "name": "joinPool",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "name",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "nonces",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "spender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "signature",
+            "type": "bytes"
+          }
+        ],
+        "name": "permit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "sharedConfig",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "exchange",
+                "type": "address"
+              },
+              {
+                "internalType": "string",
+                "name": "poolName",
+                "type": "string"
+              },
+              {
+                "internalType": "uint32",
+                "name": "accountID",
+                "type": "uint32"
+              },
+              {
+                "internalType": "address[]",
+                "name": "tokens",
+                "type": "address[]"
+              },
+              {
+                "internalType": "uint96[]",
+                "name": "weights",
+                "type": "uint96[]"
+              },
+              {
+                "internalType": "uint8",
+                "name": "feeBips",
+                "type": "uint8"
+              },
+              {
+                "internalType": "string",
+                "name": "tokenSymbol",
+                "type": "string"
+              }
+            ],
+            "internalType": "struct AmmData.PoolConfig",
+            "name": "config",
+            "type": "tuple"
+          }
+        ],
+        "name": "setupPool",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "exitOwner",
+            "type": "address"
+          }
+        ],
+        "name": "shutdown",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "totalSupply",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transfer",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferFrom",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "updateExchangeOwner",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "withdrawWhenOffline",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "stateMutability": "payable",
+        "type": "receive"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "title": "LoopringAmmPool",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "LoopringAmmPool.sol": "LoopringAmmPool"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {
+      "AmmExitRequest": "0x02d1b34cea8a23d2ca0b6c35e66e515729e9e7b1",
+      "AmmJoinRequest": "0x2fad77345e55d3c5dd95ef7594c8c1b214273d3e",
+      "AmmStatus": "0xba64e6de39f6303f8e62b4d52386b76cab626ee6",
+      "AmmWithdrawal": "0x40d9fab377d368753b9814e788393092ae374639"
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 999999
+    },
+    "remappings": []
+  },
+  "sources": {
+    "LoopringAmmPool.sol": {
+      "keccak256": "0xa1c149ae7d28ec5c435ad77cf519388c32fac037dd677ff5fc71bc73de24e1d5",
+      "license": "Apache-2.0",
+      "urls": [
+        "bzz-raw://da3622cbfa8b9d2df35605d5e0d2507901965a13058d3829a8298df74255b0a8",
+        "dweb:/ipfs/QmYHSW2WwfNiEumcbsmD4aCkjYWyQ3cP2meieSfPkcFBUG"
+      ]
+    }
+  },
+  "version": 1
+}

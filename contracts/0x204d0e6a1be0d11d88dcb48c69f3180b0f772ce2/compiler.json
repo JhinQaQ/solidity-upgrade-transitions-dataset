@@ -1,0 +1,14 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.8.7+commit.e28d00a7",
+  "fullyQualifiedName": "contracts/Minter.sol:Minter",
+  "language": "Solidity",
+  "name": "Minter"
+}

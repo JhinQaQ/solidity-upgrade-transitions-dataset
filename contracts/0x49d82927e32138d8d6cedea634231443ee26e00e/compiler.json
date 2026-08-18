@@ -1,0 +1,30 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": [
+      "@openzeppelin/=lib/openzeppelin-contracts/",
+      "ds-test/=lib/forge-std/lib/ds-test/src/",
+      "erc4626-tests/=lib/operator-filter-registry/lib/openzeppelin-contracts/lib/erc4626-tests/",
+      "flair-sdk/=lib/contracts/src/",
+      "forge-std/=lib/forge-std/src/",
+      "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+      "openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      "openzeppelin/=lib/openzeppelin-contracts/contracts/",
+      "operator-filter-registry/=lib/operator-filter-registry/src/"
+    ]
+  },
+  "compilerVersion": "0.8.17+commit.8df45f5f",
+  "fullyQualifiedName": "src/QuirklingsImplementationV2.sol:QuirklingsImplementationV2",
+  "language": "Solidity",
+  "name": "QuirklingsImplementationV2"
+}

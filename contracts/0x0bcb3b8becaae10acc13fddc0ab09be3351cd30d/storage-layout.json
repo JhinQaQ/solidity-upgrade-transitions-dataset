@@ -1,0 +1,276 @@
+{
+  "storage": [
+    {
+      "astId": 11,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "paused",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 13,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "positionCount",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 17,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "positions",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_mapping(t_uint256,t_struct(Position)1968_storage)"
+    },
+    {
+      "astId": 23,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "positionOperators",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_mapping(t_uint256,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 27,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "globalOperators",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 29,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "oracle",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_contract(IOracle)2752"
+    },
+    {
+      "astId": 31,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "precisionScalar",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 33,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "collateralAsset",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_address"
+    },
+    {
+      "astId": 35,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "syntheticAsset",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_address"
+    },
+    {
+      "astId": 37,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "totalSupplied",
+      "offset": 0,
+      "slot": "9",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 39,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "totalBorrowed",
+      "offset": 0,
+      "slot": "10",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 41,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "borrowIndex",
+      "offset": 0,
+      "slot": "11",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 43,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "indexLastUpdate",
+      "offset": 0,
+      "slot": "12",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 45,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "interestRate",
+      "offset": 0,
+      "slot": "13",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 47,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "collateralRatio",
+      "offset": 0,
+      "slot": "14",
+      "type": "t_struct(D256)2255_storage"
+    },
+    {
+      "astId": 49,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "liquidationUserFee",
+      "offset": 0,
+      "slot": "15",
+      "type": "t_struct(D256)2255_storage"
+    },
+    {
+      "astId": 51,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "liquidationArcRatio",
+      "offset": 0,
+      "slot": "16",
+      "type": "t_struct(D256)2255_storage"
+    },
+    {
+      "astId": 53,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "interestSetter",
+      "offset": 0,
+      "slot": "17",
+      "type": "t_address"
+    },
+    {
+      "astId": 55,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "collateralLimit",
+      "offset": 0,
+      "slot": "18",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 57,
+      "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+      "label": "positionCollateralMinimum",
+      "offset": 0,
+      "slot": "19",
+      "type": "t_uint256"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_contract(IOracle)2752": {
+      "encoding": "inplace",
+      "label": "contract IOracle",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_uint256,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_uint256,t_struct(Position)1968_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct MozartTypes.Position)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Position)1968_storage"
+    },
+    "t_struct(D256)2255_storage": {
+      "encoding": "inplace",
+      "label": "struct Decimal.D256",
+      "members": [
+        {
+          "astId": 2254,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "value",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(Position)1968_storage": {
+      "encoding": "inplace",
+      "label": "struct MozartTypes.Position",
+      "members": [
+        {
+          "astId": 1963,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "owner",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 1965,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "collateralAmount",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_struct(Principal)2031_storage"
+        },
+        {
+          "astId": 1967,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "borrowedAmount",
+          "offset": 0,
+          "slot": "3",
+          "type": "t_struct(Principal)2031_storage"
+        }
+      ],
+      "numberOfBytes": "160"
+    },
+    "t_struct(Principal)2031_storage": {
+      "encoding": "inplace",
+      "label": "struct Amount.Principal",
+      "members": [
+        {
+          "astId": 2028,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "sign",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_bool"
+        },
+        {
+          "astId": 2030,
+          "contract": "./contracts/debt/mozart/MozartCoreV2.sol:MozartCoreV2",
+          "label": "value",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

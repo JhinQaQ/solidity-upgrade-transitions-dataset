@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "10557136",
+    "deployer": "0xdAE0aca4B9B38199408ffaB32562Bf7B3B0495fE",
+    "transactionHash": "0x207318d8fd0a5ae591c1234021dbb484876636a2ceff008f26605495ebea9924",
+    "transactionIndex": "40"
+  },
+  "implementation_address": "0x970f1299a6a95bcace134814ebc40abb0418cdeb",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x970f1299a6a95bcace134814ebc40abb0418cdeb?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x970f1299a6a95bcace134814ebc40abb0418cdeb/runtime-bytecode.hex",
+    "sha256": "25afd593c3d357dd128a5e8a2395e07f44490ab087ce24e9897709d5ec089054",
+    "size_bytes": 7106,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "DfDepositToken.sol",
+      "sha256": "62e9ae52097ee836b9384cad5c55d77d41fbe48064d362a98dedc512f796165d",
+      "stored_path": "contracts/0x970f1299a6a95bcace134814ebc40abb0418cdeb/sources/DfDepositToken.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-23T09:20:37Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6641998",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x970f1299a6a95bcace134814ebc40abb0418cdeb?fields=all"
+}

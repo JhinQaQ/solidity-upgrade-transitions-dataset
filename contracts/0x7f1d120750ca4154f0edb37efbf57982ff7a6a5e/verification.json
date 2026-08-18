@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "11062346",
+    "deployer": "0x479D0681A73762CA32A7DCa902F44A1ae2e0dFd4",
+    "transactionHash": "0x0299833e640aaab106f59f71294d28e71c719667b9ac887edb2304cb2e79b465",
+    "transactionIndex": "20"
+  },
+  "implementation_address": "0x7f1d120750ca4154f0edb37efbf57982ff7a6a5e",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x7f1d120750ca4154f0edb37efbf57982ff7a6a5e?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x7f1d120750ca4154f0edb37efbf57982ff7a6a5e/runtime-bytecode.hex",
+    "sha256": "cf0d78cce945aefe553064c6e16baa59900c4c213e5b9157cdf0511d8e6f9628",
+    "size_bytes": 16880,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "OptionFactory.sol",
+      "sha256": "212097c1af0caed09eeb14c43ef8204275a3f7d6e7199a978e4d016bc41eb4ad",
+      "stored_path": "contracts/0x7f1d120750ca4154f0edb37efbf57982ff7a6a5e/sources/OptionFactory.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-16T12:57:07Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "5151475",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x7f1d120750ca4154f0edb37efbf57982ff7a6a5e?fields=all"
+}

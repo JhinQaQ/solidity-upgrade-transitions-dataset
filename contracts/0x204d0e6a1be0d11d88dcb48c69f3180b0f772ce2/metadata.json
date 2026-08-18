@@ -1,0 +1,904 @@
+{
+  "compiler": {
+    "version": "0.8.7+commit.e28d00a7"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "BorrowAsset",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "claimer",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes[]",
+            "name": "ids",
+            "type": "bytes[]"
+          }
+        ],
+        "name": "ClaimAll",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "claimer",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "ClaimToken",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "typeId",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "Close",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint8",
+            "name": "isLocked",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "EditShort",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "buyer",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "discountRate",
+            "type": "uint256"
+          }
+        ],
+        "name": "Liquidation",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "timestamp",
+            "type": "uint256"
+          }
+        ],
+        "name": "Short",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "accounts",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "addMoreCollateralAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "borrow",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "borrowBalances",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes[]",
+            "name": "ids",
+            "type": "bytes[]"
+          }
+        ],
+        "name": "claimAll",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "claimById",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "close",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "collateralBalances",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "controllerAddress",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "editBorrow",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "slippage",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "editShort",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "isClaimable",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "liquidation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "lockAddress",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "_owner",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_controllerAddress",
+            "type": "address"
+          }
+        ],
+        "name": "setControllerAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "uAssetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "uAssetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint16",
+            "name": "slippage",
+            "type": "uint16"
+          },
+          {
+            "internalType": "bytes",
+            "name": "id",
+            "type": "bytes"
+          }
+        ],
+        "name": "short",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "targetPrices",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "totalClaimedById",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "typeBorrow",
+        "outputs": [
+          {
+            "internalType": "uint8",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "uAssetAddressById",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "updatedLockTime",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes",
+            "name": "",
+            "type": "bytes"
+          }
+        ],
+        "name": "userBalances",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "contracts/Minter.sol": "Minter"
+    },
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "keccak256": "0x0e9621f60b2faabe65549f7ed0f24e8853a45c1b7990d47e8160e523683f3935",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://287a2f8d5814dd0f05f22b740f18ca8321acc21c9bd03a6cb2203ea626e2f3f2",
+        "dweb:/ipfs/QmZRQv9iuwU817VuqkA2WweiaibKii69x9QxYBBEfbNEud"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "keccak256": "0x9750c6b834f7b43000631af5cc30001c5f547b3ceb3635488f140f60e897ea6b",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://5a7d5b1ef5d8d5889ad2ed89d8619c09383b80b72ab226e0fe7bde1636481e34",
+        "dweb:/ipfs/QmebXWgtEfumQGBdVeM6c71McLixYXQP5Bk6kKXuoY4Bmr"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+      "keccak256": "0xf41ca991f30855bf80ffd11e9347856a517b977f0a6c2d52e6421a99b7840329",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://b2717fd2bdac99daa960a6de500754ea1b932093c946388c381da48658234b95",
+        "dweb:/ipfs/QmP6QVMn6UeA3ByahyJbYQr5M6coHKBKsf3ySZSfbyA8R7"
+      ]
+    },
+    "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+      "keccak256": "0x032807210d1d7d218963d7355d62e021a84bf1b3339f4f50be2f63b53cccaf29",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://11756f42121f6541a35a8339ea899ee7514cfaa2e6d740625fcc844419296aa6",
+        "dweb:/ipfs/QmekMuk6BY4DAjzeXr4MSbKdgoqqsZnA8JPtuyWc6CwXHf"
+      ]
+    },
+    "@openzeppelin/contracts/utils/Address.sol": {
+      "keccak256": "0xd6153ce99bcdcce22b124f755e72553295be6abcd63804cfdffceb188b8bef10",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://35c47bece3c03caaa07fab37dd2bb3413bfbca20db7bd9895024390e0a469487",
+        "dweb:/ipfs/QmPGWT2x3QHcKxqe6gRmAkdakhbaRgx3DLzcakHz5M4eXG"
+      ]
+    },
+    "@uniswap/v2-core/contracts/interfaces/IUniswapV2Pair.sol": {
+      "keccak256": "0x7c9bc70e5996c763e02ff38905282bc24fb242b0ef2519a003b36824fc524a4b",
+      "urls": [
+        "bzz-raw://85d5ad2dd23ee127f40907a12865a1e8cb5828814f6f2480285e1827dd72dedf",
+        "dweb:/ipfs/QmayKQWJgWmr46DqWseADyUanmqxh662hPNdAkdHRjiQQH"
+      ]
+    },
+    "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol": {
+      "keccak256": "0x8a3c5c449d4b7cd76513ed6995f4b86e4a86f222c770f8442f5fc128ce29b4d2",
+      "urls": [
+        "bzz-raw://1df63ca373dafae3bd0ee7fe70f890a1dc7c45ed869c01de68413e0e97ff9deb",
+        "dweb:/ipfs/QmefJgEYGUL8KX7kQKYTrDweF8GB7yjy3nw5Bmqzryg7PG"
+      ]
+    },
+    "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol": {
+      "keccak256": "0x744e30c133bd0f7ca9e7163433cf6d72f45c6bb1508c2c9c02f1a6db796ae59d",
+      "urls": [
+        "bzz-raw://9bf2f4454ad63d4cff03a0630e787d9e8a9deed80aec89682cd8ad6379d9ef8c",
+        "dweb:/ipfs/Qme51hQNR2wpax7ooUadhtqLtXm8ffeVVYyubLkTT4wMCG"
+      ]
+    },
+    "contracts/Minter.sol": {
+      "keccak256": "0x882f69668e5e485a074408edad5bc0c35c1ae70d03e5469732887cbe148cb310",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://eb7525a184796b705bd5a7796faa7eaa1f154dc3474a08e1e71efa82b94b2177",
+        "dweb:/ipfs/QmPgMNFcvQfD8313f5ShpvJ1svHzEdYtbMcj5xNcSbGgmW"
+      ]
+    },
+    "contracts/Ownable.sol": {
+      "keccak256": "0x4aee348402a49b31b9b2b751d809b49152a0ccb22baa1c2044e5645bbb1f6a97",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://dae6055f57aabe586bf8442228a19dff3926faab4cb754ff6641d725f5e64c58",
+        "dweb:/ipfs/QmeG8dMtueN817H41oQKFjzPL4USybTY7VtuhjAs8RGtFz"
+      ]
+    },
+    "contracts/interfaces/IController.sol": {
+      "keccak256": "0x8cda1459d2db58c2084c6d6d57956b300ad2cb93b272c59abacc584704db8d82",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://96bc173e6abda1fc8c84d975090415890046e52ebdc7501282f955d8b76ed0c6",
+        "dweb:/ipfs/QmThqpbA9RpRqrQyBWFH9tSc1SnUzmjv8M2X6oFx8Xe1RU"
+      ]
+    },
+    "contracts/interfaces/IEURB.sol": {
+      "keccak256": "0xe3c015401d287a4470e9de3ca1497b4e20c339ac2bb0ab717bee8724415615e0",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0710b33d1b045ec6dafcb71ab2913e45e5ff71162cc608c2cdb86db12ce2f379",
+        "dweb:/ipfs/QmQa3Pywz3ysHFoHzeiT61oLSKd2nwZgU8hv9YWDbVL72c"
+      ]
+    },
+    "contracts/interfaces/IOracle.sol": {
+      "keccak256": "0x794db92025b0361e78008e713c9f872b1338e7be2a50f411262d18f2cdb763f2",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://d7573f3d9bf945a326ff327f6dc5ce54d590fad364b37c73bffca7720fd9c09b",
+        "dweb:/ipfs/QmVt8hmkd7aLMMtFtsjbGPoGEPjs5Bqh68kT26C937xqJ6"
+      ]
+    }
+  },
+  "version": 1
+}

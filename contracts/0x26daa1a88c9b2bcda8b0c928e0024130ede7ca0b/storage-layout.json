@@ -1,0 +1,475 @@
+{
+  "storage": [
+    {
+      "astId": 993,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 996,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 975,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1290,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1834,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2615,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 184,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_roles",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_mapping(t_bytes32,t_struct(RoleData)179_storage)"
+    },
+    {
+      "astId": 479,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 33,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_roleMembers",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_mapping(t_bytes32,t_struct(AddressSet)3819_storage)"
+    },
+    {
+      "astId": 143,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "252",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1323,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_defaultRoyaltyInfo",
+      "offset": 0,
+      "slot": "301",
+      "type": "t_struct(RoyaltyInfo)1320_storage"
+    },
+    {
+      "astId": 1328,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_tokenRoyaltyInfo",
+      "offset": 0,
+      "slot": "302",
+      "type": "t_mapping(t_uint256,t_struct(RoyaltyInfo)1320_storage)"
+    },
+    {
+      "astId": 1508,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "303",
+      "type": "t_array(t_uint256)48_storage"
+    },
+    {
+      "astId": 4173,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "NON_KEYCARD_TRAITS",
+      "offset": 0,
+      "slot": "351",
+      "type": "t_array(t_bytes32)dyn_storage"
+    },
+    {
+      "astId": 4175,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "_baseTokenURI",
+      "offset": 0,
+      "slot": "352",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 4178,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "keyCard",
+      "offset": 0,
+      "slot": "353",
+      "type": "t_contract(IAppliedPrimateEngineeringModified)5009"
+    },
+    {
+      "astId": 4181,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "mintPass",
+      "offset": 0,
+      "slot": "354",
+      "type": "t_contract(IAllegiancePass)4991"
+    },
+    {
+      "astId": 4183,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "root",
+      "offset": 0,
+      "slot": "355",
+      "type": "t_bytes32"
+    },
+    {
+      "astId": 4185,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "signer",
+      "offset": 0,
+      "slot": "356",
+      "type": "t_address"
+    },
+    {
+      "astId": 4187,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "phaseOneActive",
+      "offset": 20,
+      "slot": "356",
+      "type": "t_bool"
+    },
+    {
+      "astId": 4189,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "phaseTwoActive",
+      "offset": 21,
+      "slot": "356",
+      "type": "t_bool"
+    },
+    {
+      "astId": 4194,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "keycardLimits",
+      "offset": 0,
+      "slot": "357",
+      "type": "t_mapping(t_bytes32,t_struct(KeycardLimits)4436_storage)"
+    },
+    {
+      "astId": 4198,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "redeemedKeycards",
+      "offset": 0,
+      "slot": "358",
+      "type": "t_mapping(t_uint256,t_bool)"
+    },
+    {
+      "astId": 4202,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "publicMintedTokens",
+      "offset": 0,
+      "slot": "359",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 4206,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "phaseTwoMintedTokens",
+      "offset": 0,
+      "slot": "360",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 4208,
+      "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+      "label": "softCap",
+      "offset": 0,
+      "slot": "361",
+      "type": "t_uint256"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_bytes32)dyn_storage": {
+      "base": "t_bytes32",
+      "encoding": "dynamic_array",
+      "label": "bytes32[]",
+      "numberOfBytes": "32"
+    },
+    "t_array(t_uint256)48_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[48]",
+      "numberOfBytes": "1536"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IAllegiancePass)4991": {
+      "encoding": "inplace",
+      "label": "contract IAllegiancePass",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IAppliedPrimateEngineeringModified)5009": {
+      "encoding": "inplace",
+      "label": "contract IAppliedPrimateEngineeringModified",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes32,t_struct(AddressSet)3819_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct EnumerableSetUpgradeable.AddressSet)",
+      "numberOfBytes": "32",
+      "value": "t_struct(AddressSet)3819_storage"
+    },
+    "t_mapping(t_bytes32,t_struct(KeycardLimits)4436_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct MegaForceSentinels.KeycardLimits)",
+      "numberOfBytes": "32",
+      "value": "t_struct(KeycardLimits)4436_storage"
+    },
+    "t_mapping(t_bytes32,t_struct(RoleData)179_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(RoleData)179_storage"
+    },
+    "t_mapping(t_bytes32,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_uint256,t_struct(RoyaltyInfo)1320_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ERC2981Upgradeable.RoyaltyInfo)",
+      "numberOfBytes": "32",
+      "value": "t_struct(RoyaltyInfo)1320_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(AddressSet)3819_storage": {
+      "encoding": "inplace",
+      "label": "struct EnumerableSetUpgradeable.AddressSet",
+      "members": [
+        {
+          "astId": 3818,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "_inner",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_struct(Set)3504_storage"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(KeycardLimits)4436_storage": {
+      "encoding": "inplace",
+      "label": "struct MegaForceSentinels.KeycardLimits",
+      "members": [
+        {
+          "astId": 4427,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "maxTokens",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4429,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "maxKeyCardTraits",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4431,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "maxNonKeycardTraits",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4433,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "freeTokens",
+          "offset": 3,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4435,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "costPerToken",
+          "offset": 4,
+          "slot": "0",
+          "type": "t_uint128"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(RoleData)179_storage": {
+      "encoding": "inplace",
+      "label": "struct AccessControlUpgradeable.RoleData",
+      "members": [
+        {
+          "astId": 176,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "members",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 178,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "adminRole",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(RoyaltyInfo)1320_storage": {
+      "encoding": "inplace",
+      "label": "struct ERC2981Upgradeable.RoyaltyInfo",
+      "members": [
+        {
+          "astId": 1317,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "receiver",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 1319,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "royaltyFraction",
+          "offset": 20,
+          "slot": "0",
+          "type": "t_uint96"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(Set)3504_storage": {
+      "encoding": "inplace",
+      "label": "struct EnumerableSetUpgradeable.Set",
+      "members": [
+        {
+          "astId": 3499,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "_values",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_array(t_bytes32)dyn_storage"
+        },
+        {
+          "astId": 3503,
+          "contract": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+          "label": "_indexes",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_mapping(t_bytes32,t_uint256)"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint128": {
+      "encoding": "inplace",
+      "label": "uint128",
+      "numberOfBytes": "16"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    },
+    "t_uint96": {
+      "encoding": "inplace",
+      "label": "uint96",
+      "numberOfBytes": "12"
+    }
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "compiler": {
+    "version": "0.4.23+commit.124ca40d"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "dest",
+            "type": "address"
+          },
+          {
+            "name": "howToCall",
+            "type": "uint8"
+          },
+          {
+            "name": "calldata",
+            "type": "bytes"
+          }
+        ],
+        "name": "proxy",
+        "outputs": [
+          {
+            "name": "result",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "dest",
+            "type": "address"
+          },
+          {
+            "name": "howToCall",
+            "type": "uint8"
+          },
+          {
+            "name": "calldata",
+            "type": "bytes"
+          }
+        ],
+        "name": "proxyAssert",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "proxyType",
+        "outputs": [
+          {
+            "name": "proxyTypeId",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "pure",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "addrUser",
+            "type": "address"
+          },
+          {
+            "name": "addrRegistry",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "revoke",
+            "type": "bool"
+          }
+        ],
+        "name": "setRevoke",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "user",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "implementation",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "revoked",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "upgradeabilityOwner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "registry",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "name": "extraData",
+            "type": "bytes"
+          }
+        ],
+        "name": "receiveApproval",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "fallback"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "name": "revoked",
+            "type": "bool"
+          }
+        ],
+        "name": "Revoked",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "sender",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "ReceivedEther",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "extraData",
+            "type": "bytes"
+          }
+        ],
+        "name": "ReceivedTokens",
+        "type": "event"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "implementation()": {
+          "details": "Tells the address of the current implementation\r",
+          "return": "address of the current implementation\r"
+        },
+        "initialize(address,address)": {
+          "params": {
+            "addrRegistry": "Address of ProxyRegistry contract which will manage this proxy\r",
+            "addrUser": "Address of user on whose behalf this proxy will act\r"
+          }
+        },
+        "proxy(address,uint8,bytes)": {
+          "details": "Can be called by the user, or by a contract authorized by the registry as long as the user has not revoked access\r",
+          "params": {
+            "calldata": "Calldata to send\r",
+            "dest": "Address to which the call will be sent\r",
+            "howToCall": "Which kind of call to make\r"
+          },
+          "return": "Result of the call (success or failure)\r"
+        },
+        "proxyAssert(address,uint8,bytes)": {
+          "details": "Same functionality as `proxy`, just asserts the return value\r",
+          "params": {
+            "calldata": "Calldata to send\r",
+            "dest": "Address to which the call will be sent\r",
+            "howToCall": "What kind of call to make\r"
+          }
+        },
+        "proxyType()": {
+          "details": "Tells the proxy type (EIP 897)\r",
+          "return": "Proxy type, 2 for forwarding proxy\r"
+        },
+        "receiveApproval(address,uint256,address,bytes)": {
+          "details": "Receive tokens and generate a log event\r",
+          "params": {
+            "extraData": "Additional data to log\r",
+            "from": "Address from which to transfer tokens\r",
+            "token": "Address of token\r",
+            "value": "Amount of tokens to transfer\r"
+          }
+        },
+        "setRevoke(bool)": {
+          "details": "Can be called by the user only\r",
+          "params": {
+            "revoke": "Whether or not to revoke access\r"
+          }
+        },
+        "upgradeabilityOwner()": {
+          "details": "Tells the address of the owner\r",
+          "return": "the address of the owner\r"
+        }
+      }
+    },
+    "userdoc": {
+      "methods": {
+        "initialize(address,address)": {
+          "notice": "Initialize an AuthenticatedProxy\r "
+        },
+        "proxy(address,uint8,bytes)": {
+          "notice": "Execute a message call from the proxy contract\r "
+        },
+        "proxyAssert(address,uint8,bytes)": {
+          "notice": "Execute a message call and assert success\r \r"
+        },
+        "setRevoke(bool)": {
+          "notice": "Set the revoked flag (allows a user to revoke ProxyRegistry access)\r "
+        }
+      }
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "AuthenticatedProxy.sol": "AuthenticatedProxy"
+    },
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "AuthenticatedProxy.sol": {
+      "keccak256": "0xf843302bd3c1c1effdd384d12d0bd19434737a2e7e39f6e5b5d4d24d907e4152",
+      "urls": [
+        "bzzr://37136125e43b9459be8e2c9ca02056db44fc321ce4598cf69ac5a4e810b54869"
+      ]
+    }
+  },
+  "version": 1
+}

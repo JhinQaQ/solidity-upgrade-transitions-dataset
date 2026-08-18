@@ -1,0 +1,13 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    }
+  },
+  "compilerVersion": "0.5.0+commit.1d4f565a",
+  "fullyQualifiedName": "EdgeTokenConstructorUpgrade.sol:EdgeTokenConstructorUpgrade",
+  "language": "Solidity",
+  "name": "EdgeTokenConstructorUpgrade"
+}

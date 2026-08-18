@@ -1,0 +1,103 @@
+{
+  "compiler": {
+    "version": "0.7.6+commit.7338295f"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "contract PriceOracle",
+            "name": "_priceOracle",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "priceOracle",
+        "outputs": [
+          {
+            "internalType": "contract PriceOracle",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "tokenValue",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "value",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {},
+      "title": "PriceOracle",
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "contracts/test/PriceOracleDelegate.sol": "PriceOracleDelegate"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000
+    },
+    "remappings": []
+  },
+  "sources": {
+    "contracts/iface/PriceOracle.sol": {
+      "keccak256": "0x3c463902dd8bf8ff20297717d0e170d3d2122fe774dc5ccb1eb4f6f3195fde04",
+      "license": "GPL-2.0-or-later",
+      "urls": [
+        "bzz-raw://16915992ec34f0005a200276f7e3eaa01e0e373b473691665ced86f68caad076",
+        "dweb:/ipfs/Qmf1EjPX3mCfGrLxEokLQMenFsFkTAgGrAhkhuNUy6vjUG"
+      ]
+    },
+    "contracts/test/PriceOracleDelegate.sol": {
+      "keccak256": "0x6f754312c1bd14d03529ee757efb5f214dfce6fc99fbd94773b6734519e6944b",
+      "license": "GPL-2.0-or-later",
+      "urls": [
+        "bzz-raw://d1170a62c0d84eb211bd00ae1eab1ea38115bdc6cb2f0e939433d013583e6cf1",
+        "dweb:/ipfs/QmdZjuZFR4bq3zJRkoZmui8xPiSDSC7n21E9BAbAhH8jU9"
+      ]
+    }
+  },
+  "version": 1
+}

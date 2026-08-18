@@ -1,0 +1,588 @@
+{
+  "storage": [
+    {
+      "astId": 519,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 522,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 2886,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_isController",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 501,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 721,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2558,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 10,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "152",
+      "type": "t_address"
+    },
+    {
+      "astId": 122,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "153",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 743,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_paused",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_bool"
+    },
+    {
+      "astId": 832,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "203",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 2865,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "252",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 862,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_name",
+      "offset": 0,
+      "slot": "302",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 864,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "303",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 868,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_owners",
+      "offset": 0,
+      "slot": "304",
+      "type": "t_mapping(t_uint256,t_address)"
+    },
+    {
+      "astId": 872,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "305",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 876,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_tokenApprovals",
+      "offset": 0,
+      "slot": "306",
+      "type": "t_mapping(t_uint256,t_address)"
+    },
+    {
+      "astId": 882,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_operatorApprovals",
+      "offset": 0,
+      "slot": "307",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 1723,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "308",
+      "type": "t_array(t_uint256)44_storage"
+    },
+    {
+      "astId": 1888,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_ownedTokens",
+      "offset": 0,
+      "slot": "352",
+      "type": "t_mapping(t_address,t_mapping(t_uint256,t_uint256))"
+    },
+    {
+      "astId": 1892,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_ownedTokensIndex",
+      "offset": 0,
+      "slot": "353",
+      "type": "t_mapping(t_uint256,t_uint256)"
+    },
+    {
+      "astId": 1895,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_allTokens",
+      "offset": 0,
+      "slot": "354",
+      "type": "t_array(t_uint256)dyn_storage"
+    },
+    {
+      "astId": 1899,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_allTokensIndex",
+      "offset": 0,
+      "slot": "355",
+      "type": "t_mapping(t_uint256,t_uint256)"
+    },
+    {
+      "astId": 2215,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "356",
+      "type": "t_array(t_uint256)46_storage"
+    },
+    {
+      "astId": 2955,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "entropySauce",
+      "offset": 0,
+      "slot": "402",
+      "type": "t_bytes32"
+    },
+    {
+      "astId": 2958,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "fbx",
+      "offset": 0,
+      "slot": "403",
+      "type": "t_contract(IFBX)4598"
+    },
+    {
+      "astId": 2961,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "metadaHandler",
+      "offset": 0,
+      "slot": "404",
+      "type": "t_contract(MetadataHandlerLike)4473"
+    },
+    {
+      "astId": 2964,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "fngOriginal",
+      "offset": 0,
+      "slot": "405",
+      "type": "t_contract(IFnG)4583"
+    },
+    {
+      "astId": 2967,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "hunting",
+      "offset": 0,
+      "slot": "406",
+      "type": "t_contract(IHUNTING)4728"
+    },
+    {
+      "astId": 2969,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "startingPrice",
+      "offset": 0,
+      "slot": "407",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2971,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "priceIncrease",
+      "offset": 0,
+      "slot": "408",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2973,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "maxSupply",
+      "offset": 0,
+      "slot": "409",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2975,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "maxSupplyL1",
+      "offset": 0,
+      "slot": "410",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2977,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "celestialSupply",
+      "offset": 0,
+      "slot": "411",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2979,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "freakSupply",
+      "offset": 0,
+      "slot": "412",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2981,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "mintPrice",
+      "offset": 0,
+      "slot": "413",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2983,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_currentIndex",
+      "offset": 0,
+      "slot": "414",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2985,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "_incrementor",
+      "offset": 0,
+      "slot": "415",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2990,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "freaks",
+      "offset": 0,
+      "slot": "416",
+      "type": "t_mapping(t_uint256,t_struct(Freak)4747_storage)"
+    },
+    {
+      "astId": 2995,
+      "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+      "label": "celestials",
+      "offset": 0,
+      "slot": "417",
+      "type": "t_mapping(t_uint256,t_struct(CelestialV2)4771_storage)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)44_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[44]",
+      "numberOfBytes": "1408"
+    },
+    "t_array(t_uint256)46_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[46]",
+      "numberOfBytes": "1472"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_array(t_uint256)dyn_storage": {
+      "base": "t_uint256",
+      "encoding": "dynamic_array",
+      "label": "uint256[]",
+      "numberOfBytes": "32"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IFBX)4598": {
+      "encoding": "inplace",
+      "label": "contract IFBX",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IFnG)4583": {
+      "encoding": "inplace",
+      "label": "contract IFnG",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IHUNTING)4728": {
+      "encoding": "inplace",
+      "label": "contract IHUNTING",
+      "numberOfBytes": "20"
+    },
+    "t_contract(MetadataHandlerLike)4473": {
+      "encoding": "inplace",
+      "label": "contract MetadataHandlerLike",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_mapping(t_uint256,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(uint256 => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_uint256,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_address)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_uint256,t_struct(CelestialV2)4771_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct CelestialV2)",
+      "numberOfBytes": "32",
+      "value": "t_struct(CelestialV2)4771_storage"
+    },
+    "t_mapping(t_uint256,t_struct(Freak)4747_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct Freak)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Freak)4747_storage"
+    },
+    "t_mapping(t_uint256,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(CelestialV2)4771_storage": {
+      "encoding": "inplace",
+      "label": "struct CelestialV2",
+      "members": [
+        {
+          "astId": 4758,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "healthMod",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4760,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "powMod",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4762,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "cPP",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4764,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "cLevel",
+          "offset": 3,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4766,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "forging",
+          "offset": 4,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4768,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "skill1",
+          "offset": 5,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4770,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "skill2",
+          "offset": 6,
+          "slot": "0",
+          "type": "t_uint8"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(Freak)4747_storage": {
+      "encoding": "inplace",
+      "label": "struct Freak",
+      "members": [
+        {
+          "astId": 4732,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "species",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4734,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "body",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4736,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "armor",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4738,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "mainHand",
+          "offset": 3,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4740,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "offHand",
+          "offset": 4,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4742,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "power",
+          "offset": 5,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4744,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "health",
+          "offset": 6,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 4746,
+          "contract": "contracts/game/FreaksNGuildsMigrated.sol:FreaksNGuildsMigrated",
+          "label": "criticalStrikeMod",
+          "offset": 7,
+          "slot": "0",
+          "type": "t_uint8"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

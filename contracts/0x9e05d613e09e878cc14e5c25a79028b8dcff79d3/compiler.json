@@ -1,0 +1,16 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.10+commit.fc410830",
+  "fullyQualifiedName": "/contracts/core/OTCWrapper.sol:OTCWrapper",
+  "language": "Solidity",
+  "name": "OTCWrapper"
+}

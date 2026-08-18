@@ -1,0 +1,29 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 5000
+    },
+    "remappings": [
+      ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+      ":ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+      ":base64/=lib/base64/",
+      ":ds-test/=lib/forge-std/lib/ds-test/src/",
+      ":erc721a-upgradeable/=lib/ERC721A-Upgradeable/contracts/",
+      ":forge-std/=lib/forge-std/src/",
+      ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+      ":openzeppelin-contracts/=lib/openzeppelin-contracts/"
+    ]
+  },
+  "compilerVersion": "0.8.17+commit.8df45f5f",
+  "fullyQualifiedName": "src/ERC721Drop.sol:ERC721Drop",
+  "language": "Solidity",
+  "name": "ERC721Drop"
+}

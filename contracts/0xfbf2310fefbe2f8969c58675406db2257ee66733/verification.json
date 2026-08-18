@@ -1,0 +1,47 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "13247709",
+    "deployer": "0x4374D3d032B3c96785094ec9f384f07077792768",
+    "transactionHash": "0x24f183b849a27e094bab6f268f96099e7b48516a0a220bcccb4a69be6821d6c0",
+    "transactionIndex": "276"
+  },
+  "implementation_address": "0xfbf2310fefbe2f8969c58675406db2257ee66733",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xfbf2310fefbe2f8969c58675406db2257ee66733?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xfbf2310fefbe2f8969c58675406db2257ee66733/runtime-bytecode.hex",
+    "sha256": "405b1caf0b54478d0a3d8a58072ac87d0f59ee16f20950f7703288f92962347b",
+    "size_bytes": 469,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "contracts/iface/PriceOracle.sol",
+      "sha256": "1e0d6efa24535d36f3cc0754d489a6f9895b1eeb8b3b8f26376b2cf7075d8da8",
+      "stored_path": "contracts/0xfbf2310fefbe2f8969c58675406db2257ee66733/sources/contracts/iface/PriceOracle.sol"
+    },
+    {
+      "original_path": "contracts/test/PriceOracleDelegate.sol",
+      "sha256": "2872fb791b8757d300aae5f4ec34eb3bbf9c04ffd9716cfdb435b42cd60e7e4d",
+      "stored_path": "contracts/0xfbf2310fefbe2f8969c58675406db2257ee66733/sources/contracts/test/PriceOracleDelegate.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-05T02:31:11Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "6801366",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xfbf2310fefbe2f8969c58675406db2257ee66733?fields=all"
+}

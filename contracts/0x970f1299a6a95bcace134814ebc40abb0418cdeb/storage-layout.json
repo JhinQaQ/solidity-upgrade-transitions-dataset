@@ -1,0 +1,244 @@
+{
+  "storage": [
+    {
+      "astId": 3,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 5,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 67,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "______gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 496,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_accountBalanceSnapshots",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_mapping(t_address,t_struct(Snapshots)492_storage)"
+    },
+    {
+      "astId": 498,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_totalSupplySnapshots",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_struct(Snapshots)492_storage"
+    },
+    {
+      "astId": 500,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_currentSnapshotId",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_struct(Counter)416_storage"
+    },
+    {
+      "astId": 515,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_mapping(t_address,t_struct(BalanceData)511_storage)"
+    },
+    {
+      "astId": 521,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 523,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "57",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 525,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_name",
+      "offset": 0,
+      "slot": "58",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 527,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "59",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 529,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_decimals",
+      "offset": 0,
+      "slot": "60",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 531,
+      "contract": "DfDepositToken.sol:DfDepositToken",
+      "label": "_controller",
+      "offset": 1,
+      "slot": "60",
+      "type": "t_address"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_array(t_uint256)dyn_storage": {
+      "base": "t_uint256",
+      "encoding": "dynamic_array",
+      "label": "uint256[]",
+      "numberOfBytes": "32"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_struct(BalanceData)511_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct DfDepositToken.BalanceData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(BalanceData)511_storage"
+    },
+    "t_mapping(t_address,t_struct(Snapshots)492_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct DfDepositToken.Snapshots)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Snapshots)492_storage"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(BalanceData)511_storage": {
+      "encoding": "inplace",
+      "label": "struct DfDepositToken.BalanceData",
+      "members": [
+        {
+          "astId": 506,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "balance",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 508,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "lockedBalance",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint256"
+        },
+        {
+          "astId": 510,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "timestampDivs",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "96"
+    },
+    "t_struct(Counter)416_storage": {
+      "encoding": "inplace",
+      "label": "struct Counters.Counter",
+      "members": [
+        {
+          "astId": 415,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "_value",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint256"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(Snapshots)492_storage": {
+      "encoding": "inplace",
+      "label": "struct DfDepositToken.Snapshots",
+      "members": [
+        {
+          "astId": 488,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "ids",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_array(t_uint256)dyn_storage"
+        },
+        {
+          "astId": 491,
+          "contract": "DfDepositToken.sol:DfDepositToken",
+          "label": "values",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_array(t_uint256)dyn_storage"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

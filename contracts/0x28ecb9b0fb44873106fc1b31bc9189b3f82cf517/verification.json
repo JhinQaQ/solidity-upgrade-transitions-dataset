@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "11917449",
+    "deployer": "0xDE678D4Fa1013AaEa021d9c4092B42cCe157a49d",
+    "transactionHash": "0x4597b79e0ecbbfeb14744bfb52d7571abd7585ca9d3fa854a1c7887c84e12d19",
+    "transactionIndex": "77"
+  },
+  "implementation_address": "0x28ecb9b0fb44873106fc1b31bc9189b3f82cf517",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x28ecb9b0fb44873106fc1b31bc9189b3f82cf517?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x28ecb9b0fb44873106fc1b31bc9189b3f82cf517/runtime-bytecode.hex",
+    "sha256": "6b8f14e6e1dad26aeadbcee7f2117c99139c353184385d16704116148fbf92c4",
+    "size_bytes": 10812,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "CrossDelegate.sol",
+      "sha256": "afab2b60dd41138dfa64962cd851f5aa1d4839243b07899f1e3ff2c73c7fcd49",
+      "stored_path": "contracts/0x28ecb9b0fb44873106fc1b31bc9189b3f82cf517/sources/CrossDelegate.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T14:58:15Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "2270483",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x28ecb9b0fb44873106fc1b31bc9189b3f82cf517?fields=all"
+}

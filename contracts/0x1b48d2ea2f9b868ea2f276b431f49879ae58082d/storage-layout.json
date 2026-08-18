@@ -1,0 +1,320 @@
+{
+  "storage": [
+    {
+      "astId": 2122,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 2125,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 3338,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2236,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 2242,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "52",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 2244,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "53",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2246,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_name",
+      "offset": 0,
+      "slot": "54",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 2248,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "55",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 2747,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "56",
+      "type": "t_array(t_uint256)45_storage"
+    },
+    {
+      "astId": 93,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "transactions",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_array(t_struct(Transaction)89_storage)dyn_storage"
+    },
+    {
+      "astId": 95,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "totalShares",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 99,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "userShare",
+      "offset": 0,
+      "slot": "103",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 101,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "index",
+      "offset": 0,
+      "slot": "104",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 104,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "governance",
+      "offset": 0,
+      "slot": "105",
+      "type": "t_address"
+    },
+    {
+      "astId": 109,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "strategists",
+      "offset": 0,
+      "slot": "106",
+      "type": "t_mapping(t_address,t_bool)"
+    },
+    {
+      "astId": 112,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "treasury",
+      "offset": 0,
+      "slot": "107",
+      "type": "t_address"
+    },
+    {
+      "astId": 114,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "redeemFee",
+      "offset": 0,
+      "slot": "108",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 116,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "DOMAIN_SEPARATOR",
+      "offset": 0,
+      "slot": "109",
+      "type": "t_bytes32"
+    },
+    {
+      "astId": 123,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "nonces",
+      "offset": 0,
+      "slot": "110",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 975,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "111",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 2176,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "_status",
+      "offset": 0,
+      "slot": "161",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 2219,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "162",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1040,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "token",
+      "offset": 0,
+      "slot": "211",
+      "type": "t_address"
+    },
+    {
+      "astId": 1042,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "mintPaused",
+      "offset": 20,
+      "slot": "211",
+      "type": "t_bool"
+    },
+    {
+      "astId": 1044,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "performanceFee",
+      "offset": 0,
+      "slot": "212",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1656,
+      "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "213",
+      "type": "t_array(t_uint256)50_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_struct(Transaction)89_storage)dyn_storage": {
+      "base": "t_struct(Transaction)89_storage",
+      "encoding": "dynamic_array",
+      "label": "struct Plus.Transaction[]",
+      "numberOfBytes": "32"
+    },
+    "t_array(t_uint256)45_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[45]",
+      "numberOfBytes": "1440"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_bytes_storage": {
+      "encoding": "bytes",
+      "label": "bytes",
+      "numberOfBytes": "32"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(Transaction)89_storage": {
+      "encoding": "inplace",
+      "label": "struct Plus.Transaction",
+      "members": [
+        {
+          "astId": 84,
+          "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+          "label": "enabled",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_bool"
+        },
+        {
+          "astId": 86,
+          "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+          "label": "destination",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 88,
+          "contract": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/VesperWBTC+.sol:VesperWBTCPlus",
+          "label": "data",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes_storage"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    }
+  }
+}

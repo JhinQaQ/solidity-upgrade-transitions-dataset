@@ -1,0 +1,699 @@
+{
+  "compiler": {
+    "version": "0.4.26+commit.4563c3fc"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "timeout",
+            "type": "uint256"
+          }
+        ],
+        "name": "setWithdrawFeeTimeout",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "tokenManager",
+            "type": "address"
+          },
+          {
+            "name": "smgAdminProxy",
+            "type": "address"
+          },
+          {
+            "name": "smgFeeProxy",
+            "type": "address"
+          },
+          {
+            "name": "quota",
+            "type": "address"
+          },
+          {
+            "name": "sigVerifier",
+            "type": "address"
+          }
+        ],
+        "name": "setPartners",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "uniqueID",
+            "type": "bytes32"
+          },
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "tokenPairID",
+            "type": "uint256"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "name": "tokenAccount",
+            "type": "address"
+          },
+          {
+            "name": "userAccount",
+            "type": "address"
+          },
+          {
+            "name": "r",
+            "type": "bytes"
+          },
+          {
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "smgRelease",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "tokenPairID",
+            "type": "uint256"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "name": "userAccount",
+            "type": "bytes"
+          }
+        ],
+        "name": "userLock",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "timeStamp",
+            "type": "uint256"
+          },
+          {
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "name": "r",
+            "type": "bytes"
+          },
+          {
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "smgWithdrawFee",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "tokenPairID",
+            "type": "uint256"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "name": "fee",
+            "type": "uint256"
+          },
+          {
+            "name": "tokenAccount",
+            "type": "address"
+          },
+          {
+            "name": "userAccount",
+            "type": "bytes"
+          }
+        ],
+        "name": "userBurn",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "uniqueID",
+            "type": "bytes32"
+          },
+          {
+            "name": "srcSmgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "destSmgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "r",
+            "type": "bytes"
+          },
+          {
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "receiveDebt",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "xHash",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getLeftLockedTime",
+        "outputs": [
+          {
+            "name": "leftLockedTime",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwner",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "uniqueID",
+            "type": "bytes32"
+          },
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "tokenPairID",
+            "type": "uint256"
+          },
+          {
+            "name": "value",
+            "type": "uint256"
+          },
+          {
+            "name": "tokenAccount",
+            "type": "address"
+          },
+          {
+            "name": "userAccount",
+            "type": "address"
+          },
+          {
+            "name": "r",
+            "type": "bytes"
+          },
+          {
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "smgMint",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "uniqueID",
+            "type": "bytes32"
+          },
+          {
+            "name": "srcSmgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "destSmgID",
+            "type": "bytes32"
+          },
+          {
+            "name": "r",
+            "type": "bytes"
+          },
+          {
+            "name": "s",
+            "type": "bytes32"
+          }
+        ],
+        "name": "transferAsset",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "origChainID",
+            "type": "uint256"
+          },
+          {
+            "name": "shadowChainID",
+            "type": "uint256"
+          },
+          {
+            "name": "lockFee",
+            "type": "uint256"
+          },
+          {
+            "name": "revokeFee",
+            "type": "uint256"
+          }
+        ],
+        "name": "setFees",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "smgID",
+            "type": "bytes32"
+          }
+        ],
+        "name": "getStoremanFee",
+        "outputs": [
+          {
+            "name": "fee",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "getPartners",
+        "outputs": [
+          {
+            "name": "tokenManager",
+            "type": "address"
+          },
+          {
+            "name": "smgAdminProxy",
+            "type": "address"
+          },
+          {
+            "name": "smgFeeProxy",
+            "type": "address"
+          },
+          {
+            "name": "quota",
+            "type": "address"
+          },
+          {
+            "name": "sigVerifier",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "changeOwner",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "lockedTime",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "halted",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "origChainID",
+            "type": "uint256"
+          },
+          {
+            "name": "shadowChainID",
+            "type": "uint256"
+          }
+        ],
+        "name": "getFees",
+        "outputs": [
+          {
+            "name": "lockFee",
+            "type": "uint256"
+          },
+          {
+            "name": "revokeFee",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "newOwner",
+        "outputs": [
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "time",
+            "type": "uint256"
+          }
+        ],
+        "name": "setLockedTime",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "smgFeeReceiverTimeout",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "halt",
+            "type": "bool"
+          }
+        ],
+        "name": "setHalt",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "smgID",
+            "type": "bytes32"
+          },
+          {
+            "indexed": false,
+            "name": "timeStamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "name": "receiver",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "fee",
+            "type": "uint256"
+          }
+        ],
+        "name": "SmgWithdrawFeeLogger",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "getFees(uint256,uint256)": {
+          "return": "revokeFee                   Coin the storeman group should get while user revoke its lock"
+        },
+        "getLeftLockedTime(bytes32)": {
+          "return": "leftLockTime                left time of locked transaction"
+        },
+        "getPartners()": {
+          "return": "sigVerifier                 address of the signature verifier"
+        },
+        "getStoremanFee(bytes32)": {
+          "return": "fee                         original coin the storeman group should get"
+        },
+        "receiveDebt(bytes32,bytes32,bytes32,bytes,bytes32)": {
+          "params": {
+            "s": "signature"
+          }
+        },
+        "setFees(uint256,uint256,uint256,uint256)": {
+          "params": {
+            "revokeFee": "Coin the storeman group should get while user revoke its lock"
+          }
+        },
+        "setLockedTime(uint256)": {
+          "params": {
+            "time": "Coin the storeman group should get while storeman redeem user lock"
+          }
+        },
+        "setPartners(address,address,address,address,address)": {
+          "params": {
+            "sigVerifier": "address of the signature verifier"
+          }
+        },
+        "setWithdrawFeeTimeout(uint256)": {
+          "params": {
+            "timeout": "Timeout for storeman group receiver withdraw fee, uint second"
+          }
+        },
+        "smgMint(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32)": {
+          "params": {
+            "s": "signature"
+          }
+        },
+        "smgRelease(bytes32,bytes32,uint256,uint256,address,address,bytes,bytes32)": {
+          "params": {
+            "s": "signature"
+          }
+        },
+        "smgWithdrawFee(bytes32,uint256,address,bytes,bytes32)": {
+          "params": {
+            "s": "signature"
+          }
+        },
+        "transferAsset(bytes32,bytes32,bytes32,bytes,bytes32)": {
+          "params": {
+            "s": "signature"
+          }
+        },
+        "userBurn(bytes32,uint256,uint256,uint256,address,bytes)": {
+          "params": {
+            "userAccount": "account of user, used to receive original chain token"
+          }
+        },
+        "userLock(bytes32,uint256,uint256,bytes)": {
+          "params": {
+            "userAccount": "account of user, used to receive shadow chain token"
+          }
+        }
+      }
+    },
+    "userdoc": {
+      "methods": {
+        "changeOwner(address)": {
+          "notice": "an unowned neutral vault, however that cannot be undone"
+        },
+        "setHalt(bool)": {
+          "notice": "contribution period to stop or not."
+        }
+      }
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "CrossDelegate.sol": "CrossDelegate"
+    },
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "CrossDelegate.sol": {
+      "keccak256": "0x9d02801d8eec3403722affa89fae32d4a5c536d38bd29fded7f8ab4d2d3bc300",
+      "urls": [
+        "bzzr://c09040db07e174973b01881db483bc2ea974cb9c49201bc33088321991218880"
+      ]
+    }
+  },
+  "version": 1
+}

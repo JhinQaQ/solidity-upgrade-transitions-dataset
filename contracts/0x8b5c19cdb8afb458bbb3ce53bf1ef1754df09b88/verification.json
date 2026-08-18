@@ -1,0 +1,47 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "15957200",
+    "deployer": "0x456c651717103904F1673579AB326E1195652467",
+    "transactionHash": "0xcb5a0a7e7390ed91082d93c9bc9796baa292f704e65278ed31d9bab69fb5da94",
+    "transactionIndex": "226"
+  },
+  "implementation_address": "0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88/runtime-bytecode.hex",
+    "sha256": "203a60b87444d9baab66478dc8c6909188fc1b0429e3025d3925dbf400a8b288",
+    "size_bytes": 16642,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Utils.sol",
+      "sha256": "85b9541b33e16d91ee3dbebe4f9b6bf32db9a3d6577f572100e8d9b7432e961a",
+      "stored_path": "contracts/0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88/sources/Utils.sol"
+    },
+    {
+      "original_path": "egt.sol",
+      "sha256": "4011f60607c8ab434a5f1908a7592c2258bffb4965624eb7b3411bed4a33e5e7",
+      "stored_path": "contracts/0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88/sources/egt.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-23T06:17:46Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6627627",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x8b5c19cdb8afb458bbb3ce53bf1ef1754df09b88?fields=all"
+}

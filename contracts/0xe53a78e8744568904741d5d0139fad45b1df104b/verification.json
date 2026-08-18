@@ -1,0 +1,137 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "12314160",
+    "deployer": "0x2932516D9564CB799DDA2c16559caD5b8357a0D6",
+    "transactionHash": "0xb327f85dcc916b2b3d7b8db373bb570f5e1c800a207c04fb306d3e0fbc8ae3e9",
+    "transactionIndex": "144"
+  },
+  "implementation_address": "0xe53a78e8744568904741d5d0139fad45b1df104b",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xe53a78e8744568904741d5d0139fad45b1df104b?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/runtime-bytecode.hex",
+    "sha256": "955a10de59e993fd3364ad086ca19a035ee43585e610b9eff41f8eeef3c2952e",
+    "size_bytes": 20838,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/Plus.sol",
+      "sha256": "cdd834be2088eaf9b208085c85019ca5e974aad212118ef133029de7204a2dbb",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/Plus.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/SinglePlus.sol",
+      "sha256": "6f57dfae9dc310ac5e6943f92e0d6117525bb7d5e3b384dc980b4c4632bf6d48",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/SinglePlus.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/IConverter.sol",
+      "sha256": "88bbc9eba7e5ca916a0ca3495d7d8f5eb77615e126217caed4612008fdbe4906",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/IConverter.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/IPlus.sol",
+      "sha256": "6e91a849c01cf34cf9e73cd0d05797993cb78f920be5fa2c9d459de22efcae2a",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/IPlus.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/ISinglePlus.sol",
+      "sha256": "6717f2c7c8b6740072cce2324b951177f869ba66f4a3120105b742b245d82d26",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/ISinglePlus.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerGeyser.sol",
+      "sha256": "6b50b8f8d07e4050f08c01160d74f429299b7149ddb3adf937eed3ff4489a2bc",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerGeyser.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerSett.sol",
+      "sha256": "fae2bbd9e567da4c2c0c76559ac10080609ff65501b67187d08d792c72cb7abc",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerSett.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerTree.sol",
+      "sha256": "b523d93a552d97469005212a996fc938c0fb9b8fed2263e30cd06e40921f25a9",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/badger/IBadgerTree.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/curve/ICurveFi.sol",
+      "sha256": "b71c685b4d93475a1a27a49181b50aac180896eb0fdab84d31a1c0bf74445f10",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/curve/ICurveFi.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/interfaces/uniswap/IUniswapRouter.sol",
+      "sha256": "f749f0b1f873bfeadacdda63bc6d8630cade96b53aa3891dc3b9f77e65d1b4bc",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/interfaces/uniswap/IUniswapRouter.sol"
+    },
+    {
+      "original_path": "/Users/shengdading/git/BTC-Plus/contracts/single/eth/BadgerRenCrv+.sol",
+      "sha256": "9cc2d0731d777e1c5037d6ced8dc3f07e43ac11ab95a4aabe318bdcb405141f3",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/Users/shengdading/git/BTC-Plus/contracts/single/eth/BadgerRenCrv+.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "sha256": "36243fdbd632655e8ad4cd82a4f1f6f81f8fb50f17279cdbd33891dd927c0894",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+      "sha256": "6de3cfbf436eded4f2419ff40faec4ead7231be253d58cf1e247a1269241e003",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol",
+      "sha256": "2ad4e6f1717d3e1dd175077fe3c3394a34c3d4f21bb94775c6e185e1033a2633",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+      "sha256": "f8d5ecbf733c0688b626ea8fa61a85e98dbab3e3f82f8c1b67fc6c876c132c55",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol",
+      "sha256": "2fc643eaa38e35ce2bcf54ecbbbc487ac3af0894b9f9e9c9c1744cbd8b430098",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+      "sha256": "c965c8d9d61de1e0a9248b120441f89daaa81115adeee7371698f2f45b5d1e8a",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+      "sha256": "74d81154e1d76c68befe56d3750b80ba8960220b9338f3a4191c3e20d0a170a4",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol",
+      "sha256": "639947cbc9366eda73ee0f68922ec458e71bb956af6847299f22770beb9be22a",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol",
+      "sha256": "2eb14d1da13053da7898cac59d62b24c07c049f68c34326c8496f47b3e733511",
+      "stored_path": "contracts/0xe53a78e8744568904741d5d0139fad45b1df104b/sources/@openzeppelin/contracts-upgradeable/utils/math/SafeMathUpgradeable.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T14:32:10Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "2080017",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xe53a78e8744568904741d5d0139fad45b1df104b?fields=all"
+}

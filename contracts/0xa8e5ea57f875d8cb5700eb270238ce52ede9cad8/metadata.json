@@ -1,0 +1,577 @@
+{
+  "compiler": {
+    "version": "0.8.4+commit.c7e474f2"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "VaultMapping",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "poolSize",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minimumAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maturityPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "APY",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earlyWithDrawTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withDrawPenality",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investmentPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTimeStamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAmountAdded",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maximumAmount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "XIVTokenContractAddress",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_activeVaultId",
+            "type": "uint256"
+          }
+        ],
+        "name": "activateVault",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "addedToColdmapping",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_vaultId",
+            "type": "uint256"
+          }
+        ],
+        "name": "calculateReturnValue",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_VaultId",
+            "type": "uint256"
+          }
+        ],
+        "name": "claimAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_poolSize",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_maturityPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_minimumAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_maximumAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_APY",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_earlyWithDrawTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_withDrawPenality",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_investmentPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          }
+        ],
+        "name": "createVault",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_VaultId",
+            "type": "uint256"
+          }
+        ],
+        "name": "fillPool",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_XIVTokenContractAddress",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address payable[]",
+            "name": "addressArray",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amountArray",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "makeTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "walletAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_VaultId",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferToColdWallet",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_vaultId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "transferToContract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_poolSize",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_maturityPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_minimumAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_maximumAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_APY",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_earlyWithDrawTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_withDrawPenality",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_investmentPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "_name",
+            "type": "string"
+          }
+        ],
+        "name": "updateVault",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_XIVTokenContractAddress",
+            "type": "address"
+          }
+        ],
+        "name": "updateXIVAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "userMapping",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "investMentVaultId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "investmentAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maturityPeriod",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "APY",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earlyWithDrawTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "withDrawPenality",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startTimeStamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "stakingTimeStamp",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "bool",
+            "name": "isActive",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "vaultId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "kind": "dev",
+      "methods": {
+        "transferOwnership(address)": {
+          "details": "Allows the current owner to transfer control of the contract to a newOwner.",
+          "params": {
+            "newOwner": "The address to transfer ownership to."
+          }
+        }
+      },
+      "version": 1
+    },
+    "userdoc": {
+      "kind": "user",
+      "methods": {},
+      "version": 1
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "StakingVault.sol": "StakingVault"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "Ownable.sol": {
+      "keccak256": "0xbe646cc497ffa7b1071651571222ddbabb3aac59d9cabcbd83df4a4e507fe4bd",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://798fe3a18c95f73e72c32ad0164af59647845e133568987801a79f674bbd2bb3",
+        "dweb:/ipfs/QmUWoQPd6x1RNnn4P9Ez7EZDL8WVWSeEB4nMiWrvrup1Qc"
+      ]
+    },
+    "ReentrancyGuard.sol": {
+      "keccak256": "0x0f7f96549b7454cd791fd4b97704c11289a2437558901793d3db60ea5a9f59fb",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://80ea6094c37ec5b59f41f8bd5a74bb80911c88adf4d8abbc0ea802ec97452ab8",
+        "dweb:/ipfs/QmUPugJ2VfsF5ydokwBNAUYukaDbMSPyfPmVXRfZERNNct"
+      ]
+    },
+    "SafeMath.sol": {
+      "keccak256": "0xad7ebae8641475cbc86ca34bc517674f48047e39002870220041d4654295aa47",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://f4ebfd323be4102e1240154bcecdca9278cef0c718869c085dc5e00d37a8ac46",
+        "dweb:/ipfs/QmSWSUKv8v6Au2R2b4j8cKcoTvU3mZXjmJC8CKjYe8txTN"
+      ]
+    },
+    "StakingVault.sol": {
+      "keccak256": "0x067058bdb9d5f5a06d74b0803dc9a1a07540d4686e8e2cf39e29e85e23ad6b87",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://0e3cf7b7dd1b820c5bc793cfeaf4a70443dacb9d68e11e10dee0049c355a4cd9",
+        "dweb:/ipfs/QmYzGnL2uv7fksx6gqTcQG1sdXDADKwDkzDjVn1c3FjYkH"
+      ]
+    },
+    "TransferHelper.sol": {
+      "keccak256": "0x061e1d35ab26d0b6000b8c198ac40b5d550f6b20515bca2811d853a085439c7a",
+      "license": "MIT",
+      "urls": [
+        "bzz-raw://96f14f4ff746cbf645b66c40beb499ffdcfffe2e073519ae0bbbf1134688481b",
+        "dweb:/ipfs/QmZ93hFh4pntQdLkMk7MoGrgTgyyMTmZAASopteB4fSpEu"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,150 @@
+{
+  "storage": [
+    {
+      "astId": 10,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "_status",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1391,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "controllerAddress",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_address"
+    },
+    {
+      "astId": 1393,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "lockAddress",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_address"
+    },
+    {
+      "astId": 1397,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "targetPrices",
+      "offset": 0,
+      "slot": "3",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 1401,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "borrowBalances",
+      "offset": 0,
+      "slot": "4",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint256)"
+    },
+    {
+      "astId": 1405,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "collateralBalances",
+      "offset": 0,
+      "slot": "5",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint256)"
+    },
+    {
+      "astId": 1409,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "accounts",
+      "offset": 0,
+      "slot": "6",
+      "type": "t_mapping(t_bytes_memory_ptr,t_address)"
+    },
+    {
+      "astId": 1413,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "userBalances",
+      "offset": 0,
+      "slot": "7",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint256)"
+    },
+    {
+      "astId": 1417,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "updatedLockTime",
+      "offset": 0,
+      "slot": "8",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint256)"
+    },
+    {
+      "astId": 1421,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "typeBorrow",
+      "offset": 0,
+      "slot": "9",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint8)"
+    },
+    {
+      "astId": 1425,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "totalClaimedById",
+      "offset": 0,
+      "slot": "10",
+      "type": "t_mapping(t_bytes_memory_ptr,t_uint256)"
+    },
+    {
+      "astId": 1429,
+      "contract": "contracts/Minter.sol:Minter",
+      "label": "uAssetAddressById",
+      "offset": 0,
+      "slot": "11",
+      "type": "t_mapping(t_bytes_memory_ptr,t_address)"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_bytes_memory_ptr": {
+      "encoding": "bytes",
+      "label": "bytes",
+      "numberOfBytes": "32"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes_memory_ptr,t_address)": {
+      "encoding": "mapping",
+      "key": "t_bytes_memory_ptr",
+      "label": "mapping(bytes => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_bytes_memory_ptr,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_bytes_memory_ptr",
+      "label": "mapping(bytes => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes_memory_ptr,t_uint8)": {
+      "encoding": "mapping",
+      "key": "t_bytes_memory_ptr",
+      "label": "mapping(bytes => uint8)",
+      "numberOfBytes": "32",
+      "value": "t_uint8"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

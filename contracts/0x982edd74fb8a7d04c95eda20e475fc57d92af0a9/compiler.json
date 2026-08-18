@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "paris",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.18+commit.87f61d96",
+  "fullyQualifiedName": "contracts/MEMEKONG.sol:MEMEKONG",
+  "language": "Solidity",
+  "name": "MEMEKONG"
+}

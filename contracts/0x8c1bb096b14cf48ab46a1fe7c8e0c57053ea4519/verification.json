@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "14345435",
+    "deployer": "0x066003C1493A346357Af15158cD985b4A6e29D3F",
+    "transactionHash": "0xc317b42a3ef8634fe7b9dd76a980f0b0dc524945bcb72815628ca79cd7cdd2d0",
+    "transactionIndex": "268"
+  },
+  "implementation_address": "0x8c1bb096b14cf48ab46a1fe7c8e0c57053ea4519",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x8c1bb096b14cf48ab46a1fe7c8e0c57053ea4519?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x8c1bb096b14cf48ab46a1fe7c8e0c57053ea4519/runtime-bytecode.hex",
+    "sha256": "a9585cc32a70fddb13d3b2bd043fd3c9d1fd26d422c6e485634f24f2451dd2a6",
+    "size_bytes": 17650,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "Sales721ForEth.sol",
+      "sha256": "5b51663764f90ffb7926364b60b2fc9a15be8407e1dffa57e850dd9d8210095b",
+      "stored_path": "contracts/0x8c1bb096b14cf48ab46a1fe7c8e0c57053ea4519/sources/Sales721ForEth.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-06-23T06:27:42Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "6628500",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x8c1bb096b14cf48ab46a1fe7c8e0c57053ea4519?fields=all"
+}

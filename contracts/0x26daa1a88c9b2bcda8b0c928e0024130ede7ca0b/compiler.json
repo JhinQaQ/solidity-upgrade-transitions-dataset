@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "london",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.8.17+commit.8df45f5f",
+  "fullyQualifiedName": "contracts/MegaForceSentinels.sol:MegaForceSentinels",
+  "language": "Solidity",
+  "name": "MegaForceSentinels"
+}

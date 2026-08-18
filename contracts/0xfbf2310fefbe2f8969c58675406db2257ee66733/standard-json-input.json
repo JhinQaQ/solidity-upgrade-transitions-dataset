@@ -1,0 +1,18 @@
+{
+  "language": "Solidity",
+  "settings": {
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 100000
+    }
+  },
+  "sources": {
+    "contracts/iface/PriceOracle.sol": {
+      "content": "// SPDX-License-Identifier: GPL-2.0-or-later\n// Copyright 2017 Loopring Technology Limited.\npragma solidity ^0.7.0;\n\n\n/// @title PriceOracle\ninterface PriceOracle\n{\n    // @dev Return's the token's value in ETH\n    function tokenValue(address token, uint amount)\n        external\n        view\n        returns (uint value);\n}\n"
+    },
+    "contracts/test/PriceOracleDelegate.sol": {
+      "content": "// SPDX-License-Identifier: GPL-2.0-or-later\n// Copyright 2017 Loopring Technology Limited.\npragma solidity ^0.7.0;\n\nimport \"../iface/PriceOracle.sol\";\n\n/// @title PriceOracle\ncontract PriceOracleDelegate is PriceOracle\n{\n    PriceOracle public immutable priceOracle;\n\n    constructor(\n        PriceOracle _priceOracle\n        )\n    {\n        priceOracle = _priceOracle;\n    }\n\n    function tokenValue(address token, uint amount)\n        public\n        view\n        override\n        returns (uint value)\n    {\n        return priceOracle.tokenValue(token, amount);\n    }\n}\n"
+    }
+  }
+}

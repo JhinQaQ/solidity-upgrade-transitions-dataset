@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "7595601",
+    "deployer": "0xaA78bAd0561643e365D650CDAc5635EFCdbf9242",
+    "transactionHash": "0x6ba4716712436d2b1117450f3cd738d70cc8810777f4925b09d38aea59497fca",
+    "transactionIndex": "13"
+  },
+  "implementation_address": "0x3592d5037865f425628583ca1ca3bdc069dfcdd8",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x3592d5037865f425628583ca1ca3bdc069dfcdd8?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x3592d5037865f425628583ca1ca3bdc069dfcdd8/runtime-bytecode.hex",
+    "sha256": "f26b82009f29edce69ba73bd69d8c0bf1dfe658c3d2044dbf4e5e79f0e3fb50d",
+    "size_bytes": 13804,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "TrueAUDMock.sol",
+      "sha256": "eccdd205a34b566bf1f38fd122de13f2d1df0e8fcb95234d82b8c5cfa4c03787",
+      "stored_path": "contracts/0x3592d5037865f425628583ca1ca3bdc069dfcdd8/sources/TrueAUDMock.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-14T03:46:24Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "7358403",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x3592d5037865f425628583ca1ca3bdc069dfcdd8?fields=all"
+}

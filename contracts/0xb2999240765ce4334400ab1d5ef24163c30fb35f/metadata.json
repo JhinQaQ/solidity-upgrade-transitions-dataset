@@ -1,0 +1,1485 @@
+{
+  "compiler": {
+    "version": "0.6.2+commit.bacdbe57"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "userId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "address_",
+            "type": "address"
+          }
+        ],
+        "name": "AddressAttached",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "userId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "address_",
+            "type": "address"
+          }
+        ],
+        "name": "AddressDetached",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          }
+        ],
+        "name": "OperatorAdded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          }
+        ],
+        "name": "OperatorRemoved",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "TransferApproved",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "TransferCancelled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "TransferOnHold",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "TransferRejected",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "userId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256[]",
+            "name": "attributeKeys",
+            "type": "uint256[]"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256[]",
+            "name": "attributeValues",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "UpdatedUserAttributes",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "VERSION",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "addOnHoldTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_operator",
+            "type": "address"
+          }
+        ],
+        "name": "addOperator",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "attachAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "_userIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_addresses",
+            "type": "address[]"
+          }
+        ],
+        "name": "attachAddresses",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_key",
+            "type": "uint256"
+          }
+        ],
+        "name": "attribute",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_keys",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "attributes",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "transfers",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "skipMinBoundaryUpdate",
+            "type": "bool"
+          }
+        ],
+        "name": "cancelOnHoldTransfers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "detachAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_addresses",
+            "type": "address[]"
+          }
+        ],
+        "name": "detachAddresses",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "trustedIntermediary",
+            "type": "address"
+          }
+        ],
+        "name": "getOnHoldTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "length",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "id",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "token",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "from",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address[]",
+            "name": "to",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amount",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "isAddressValid",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_operator",
+            "type": "address"
+          }
+        ],
+        "name": "isOperator",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          }
+        ],
+        "name": "isValid",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "monthlyInTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "monthlyOutTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "monthlyTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "onHoldMaxBoundary",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "onHoldMinBoundary",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "transfers",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint8[]",
+            "name": "transferDecisions",
+            "type": "uint8[]"
+          },
+          {
+            "internalType": "bool",
+            "name": "skipMinBoundaryUpdate",
+            "type": "bool"
+          }
+        ],
+        "name": "processOnHoldTransfers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeKeys",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeValues",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "registerUser",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_addresses",
+            "type": "address[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeKeys",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeValues",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "registerUsers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_operator",
+            "type": "address"
+          }
+        ],
+        "name": "removeOperator",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "maxIterations",
+            "type": "uint256"
+          }
+        ],
+        "name": "updateOnHoldMinBoundary",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_from",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_to",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_value",
+            "type": "uint256"
+          }
+        ],
+        "name": "updateTransfers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeKeys",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeValues",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "updateUserAttributes",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "_userIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeKeys",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_attributeValues",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "updateUsersAttributes",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "name": "userCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "userId",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_trustedIntermediary",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "_userId",
+            "type": "uint256"
+          }
+        ],
+        "name": "validUntil",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "yearlyInTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "yearlyOutTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_realm",
+            "type": "address"
+          },
+          {
+            "internalType": "address[]",
+            "name": "_trustedIntermediaries",
+            "type": "address[]"
+          },
+          {
+            "internalType": "address",
+            "name": "_address",
+            "type": "address"
+          }
+        ],
+        "name": "yearlyTransfers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "devdoc": {
+      "details": "The Compliance Registry stores user related attributes for multiple compliance authorities (named trusted intermediaries) * Error messages UR01: UserId is invalid UR02: Address is already attached UR03: Users length does not match with addresses length UR04: Address is not attached UR05: Attribute keys length does not match with attribute values length UR06: Transfer and transfer decisions must have the same length UR07: Only originator can cancel transfer UR08: Unsuccessful transfer UR09: Only on hold transfers can be canceled",
+      "methods": {
+        "addOnHoldTransfer(address,address,address,address,uint256)": {
+          "details": "Adds a transfer to the on hold queue that will be processed by the trusted intermediaryIntended to ba called by transfer computing rules that has been granted the operator rightEmits a TransferOnHold event that can be listened by wallets for improved UX experience",
+          "params": {
+            "amount": "the amount of transfered tokens",
+            "from": "the sender of the transfered tokens",
+            "to": "the receiver of the transfered tokens",
+            "token": "the transfered token address",
+            "trustedIntermediary": "the trusted intermediary for which the transfer is placed on hold"
+          }
+        },
+        "addOperator(address)": {
+          "details": "Grants the operator right to _operator",
+          "params": {
+            "_operator": "the address to grant"
+          }
+        },
+        "attachAddress(uint256,address)": {
+          "details": "Attach an address to an existing userIntended to be called from a trusted intermediary keyThrows UR01 if user does not existThrows UR02 if address is already attachedEmits AddressAttached event",
+          "params": {
+            "_address": "the address to attach",
+            "_userId": "the user id to which the address will be attached"
+          }
+        },
+        "attachAddresses(uint256[],address[])": {
+          "details": "Attach addresses to existing usersIntended to be called from a trusted intermediary keyThrows UR03 if _addresses length does not match _userIds lengthThrows UR02 if an address is already attachedThrows UR01 if user does not existEmits multiple AddressAttached events",
+          "params": {
+            "_addresses": "array of addresses to attach",
+            "_userIds": "array of user ids to which an address will be attached"
+          }
+        },
+        "attribute(address,uint256,uint256)": {
+          "details": "get one user attribute",
+          "params": {
+            "_key": "the key of the attribute to return",
+            "_trustedIntermediary": "the reference trusted intermediary of the user",
+            "_userId": "the userId for which the attribute has to be returned"
+          },
+          "returns": {
+            "_0": "the attribute value for the pair (_userId, _key), defaults to 0 if _key or _userId not found"
+          }
+        },
+        "attributes(address,uint256,uint256[])": {
+          "details": "access to multiple user attributes at once",
+          "params": {
+            "_keys": "array of keys of attributes to return",
+            "_trustedIntermediary": "the reference trusted intermediary of the user",
+            "_userId": "the userId for which attributes have to be returned"
+          },
+          "returns": {
+            "_0": "the attribute values for each pair (_userId, _key), defaults to 0 if _key or _userId not found*"
+          }
+        },
+        "cancelOnHoldTransfers(address,uint256[],bool)": {
+          "details": "Called by user to cancel transfers for a specific trusted intermediary and get his tokens backThrows UR07 if any of the transfer does not have user address as the senderEmits a TransferCancelled event that can be listened by wallets for improved UX experience",
+          "params": {
+            "skipMinBoundaryUpdate": "whether to skip the minBoundary update or not. Updating minBoundary can result in out of gas exception. Skipping the update will process the transfers and the user will be able to update minBoundary by calling the updateOnHoldMinBoundary multiple times",
+            "transfers": "array of transfer ids on hold with the trusted intermediary",
+            "trustedIntermediary": "the trusted intermediary address for which the transfers are on hold"
+          }
+        },
+        "detachAddress(address)": {
+          "details": "Detach an address from a userIntended to be called from a trusted intermediary keyThrows UR04 if the address is not attachedEmits AddressDetached event",
+          "params": {
+            "_address": "address to detach"
+          }
+        },
+        "detachAddresses(address[])": {
+          "details": "Detach addresses from their respective userIntended to be called from a trusted intermediary keyThrows UR04 if an address is not attachedEmits multiple AddressDetached events",
+          "params": {
+            "_addresses": "array of addresses to detach"
+          }
+        },
+        "getOnHoldTransfers(address)": {
+          "details": "Fetch on hold transfers to be processed by a specific trusted intermediary",
+          "params": {
+            "trustedIntermediary": "the trusted intermediary for which on hold transfers will be fetched"
+          },
+          "returns": {
+            "amount": "the array of amounts for on hold transfers",
+            "from": "the array of sender addresses for on hold transfers",
+            "id": "the array of ids for on hold transfers",
+            "length": "the number of on hold transfers",
+            "to": "the array of receiver addresses for on hold transfers",
+            "token": "the array of token addresses for on hold transfers"
+          }
+        },
+        "initialize(address)": {
+          "details": "Initializer (replaces constructor when contract is upgradable)",
+          "params": {
+            "owner": "the final owner of the contract"
+          }
+        },
+        "isAddressValid(address[],address)": {
+          "details": "Get the validaty of an address for trusted intermediaries",
+          "params": {
+            "_address": "address to look for",
+            "_trustedIntermediaries": "array of trusted intermediaries to look the address for"
+          },
+          "returns": {
+            "_0": "true if a user corresponding to the address was found for a trusted intermediary and is not expired, false otherwise"
+          }
+        },
+        "isOperator(address)": {
+          "details": "Checks if the address in param _operator is granted the operator right",
+          "params": {
+            "_operator": "the address to check for operator right"
+          },
+          "returns": {
+            "_0": "true if the address is granted the operator right, false otherwise"
+          }
+        },
+        "isValid(address,uint256)": {
+          "details": "checks if the user id passed in parameter is not expired",
+          "params": {
+            "_trustedIntermediary": "the reference trusted intermediary of the user",
+            "_userId": "the userId to be checked"
+          },
+          "returns": {
+            "_0": "true if a user was found for the trusted intermediary and is not expired, false otherwise"
+          }
+        },
+        "monthlyInTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (IN) by an address for a 31 days period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (IN) by an address for the period for a specific realm "
+          }
+        },
+        "monthlyOutTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (OUT) by an address for a 31 days period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (OUT) by an address for the period for a specific realm "
+          }
+        },
+        "monthlyTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (IN and OUT) by an address for a 31 days period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (IN and OUT) by an address for the period for a specific realm "
+          }
+        },
+        "owner()": {
+          "details": "Returns the address of the current owner."
+        },
+        "processOnHoldTransfers(uint256[],uint8[],bool)": {
+          "details": "Processes on hold transfersIntended to be called from a trusted intermediary keyTransfer decision: 1 = Approve, 2 = RejectEmits either a TransferApproved or a TransferRejected event that can be listened by wallets for improved UX experienceWhen transfer is approved, tokens are transfered to the receiver of the tokensWhen transfer is rejected, tokens are transfered back to the sender of the tokensIf transfer is not on-hold, it will be ignored without notification",
+          "params": {
+            "skipMinBoundaryUpdate": "whether to skip the minBoundary update or not. Updating minBoundary can result in out of gas exception. Skipping the update will process the transfers and the user will be able to update minBoundary by calling the updateOnHoldMinBoundary multiple times",
+            "transferDecisions": "array of transfer decisions applied to transfers",
+            "transfers": "array of transfer ids to process"
+          }
+        },
+        "registerUser(address,uint256[],uint256[])": {
+          "details": "Registers a new user corresponding to an address and sets its initial attributesIntended to be called from a trusted intermediary keyThrows UR05 if _attributeKeys length is not the same as _attributeValues lengthThrows UR02 if address is already registered to a userEmits AddressAttached event",
+          "params": {
+            "_address": "the address to register",
+            "_attributeKeys": "array of keys of attributes to set",
+            "_attributeValues": "array of values of attributes to set"
+          }
+        },
+        "registerUsers(address[],uint256[],uint256[])": {
+          "details": "Registers multiple users corresponding to addresses and sets their initial attributesIntended to be called from a trusted intermediary keyIgnores already registered addressesThrows UR05 if _attributeKeys length is not the same as _attributeValues lengthEmits multiple AddressAttached events",
+          "params": {
+            "_addresses": "the array of addresses to register",
+            "_attributeKeys": "array of keys of attributes to set",
+            "_attributeValues": "array of values of attributes to set"
+          }
+        },
+        "removeOperator(address)": {
+          "details": "Removes the operator right from the _operator address",
+          "params": {
+            "_operator": "the address of the operator to remove"
+          }
+        },
+        "renounceOwnership()": {
+          "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+        },
+        "transferOwnership(address)": {
+          "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+        },
+        "updateOnHoldMinBoundary(uint256)": {
+          "details": "Updates the minBoundary index but limiting iterations to avoid out of gas exceptionsIntended to be called from a trusted intermediary key",
+          "params": {
+            "maxIterations": "number of iterations allowed for the loop"
+          }
+        },
+        "updateTransfers(address,address,address,uint256)": {
+          "details": "Updates the transfer registryIntended to ba called by transfer computing rules that has been granted the operator right",
+          "params": {
+            "_from": "the sender of the tokens",
+            "_realm": "the realm (group) of the exchanged token",
+            "_to": "the receiver of the tokens",
+            "_value": "transfered tokens value converted in CHF"
+          }
+        },
+        "updateUserAttributes(uint256,uint256[],uint256[])": {
+          "details": "Updates attributes for a userIntended to be called from a trusted intermediary keyThrows UR05 if _attributeKeys length is not the same as _attributeValues lengthThrows UR01 user is not found",
+          "params": {
+            "_attributeKeys": "array of keys of attributes to set",
+            "_attributeValues": "array of values of attributes to set",
+            "_userId": "the user id for which the attributes are updated"
+          }
+        },
+        "updateUsersAttributes(uint256[],uint256[],uint256[])": {
+          "details": "Updates attributes for many usersIntended to be called from a trusted intermediary keyThrows UR05 if _attributeKeys length is not the same as _attributeValues lengthIgnores not found users",
+          "params": {
+            "_attributeKeys": "array of keys of attributes to set",
+            "_attributeValues": "array of values of attributes to set",
+            "_userIds": "the user ids for which the attributes are updated"
+          }
+        },
+        "userId(address[],address)": {
+          "details": "fetch the userId associated to the provided address registered by trusted intermediariesThe algorithm loops through each trusted intermediary and returns the first userId found even if the user exists for next trusted intermediaries",
+          "params": {
+            "_address": "address to look for",
+            "_trustedIntermediaries": "array of trusted intermediaries to look the address for"
+          },
+          "returns": {
+            "_0": "userId the user id found, 0 if not found",
+            "_1": "the address of the first trusted intermediary for which the user was found, 0x0 if no user was found"
+          }
+        },
+        "validUntil(address,uint256)": {
+          "details": "returns the date at which user validity ends (UNIX timestamp)",
+          "params": {
+            "_trustedIntermediary": "the reference trusted intermediary of the user",
+            "_userId": "the userId for which the validity date has to be returned"
+          },
+          "returns": {
+            "_0": "the date at which user validity ends (UNIX timestamp)"
+          }
+        },
+        "yearlyInTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (IN) by an address for a 12 months period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (IN) by an address for the period for a specific realm "
+          }
+        },
+        "yearlyOutTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (OUT) by an address for a 12 months period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (OUT) by an address for the period for a specific realm "
+          }
+        },
+        "yearlyTransfers(address,address[],address)": {
+          "details": "Returns the CHF amount transfered (IN and OUT) by an address for a 12 months period for a specific realm",
+          "params": {
+            "_address": "address to lookup",
+            "_realm": "the realm for which we want the amount to be returned",
+            "_trustedIntermediaries": "array of trustedIntermediaries in which we lookup the address"
+          },
+          "returns": {
+            "_0": "the CHF amount transfered (IN and OUT) by an address for the period for a specific realm "
+          }
+        }
+      },
+      "title": "ComplianceRegistry"
+    },
+    "userdoc": {
+      "methods": {}
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "/contracts/operating/ComplianceRegistry.sol": "ComplianceRegistry"
+    },
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "/contracts/access/Operator.sol": {
+      "keccak256": "0xe2d458b97d83ca0a15ff3f993fedf564f37c65941908e334bd72071eb6c3f780",
+      "urls": [
+        "bzz-raw://7a35756fe850488705d4c5b5d290bcd6b880afde4f9943554fc907122f29208b",
+        "dweb:/ipfs/QmQstqYg2XFLACFC4p3Vfb5us24tAqSAYf5WBLEiZuxB4h"
+      ]
+    },
+    "/contracts/access/Roles.sol": {
+      "keccak256": "0xf871413916979d4373dacb13a52a7375cffe5b243b594cd3564335e6508e12dd",
+      "urls": [
+        "bzz-raw://f732193dfe8678a2fb179384858657f52ade12e183de51d2a95ca602114f3a22",
+        "dweb:/ipfs/QmPLDcHnXWieHED9ciMtP5pMyB9E67rhcLiDSpxXiNjpRE"
+      ]
+    },
+    "/contracts/interfaces/IComplianceRegistry.sol": {
+      "keccak256": "0x0f17024723d328fc3ee51bb9488d2b7185afcf11282aace77b637adaa0c67179",
+      "urls": [
+        "bzz-raw://3e35ec3599742d68a5e1870b1c541aa2a44276e3ab7a52312d205c409f46713c",
+        "dweb:/ipfs/QmY8Dpjh3ha1UzeJYM9Pq15Jv4hQNpvYCTqcj5BsrT1Le5"
+      ]
+    },
+    "/contracts/interfaces/IERC20Detailed.sol": {
+      "keccak256": "0xaaae91a6d825a20b237043d002c9e8de779bc61d2d8c259a3443a96167978286",
+      "urls": [
+        "bzz-raw://30d8dfc94997f0aedc7cb887a31f1d7cd7fd4627e48d5e960b0b54d43ed34ba7",
+        "dweb:/ipfs/QmUqJ6oayZziYaw453EctNCWTiTy8N3bWLUN9p8hbMzyjN"
+      ]
+    },
+    "/contracts/interfaces/IGovernable.sol": {
+      "keccak256": "0xc265b29929047aace0043bdca8cb44159d9a2be922ac011a5373c7007b6da55a",
+      "urls": [
+        "bzz-raw://684afea9eacaa0fb23c74d931446c12a74455779bca47dbc6f3a75dc913e445e",
+        "dweb:/ipfs/QmfY6MrBVJ9PdGNoSieM1FyewMvdeAcjukRtkYvWPwt6Sd"
+      ]
+    },
+    "/contracts/interfaces/IPriceOracle.sol": {
+      "keccak256": "0xaff6d54b5fcd879cb77203f6dd0cd5d1ccdce9800246a55dc12301e0bdbdb208",
+      "urls": [
+        "bzz-raw://02d23dc6dccc8a3f661b2f871eb0ad2995ccb8e5458dcdc6d14f6dc74204e4b5",
+        "dweb:/ipfs/QmapKo4vPmcuX5tzKWQGnc7qu7fVamGT5LCDpRUAnSXHvc"
+      ]
+    },
+    "/contracts/interfaces/IPriceable.sol": {
+      "keccak256": "0x03024023b65bf72022c372d23ef41629008c23f5405a6b0dce8b85bbdbfa3248",
+      "urls": [
+        "bzz-raw://52ccd14654f0039c693cc8cddde48af71fc6e55820e4744f61c19b538167ea5f",
+        "dweb:/ipfs/QmazR4mPmrVR3Qzu8RUUVv8C7obC71BVHmZDWtxfHeWB5J"
+      ]
+    },
+    "/contracts/operating/ComplianceRegistry.sol": {
+      "keccak256": "0x1cde546ca75aeb5fd4ac3b644d9abdf0f0609d12c5ba8cfb1e9fc74eddadb79f",
+      "urls": [
+        "bzz-raw://bd3e4d49fe5fbf0453900230e75307e7c696c0ca3f80ff3ca5f20316e1637ab4",
+        "dweb:/ipfs/QmNf314dkV2N6AH97s1qjNX3fZVo2KnvgKunpG4nU7in5g"
+      ]
+    },
+    "@openzeppelin/contracts-ethereum-package/contracts/GSN/Context.sol": {
+      "keccak256": "0xe81686511d62f18b2d9c693c2c94c0a789c690de63aa90e15451ebf65c5bfd3e",
+      "urls": [
+        "bzz-raw://1332ee1d2b096456bf2e5795b5871d0fed47be6a31c9a2f2cef9206a299565ea",
+        "dweb:/ipfs/Qmdu1847Y4UL3gTjbLUManMGfxYEoyGPSodM3Br89SKzwx"
+      ]
+    },
+    "@openzeppelin/contracts-ethereum-package/contracts/Initializable.sol": {
+      "keccak256": "0x9bfec92e36234ecc99b5d37230acb6cd1f99560233753162204104a4897e8721",
+      "urls": [
+        "bzz-raw://5cf7c208583d4d046d75bd99f5507412ab01cce9dd9f802ce9768a416d93ea2f",
+        "dweb:/ipfs/QmcQS1BBMPpVEkXP3qzwSjxHNrqDek8YeR7xbVWDC9ApC7"
+      ]
+    },
+    "@openzeppelin/contracts-ethereum-package/contracts/access/Ownable.sol": {
+      "keccak256": "0x04a69a78363214b4e3055db8e620bed222349f0c81e9d1cbe769eb849b69b73f",
+      "urls": [
+        "bzz-raw://b3115459376196d6c2c3817439c169d9b052b27b70e8ee2e28963cda760736da",
+        "dweb:/ipfs/QmXaNF5rmcDSAzBiFMQjf979qb9xNXqD9eZtgo4uM9VEis"
+      ]
+    },
+    "@openzeppelin/contracts-ethereum-package/contracts/math/SafeMath.sol": {
+      "keccak256": "0x04d34b3cd5677bea25f8dfceb6dec0eaa071d4d4b789a43f13fe0c415ba4c296",
+      "urls": [
+        "bzz-raw://e7e8b526a6839e5ba14f0d23a830387fec47f7043ce01d42c9f285b709a9d080",
+        "dweb:/ipfs/QmXmhhFmX5gcAvVzNiDPAGA35iHMPNaYtQkACswRHBVTNw"
+      ]
+    }
+  },
+  "version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {},
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 20000
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.6.10+commit.00c0fcaf",
+  "fullyQualifiedName": "TrueFiPool.sol:TrueFiPool",
+  "language": "Solidity",
+  "name": "TrueFiPool"
+}

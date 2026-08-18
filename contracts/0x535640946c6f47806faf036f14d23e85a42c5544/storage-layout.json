@@ -1,0 +1,362 @@
+{
+  "storage": [
+    {
+      "astId": 1407,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 1410,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 3161,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 3440,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1734,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_name",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 1736,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 1740,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_owners",
+      "offset": 0,
+      "slot": "103",
+      "type": "t_mapping(t_uint256,t_address)"
+    },
+    {
+      "astId": 1744,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "104",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 1748,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_tokenApprovals",
+      "offset": 0,
+      "slot": "105",
+      "type": "t_mapping(t_uint256,t_address)"
+    },
+    {
+      "astId": 1754,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_operatorApprovals",
+      "offset": 0,
+      "slot": "106",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+    },
+    {
+      "astId": 2674,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "107",
+      "type": "t_array(t_uint256)44_storage"
+    },
+    {
+      "astId": 510,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_roles",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_mapping(t_bytes32,t_struct(RoleData)505_storage)"
+    },
+    {
+      "astId": 805,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "152",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 890,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_address"
+    },
+    {
+      "astId": 1010,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1389,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "251",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 1704,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "301",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 49,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "_tokenDetails",
+      "offset": 0,
+      "slot": "351",
+      "type": "t_mapping(t_uint256,t_struct(TokenDetails)44_storage)"
+    },
+    {
+      "astId": 51,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "ens",
+      "offset": 0,
+      "slot": "352",
+      "type": "t_address"
+    },
+    {
+      "astId": 54,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "descriptor",
+      "offset": 0,
+      "slot": "353",
+      "type": "t_contract(IENSAvatarMirrorDescriptor)427"
+    },
+    {
+      "astId": 57,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "nameLabeler",
+      "offset": 0,
+      "slot": "354",
+      "type": "t_contract(IENSAvatarMirrorNameLabeler)437"
+    },
+    {
+      "astId": 60,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "dataReader",
+      "offset": 0,
+      "slot": "355",
+      "type": "t_contract(IENSAvatarMirrorDataReader)415"
+    },
+    {
+      "astId": 63,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "nodeResolver",
+      "offset": 0,
+      "slot": "356",
+      "type": "t_contract(IENSAvatarMirrorNodeResolver)470"
+    },
+    {
+      "astId": 375,
+      "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "357",
+      "type": "t_array(t_uint256)50_storage"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)44_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[44]",
+      "numberOfBytes": "1408"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_bytes32": {
+      "encoding": "inplace",
+      "label": "bytes32",
+      "numberOfBytes": "32"
+    },
+    "t_contract(IENSAvatarMirrorDataReader)415": {
+      "encoding": "inplace",
+      "label": "contract IENSAvatarMirrorDataReader",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IENSAvatarMirrorDescriptor)427": {
+      "encoding": "inplace",
+      "label": "contract IENSAvatarMirrorDescriptor",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IENSAvatarMirrorNameLabeler)437": {
+      "encoding": "inplace",
+      "label": "contract IENSAvatarMirrorNameLabeler",
+      "numberOfBytes": "20"
+    },
+    "t_contract(IENSAvatarMirrorNodeResolver)470": {
+      "encoding": "inplace",
+      "label": "contract IENSAvatarMirrorNodeResolver",
+      "numberOfBytes": "20"
+    },
+    "t_mapping(t_address,t_bool)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => bool)",
+      "numberOfBytes": "32",
+      "value": "t_bool"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => bool))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_bool)"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_bytes32,t_struct(RoleData)505_storage)": {
+      "encoding": "mapping",
+      "key": "t_bytes32",
+      "label": "mapping(bytes32 => struct AccessControlUpgradeable.RoleData)",
+      "numberOfBytes": "32",
+      "value": "t_struct(RoleData)505_storage"
+    },
+    "t_mapping(t_uint256,t_address)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => address)",
+      "numberOfBytes": "32",
+      "value": "t_address"
+    },
+    "t_mapping(t_uint256,t_struct(TokenDetails)44_storage)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => struct ENSAvatarMirror.TokenDetails)",
+      "numberOfBytes": "32",
+      "value": "t_struct(TokenDetails)44_storage"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(RoleData)505_storage": {
+      "encoding": "inplace",
+      "label": "struct AccessControlUpgradeable.RoleData",
+      "members": [
+        {
+          "astId": 502,
+          "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+          "label": "members",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_mapping(t_address,t_bool)"
+        },
+        {
+          "astId": 504,
+          "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+          "label": "adminRole",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(TokenDetails)44_storage": {
+      "encoding": "inplace",
+      "label": "struct ENSAvatarMirror.TokenDetails",
+      "members": [
+        {
+          "astId": 39,
+          "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+          "label": "minter",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 41,
+          "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+          "label": "node",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_bytes32"
+        },
+        {
+          "astId": 43,
+          "contract": "contracts/ENSAvatarMirror.sol:ENSAvatarMirror",
+          "label": "domain",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_string_storage"
+        }
+      ],
+      "numberOfBytes": "96"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

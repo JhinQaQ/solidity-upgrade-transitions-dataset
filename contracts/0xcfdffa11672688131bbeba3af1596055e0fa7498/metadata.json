@@ -1,0 +1,470 @@
+{
+  "compiler": {
+    "version": "0.4.24+commit.e67f0147"
+  },
+  "language": "Solidity",
+  "output": {
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_player",
+            "type": "address"
+          }
+        ],
+        "name": "refund2",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_roundID",
+            "type": "uint256"
+          }
+        ],
+        "name": "assign",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "refund",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_player",
+            "type": "address"
+          },
+          {
+            "name": "_roundID",
+            "type": "uint256"
+          }
+        ],
+        "name": "assign2",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_roundID",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRoundInfo",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "_bonus",
+            "type": "uint256"
+          },
+          {
+            "name": "_issued_numbers",
+            "type": "uint256"
+          }
+        ],
+        "name": "initiate",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "_roundID",
+            "type": "uint256"
+          },
+          {
+            "name": "_palyer",
+            "type": "address"
+          }
+        ],
+        "name": "getPlayerRoundNumbers",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "gameInfo",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          },
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "fallback"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "bonus",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "issued_numbers",
+            "type": "uint256"
+          }
+        ],
+        "name": "onActivate",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "name": "timestatmp",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "blockNumber",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "roundID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "winningNumber",
+            "type": "uint256"
+          }
+        ],
+        "name": "onDraw",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "roundID",
+            "type": "uint256"
+          }
+        ],
+        "name": "onStartRunnd",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "addr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "roundID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "beginNumber",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "endNumber",
+            "type": "uint256"
+          }
+        ],
+        "name": "onBet",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "operatorAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "timestatmp",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "name": "winnerAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "roundID",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "pond",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "bonus",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "fund",
+            "type": "uint256"
+          }
+        ],
+        "name": "onAssign",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "operatorAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "name": "playerAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "count",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "onRefund",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "name": "operatorAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "timestamp",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "name": "platformAddr",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "name": "amout",
+            "type": "uint256"
+          }
+        ],
+        "name": "onLastRefund",
+        "type": "event"
+      }
+    ],
+    "devdoc": {
+      "methods": {
+        "assign(uint256)": {
+          "details": "assign for a round\r",
+          "params": {
+            "_roundID": "the round ID\r"
+          }
+        },
+        "assign2(address,uint256)": {
+          "details": "assign for a round\r",
+          "params": {
+            "_player": "the player's address\r",
+            "_roundID": "the round ID\r"
+          }
+        },
+        "gameInfo()": {
+          "details": "return game's information\r",
+          "return": "bool, game is active or not\ruint256, bonus assigned to the winner\ruint256, total numbers every round\ruint256, current round ID\ruint256, already drawn round ID\r"
+        },
+        "getPlayerRoundNumbers(uint256,address)": {
+          "details": "return player's numbers in the round\r",
+          "params": {
+            "_palyer": "player's address\r",
+            "_roundID": "round ID\r"
+          },
+          "return": "uint256[], player's numbers\r"
+        },
+        "getRoundInfo(uint256)": {
+          "details": "return round's information\r",
+          "params": {
+            "_roundID": "round ID\r"
+          },
+          "return": "uint256, quantity of round's numbers\ruint256, block number refer to last bet\ruint256, block number refer to draw winning number\ruint256, round's running state\ruint256, round's pond\ruint256, round's winning number if drawn\raddress, round's winner if assigned\r"
+        },
+        "initiate(uint256,uint256)": {
+          "details": "initiate game\r",
+          "params": {
+            "_bonus": "the bonus assigned the winner every round\r",
+            "_issued_numbers": "the quantity of candidate numbers every round\r"
+          }
+        },
+        "refund()": {
+          "details": "refund to player and platform\r"
+        },
+        "refund2(address)": {
+          "details": "refund to player and platform\r",
+          "params": {
+            "_player": "the player's address\r"
+          }
+        }
+      }
+    },
+    "userdoc": {
+      "methods": {}
+    }
+  },
+  "settings": {
+    "compilationTarget": {
+      "Winner.sol": "Winner"
+    },
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "remappings": []
+  },
+  "sources": {
+    "Winner.sol": {
+      "keccak256": "0xfadbe954a7b7adf19511f8a8d551c44993d052793c63f0718cc794de222f9eda",
+      "urls": [
+        "bzzr://78a4ec4a38145d34d544a40db634b46681ee675a687020ed71a98cbbd88a68c6"
+      ]
+    }
+  },
+  "version": 1
+}

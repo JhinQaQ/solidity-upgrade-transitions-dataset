@@ -1,0 +1,127 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "16187692",
+    "deployer": "0x796C1f28c777b8a5851D356EBbc9DeC2ee51137F",
+    "transactionHash": "0x09278db07d89e2a531d8abae4713e9f01b5591142f9b749092bf833c8665c6f5",
+    "transactionIndex": "36"
+  },
+  "implementation_address": "0xc600727f1ce705436734f2367e7fc449da5fb3a6",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0xc600727f1ce705436734f2367e7fc449da5fb3a6?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/runtime-bytecode.hex",
+    "sha256": "8f3a0a73767e258d99a5375ccaf2a8f01170b9c0622b36141e453fb4d2d327c0",
+    "size_bytes": 23133,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "@openzeppelin/contracts/access/AccessControl.sol",
+      "sha256": "6385dc61482d7019508a1076d7a87874e258d18aebac63a59b4dc9dd5d58effc",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/access/AccessControl.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/access/IAccessControl.sol",
+      "sha256": "d03c1257f2094da6c86efa7aa09c1c07ebd33dd31046480c5097bc2542140e45",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/access/IAccessControl.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Arrays.sol",
+      "sha256": "7aadd135b55a263885c171517af1fae9ac1fe6573b34e041b447c218cf5b4f64",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/Arrays.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Context.sol",
+      "sha256": "1458c260d010a08e4c20a4a517882259a23a4baa0b5bd9add9fb6d6a1549814a",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/Context.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Counters.sol",
+      "sha256": "2fdcb1343e5621385b62e57b5c7775607c272122b6f2dc77da8f84828aa40cd0",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/Counters.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/Strings.sol",
+      "sha256": "8597c62818dcbc6cf85c21179b90b714fb4f70a4347ca2eed23e88c87b08b8a1",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/Strings.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "sha256": "8806a632d7b656cadb8133ff8f2acae4405b3a64d8709d93b0fa6a216a8a6154",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/introspection/ERC165.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "sha256": "701e025d13ec6be09ae892eb029cd83b3064325801d73654847a5fb11c58b1e5",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/introspection/IERC165.sol"
+    },
+    {
+      "original_path": "@openzeppelin/contracts/utils/math/Math.sol",
+      "sha256": "259b145649e562dced1a2b0af5353a9a775025d3281a1375f70b04efe357ca60",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/@openzeppelin/contracts/utils/math/Math.sol"
+    },
+    {
+      "original_path": "contracts/interfaces/IAutoCoinageSnapshot2.sol",
+      "sha256": "573594ce7fda5b7499b5f34a51f6297cb8b18ddb0e79634eee9b620fa10ca53d",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/interfaces/IAutoCoinageSnapshot2.sol"
+    },
+    {
+      "original_path": "contracts/libraries/DSMath.sol",
+      "sha256": "95f6623bebcf098132a22e0c48f7b84dabc0c143f45c0ab86da05b7194671810",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/libraries/DSMath.sol"
+    },
+    {
+      "original_path": "contracts/libraries/SArrays.sol",
+      "sha256": "a8c0900a15eba2bbd98d83a3bb301eac6c733c11483a38ecb1dd94773908ed7d",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/libraries/SArrays.sol"
+    },
+    {
+      "original_path": "contracts/powerton/AutoRefactorCoinageI.sol",
+      "sha256": "4db47cb062f67ec196aef0b6ccc5c9e2d4b4c59bdde3f19936bf4920634b8137",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/powerton/AutoRefactorCoinageI.sol"
+    },
+    {
+      "original_path": "contracts/powerton/Layer2RegistryI.sol",
+      "sha256": "85324b906e02be2a8a04fea81ba371d8400e5385b3e941332d1fcde153ea637f",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/powerton/Layer2RegistryI.sol"
+    },
+    {
+      "original_path": "contracts/powerton/SeigManagerI.sol",
+      "sha256": "f59cb38a84066c926866f892be0caa99db1f9488d300ca715d97af71d177e794",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/powerton/SeigManagerI.sol"
+    },
+    {
+      "original_path": "contracts/tokens/AutoCoinageSnapshot2.sol",
+      "sha256": "2fbe8de43cc8f57007c3d7223ab34dcf49a43afa2a958502095e29ae5190bc16",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/tokens/AutoCoinageSnapshot2.sol"
+    },
+    {
+      "original_path": "contracts/tokens/AutoCoinageSnapshotStorage2.sol",
+      "sha256": "709e2196a46579d063112760101f60954138d8e3e325a8ea0132b7539bb94178",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/contracts/tokens/AutoCoinageSnapshotStorage2.sol"
+    },
+    {
+      "original_path": "hardhat/console.sol",
+      "sha256": "27d7e349617dc857b040f2186bf577fe6169ede8bfc98be714ab4289b5793548",
+      "stored_path": "contracts/0xc600727f1ce705436734f2367e7fc449da5fb3a6/sources/hardhat/console.sol"
+    }
+  ],
+  "source_match": "exact_match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T11:19:39Z",
+  "sourcify_creation_match": "exact_match",
+  "sourcify_match_id": "411127",
+  "sourcify_runtime_match": "exact_match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0xc600727f1ce705436734f2367e7fc449da5fb3a6?fields=all"
+}

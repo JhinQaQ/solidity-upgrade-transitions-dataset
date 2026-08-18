@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "16126586",
+    "deployer": "0x23c4602e63ACfe29b930c530B19d44a84AF0d767",
+    "transactionHash": "0x6d055e5fb7255cc0531c345811d5bc9691383b1f1b70171f590944ea10d18ee3",
+    "transactionIndex": "158"
+  },
+  "implementation_address": "0x6564fe0809e8b520a0e26ee644d98c4ea2c6fb45",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x6564fe0809e8b520a0e26ee644d98c4ea2c6fb45?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x6564fe0809e8b520a0e26ee644d98c4ea2c6fb45/runtime-bytecode.hex",
+    "sha256": "959375847291ac4d49306b512acad984d4ee429c03c5ef15d6e20db1b2b289d2",
+    "size_bytes": 6998,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "OperatorVault.sol",
+      "sha256": "26bc979fa636e0e3f763d9ce150c95144a271b8301860d360824cdbabcf0f604",
+      "stored_path": "contracts/0x6564fe0809e8b520a0e26ee644d98c4ea2c6fb45/sources/OperatorVault.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2025-07-14T07:17:56Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "7367965",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x6564fe0809e8b520a0e26ee644d98c4ea2c6fb45?fields=all"
+}

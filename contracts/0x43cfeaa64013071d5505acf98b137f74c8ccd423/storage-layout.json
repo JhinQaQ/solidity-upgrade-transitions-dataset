@@ -1,0 +1,552 @@
+{
+  "storage": [
+    {
+      "astId": 492,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_initialized",
+      "offset": 0,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 495,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_initializing",
+      "offset": 1,
+      "slot": "0",
+      "type": "t_bool"
+    },
+    {
+      "astId": 1462,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_status",
+      "offset": 0,
+      "slot": "1",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 1505,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "2",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 1447,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "51",
+      "type": "t_array(t_uint256)50_storage"
+    },
+    {
+      "astId": 10,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_owner",
+      "offset": 0,
+      "slot": "101",
+      "type": "t_address"
+    },
+    {
+      "astId": 129,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "102",
+      "type": "t_array(t_uint256)49_storage"
+    },
+    {
+      "astId": 571,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_balances",
+      "offset": 0,
+      "slot": "151",
+      "type": "t_mapping(t_address,t_uint256)"
+    },
+    {
+      "astId": 577,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_allowances",
+      "offset": 0,
+      "slot": "152",
+      "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+    },
+    {
+      "astId": 579,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_totalSupply",
+      "offset": 0,
+      "slot": "153",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 581,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_name",
+      "offset": 0,
+      "slot": "154",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 583,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_symbol",
+      "offset": 0,
+      "slot": "155",
+      "type": "t_string_storage"
+    },
+    {
+      "astId": 585,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "_decimals",
+      "offset": 0,
+      "slot": "156",
+      "type": "t_uint8"
+    },
+    {
+      "astId": 1080,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "__gap",
+      "offset": 0,
+      "slot": "157",
+      "type": "t_array(t_uint256)44_storage"
+    },
+    {
+      "astId": 5367,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "depositReceipts",
+      "offset": 0,
+      "slot": "201",
+      "type": "t_mapping(t_address,t_struct(DepositReceipt)3845_storage)"
+    },
+    {
+      "astId": 5372,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "roundPricePerShare",
+      "offset": 0,
+      "slot": "202",
+      "type": "t_mapping(t_uint256,t_uint256)"
+    },
+    {
+      "astId": 5377,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "withdrawals",
+      "offset": 0,
+      "slot": "203",
+      "type": "t_mapping(t_address,t_struct(Withdrawal)3850_storage)"
+    },
+    {
+      "astId": 5379,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "vaultParams",
+      "offset": 0,
+      "slot": "204",
+      "type": "t_struct(VaultParams)3820_storage"
+    },
+    {
+      "astId": 5381,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "vaultState",
+      "offset": 0,
+      "slot": "207",
+      "type": "t_struct(VaultState)3838_storage"
+    },
+    {
+      "astId": 5383,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "optionState",
+      "offset": 0,
+      "slot": "209",
+      "type": "t_struct(OptionState)3827_storage"
+    },
+    {
+      "astId": 5385,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "feeRecipient",
+      "offset": 0,
+      "slot": "211",
+      "type": "t_address"
+    },
+    {
+      "astId": 5387,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "keeper",
+      "offset": 0,
+      "slot": "212",
+      "type": "t_address"
+    },
+    {
+      "astId": 5389,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "performanceFee",
+      "offset": 0,
+      "slot": "213",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5391,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "managementFee",
+      "offset": 0,
+      "slot": "214",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5394,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "optionsPremiumPricer",
+      "offset": 0,
+      "slot": "215",
+      "type": "t_address"
+    },
+    {
+      "astId": 5396,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "strikeSelection",
+      "offset": 0,
+      "slot": "216",
+      "type": "t_address"
+    },
+    {
+      "astId": 5398,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "premiumDiscount",
+      "offset": 0,
+      "slot": "217",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5400,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "currentOtokenPremium",
+      "offset": 0,
+      "slot": "218",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5402,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "lastStrikeOverride",
+      "offset": 0,
+      "slot": "219",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5404,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "overriddenStrikePrice",
+      "offset": 0,
+      "slot": "220",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5406,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "auctionDuration",
+      "offset": 0,
+      "slot": "221",
+      "type": "t_uint256"
+    },
+    {
+      "astId": 5408,
+      "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+      "label": "optionAuctionID",
+      "offset": 0,
+      "slot": "222",
+      "type": "t_uint256"
+    }
+  ],
+  "types": {
+    "t_address": {
+      "encoding": "inplace",
+      "label": "address",
+      "numberOfBytes": "20"
+    },
+    "t_array(t_uint256)44_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[44]",
+      "numberOfBytes": "1408"
+    },
+    "t_array(t_uint256)49_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[49]",
+      "numberOfBytes": "1568"
+    },
+    "t_array(t_uint256)50_storage": {
+      "base": "t_uint256",
+      "encoding": "inplace",
+      "label": "uint256[50]",
+      "numberOfBytes": "1600"
+    },
+    "t_bool": {
+      "encoding": "inplace",
+      "label": "bool",
+      "numberOfBytes": "1"
+    },
+    "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => mapping(address => uint256))",
+      "numberOfBytes": "32",
+      "value": "t_mapping(t_address,t_uint256)"
+    },
+    "t_mapping(t_address,t_struct(DepositReceipt)3845_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct Vault.DepositReceipt)",
+      "numberOfBytes": "32",
+      "value": "t_struct(DepositReceipt)3845_storage"
+    },
+    "t_mapping(t_address,t_struct(Withdrawal)3850_storage)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => struct Vault.Withdrawal)",
+      "numberOfBytes": "32",
+      "value": "t_struct(Withdrawal)3850_storage"
+    },
+    "t_mapping(t_address,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_address",
+      "label": "mapping(address => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_mapping(t_uint256,t_uint256)": {
+      "encoding": "mapping",
+      "key": "t_uint256",
+      "label": "mapping(uint256 => uint256)",
+      "numberOfBytes": "32",
+      "value": "t_uint256"
+    },
+    "t_string_storage": {
+      "encoding": "bytes",
+      "label": "string",
+      "numberOfBytes": "32"
+    },
+    "t_struct(DepositReceipt)3845_storage": {
+      "encoding": "inplace",
+      "label": "struct Vault.DepositReceipt",
+      "members": [
+        {
+          "astId": 3840,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "round",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint16"
+        },
+        {
+          "astId": 3842,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "amount",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint104"
+        },
+        {
+          "astId": 3844,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "unredeemedShares",
+          "offset": 15,
+          "slot": "0",
+          "type": "t_uint128"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_struct(OptionState)3827_storage": {
+      "encoding": "inplace",
+      "label": "struct Vault.OptionState",
+      "members": [
+        {
+          "astId": 3822,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "nextOption",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 3824,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "currentOption",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 3826,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "nextOptionReadyAt",
+          "offset": 20,
+          "slot": "1",
+          "type": "t_uint32"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(VaultParams)3820_storage": {
+      "encoding": "inplace",
+      "label": "struct Vault.VaultParams",
+      "members": [
+        {
+          "astId": 3809,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "isPut",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_bool"
+        },
+        {
+          "astId": 3811,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "decimals",
+          "offset": 1,
+          "slot": "0",
+          "type": "t_uint8"
+        },
+        {
+          "astId": 3813,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "asset",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_address"
+        },
+        {
+          "astId": 3815,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "underlying",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_address"
+        },
+        {
+          "astId": 3817,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "minimumSupply",
+          "offset": 20,
+          "slot": "1",
+          "type": "t_uint56"
+        },
+        {
+          "astId": 3819,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "cap",
+          "offset": 0,
+          "slot": "2",
+          "type": "t_uint104"
+        }
+      ],
+      "numberOfBytes": "96"
+    },
+    "t_struct(VaultState)3838_storage": {
+      "encoding": "inplace",
+      "label": "struct Vault.VaultState",
+      "members": [
+        {
+          "astId": 3829,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "round",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint16"
+        },
+        {
+          "astId": 3831,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "lockedAmount",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint104"
+        },
+        {
+          "astId": 3833,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "lastLockedAmount",
+          "offset": 15,
+          "slot": "0",
+          "type": "t_uint104"
+        },
+        {
+          "astId": 3835,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "totalPending",
+          "offset": 0,
+          "slot": "1",
+          "type": "t_uint128"
+        },
+        {
+          "astId": 3837,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "queuedWithdrawShares",
+          "offset": 16,
+          "slot": "1",
+          "type": "t_uint128"
+        }
+      ],
+      "numberOfBytes": "64"
+    },
+    "t_struct(Withdrawal)3850_storage": {
+      "encoding": "inplace",
+      "label": "struct Vault.Withdrawal",
+      "members": [
+        {
+          "astId": 3847,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "round",
+          "offset": 0,
+          "slot": "0",
+          "type": "t_uint16"
+        },
+        {
+          "astId": 3849,
+          "contract": "contracts/vaults/BaseVaults/RibbonThetaVault.sol:RibbonThetaVault",
+          "label": "shares",
+          "offset": 2,
+          "slot": "0",
+          "type": "t_uint128"
+        }
+      ],
+      "numberOfBytes": "32"
+    },
+    "t_uint104": {
+      "encoding": "inplace",
+      "label": "uint104",
+      "numberOfBytes": "13"
+    },
+    "t_uint128": {
+      "encoding": "inplace",
+      "label": "uint128",
+      "numberOfBytes": "16"
+    },
+    "t_uint16": {
+      "encoding": "inplace",
+      "label": "uint16",
+      "numberOfBytes": "2"
+    },
+    "t_uint256": {
+      "encoding": "inplace",
+      "label": "uint256",
+      "numberOfBytes": "32"
+    },
+    "t_uint32": {
+      "encoding": "inplace",
+      "label": "uint32",
+      "numberOfBytes": "4"
+    },
+    "t_uint56": {
+      "encoding": "inplace",
+      "label": "uint56",
+      "numberOfBytes": "7"
+    },
+    "t_uint8": {
+      "encoding": "inplace",
+      "label": "uint8",
+      "numberOfBytes": "1"
+    }
+  }
+}

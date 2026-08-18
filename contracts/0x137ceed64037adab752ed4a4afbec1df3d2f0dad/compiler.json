@@ -1,0 +1,16 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "byzantium",
+    "libraries": {},
+    "optimizer": {
+      "enabled": true,
+      "runs": 20000
+    },
+    "remappings": []
+  },
+  "compilerVersion": "0.4.23+commit.124ca40d",
+  "fullyQualifiedName": "Registry.sol:Registry",
+  "language": "Solidity",
+  "name": "Registry"
+}

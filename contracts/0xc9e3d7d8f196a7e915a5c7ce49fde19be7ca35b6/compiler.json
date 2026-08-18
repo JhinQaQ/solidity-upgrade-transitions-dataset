@@ -1,0 +1,30 @@
+{
+  "compiler": "solc",
+  "compilerSettings": {
+    "evmVersion": "istanbul",
+    "libraries": {
+      "Bridge.sol": {}
+    },
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "": [
+          "*"
+        ],
+        "*": [
+          "*"
+        ]
+      }
+    }
+  },
+  "compilerVersion": "v0.8.14+commit.80d49f37",
+  "evmVersion": "istanbul",
+  "filePath": "Bridge.sol",
+  "language": "solidity",
+  "name": "Bridge",
+  "optimizationEnabled": true,
+  "optimizationRuns": 200
+}

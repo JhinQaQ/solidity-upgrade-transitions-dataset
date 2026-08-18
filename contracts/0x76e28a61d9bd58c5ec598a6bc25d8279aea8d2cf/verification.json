@@ -1,0 +1,42 @@
+{
+  "chain_id": 1,
+  "collected_at_utc": "2026-08-18T19:11:43+00:00",
+  "deployment": {
+    "blockNumber": "11280379",
+    "deployer": "0xf6E2Da7D82ee49f76CE652bc0BeB546Cbe0Ea521",
+    "transactionHash": "0x985781e83b1815c9c0669e0c223cffc551060d1b7787e92ef3934592647e9762",
+    "transactionIndex": "103"
+  },
+  "implementation_address": "0x76e28a61d9bd58c5ec598a6bc25d8279aea8d2cf",
+  "provider_lookups": {
+    "blockscout": {
+      "status": "not_needed",
+      "url": null
+    },
+    "sourcify": {
+      "status": 200,
+      "url": "https://sourcify.dev/server/v2/contract/1/0x76e28a61d9bd58c5ec598a6bc25d8279aea8d2cf?fields=all"
+    }
+  },
+  "runtime_bytecode": {
+    "path": "contracts/0x76e28a61d9bd58c5ec598a6bc25d8279aea8d2cf/runtime-bytecode.hex",
+    "sha256": "853c944c49743d21e8cb2599f1e8fa84fd0b48140507e594d1e300a3b76f8ffa",
+    "size_bytes": 16358,
+    "state": "latest"
+  },
+  "source_available": true,
+  "source_files": [
+    {
+      "original_path": "TrueFiPool.sol",
+      "sha256": "0e0e58b9fc0fe483efee5e1110d6c3db139c47ba947323a5b5a54f05eeff256b",
+      "stored_path": "contracts/0x76e28a61d9bd58c5ec598a6bc25d8279aea8d2cf/sources/TrueFiPool.sol"
+    }
+  ],
+  "source_match": "match",
+  "source_provider": "sourcify",
+  "source_verified_at": "2024-08-08T12:55:09Z",
+  "sourcify_creation_match": "match",
+  "sourcify_match_id": "1316504",
+  "sourcify_runtime_match": "match",
+  "verification_url": "https://sourcify.dev/server/v2/contract/1/0x76e28a61d9bd58c5ec598a6bc25d8279aea8d2cf?fields=all"
+}
