@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+node_modules
+debug-output/
+spreadsheet-previews/
+*.inspect.ndjson
